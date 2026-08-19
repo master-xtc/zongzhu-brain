@@ -2,13 +2,19 @@
  "meta": {
   "name": "总助大脑",
   "subject": "总助 Codex · 全量记忆·想法·能力知识库",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "generated_at": "2026-08-20",
   "source_root": "D:\\小说文件\\总助大脑",
   "assets_count": 205,
   "sync": "由 build_kb.py 生成；修改请重跑构建器或直接编辑本文件",
   "url": "https://master-xtc.github.io/zongzhu-brain/",
   "changelog": [
+   {
+    "time": "2026-08-20 06:10",
+    "type": "feature",
+    "title": "v1.4.1：Obsidian vault 下载即用（图谱一致）+ 提示词库独立入口 + 新AI接任与保障手册",
+    "id": "v1.4.1"
+   },
    {
     "time": "2026-08-20 04:50",
     "type": "knowledge",

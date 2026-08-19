@@ -244,6 +244,7 @@ header{display:none}
     <div class="rb-btn" data-r="projects" title="项目主线"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
     <div class="rb-btn" data-r="reqs" title="需求库"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
     <div class="rb-btn" data-r="archive" title="记忆档案"><svg viewBox="0 0 24 24"><path d="M4 5h16v4H4z"/><path d="M6 9v10h12V9"/><path d="M10 13h4"/></svg></div>
+    <div class="rb-btn" data-r="prompts" title="提示词库"><svg viewBox="0 0 24 24"><path d="M4 5h16v4H4z"/><path d="M6 9v10h12V9"/><path d="M10 13h4"/></svg></div>
     <div class="rb-btn" data-r="activate" title="对接激活"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></div>
   </div>
   <div class="sidebar" id="sidebar">
@@ -257,9 +258,10 @@ header{display:none}
       <div class="tab" data-p="projects"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg>项目主线</div>
       <div class="tab" data-p="reqs"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>需求库</div>
       <div class="tab" data-p="archive"><svg viewBox="0 0 24 24"><path d="M4 5h16v4H4z"/><path d="M6 9v10h12V9"/><path d="M10 13h4"/></svg>记忆档案</div>
+      <div class="tab" data-p="prompts"><svg viewBox="0 0 24 24"><path d="M4 5h16v4H4z"/><path d="M6 9v10h12V9"/><path d="M10 13h4"/></svg>提示词库</div>
       <div class="tab" data-p="activate"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg>对接激活</div>
     </nav>
-    <div class="sb-foot">数据源：D:\AI员工体系 + Codex 记忆档案<br>版本 v1.4 · 2026-08-20</div>
+    <div class="sb-foot">数据源：D:\AI员工体系 + Codex 记忆档案<br>版本 v1.4.1 · 2026-08-20</div>
   </div>
 <main class="wrap" id="main">
 
@@ -376,6 +378,17 @@ header{display:none}
   <div class="list" id="arcList"></div>
 </section>
 
+<section class="panel" id="p-prompts">
+  <h2>提示词库 <span class="en">PROMPT LIBRARY · 52 条 · 8 大类 · 先查库后开工</span></h2>
+  <p class="sub">全部提示词资产：内容创作 / 图像生成 / 小说写作 / 开发建站 / 分析复盘 / 知识库运营 / 自动化运营 / 调度指令。开工前先查库，能复用不重写；优质提示词用完即沉淀（R30）。</p>
+  <div class="search">
+    <input id="prQ" placeholder="输入关键词检索，如：引流、小说、部署、复盘……">
+    <button class="btn" onclick="doPrSearch()">检索</button>
+  </div>
+  <div class="chips" id="prChips"></div>
+  <div class="list" id="prList"></div>
+</section>
+
 <section class="panel" id="p-activate">
   <h2>对接与激活 <span class="en">ACTIVATE &amp; CONNECT · 让任意 AI 接任总助</span></h2>
   <p class="sub">三通道：① 文件通道——把下方激活指令粘贴给任意 AI 并告知档案路径；② HTTP API——本地起服务，任意 AI 有 HTTP 能力即可调用；③ MCP——Claude Desktop 等 MCP 客户端直连。</p>
@@ -390,6 +403,9 @@ header{display:none}
   <pre class="code" id="apiDoc"></pre>
   <div class="sec-t">MCP 对接（Claude Desktop 配置）</div>
   <pre class="code" id="mcpDoc"></pre>
+  <div class="sec-t">新 AI 接任与保障（记忆 / 文件 / 聊天内容）</div>
+  <div class="callout info"><b class="cap">接任三步</b>① 读：把下方激活指令 + 档案路径（或直接给 obsidian-vault 文件夹）交给新 AI；② 认：让新 AI 先读规则、红线、命名规范与 MOC，确认身份与工作方式；③ 写：新知识按 R30 回写规则落盘并同步 GitHub。新 AI 即拥有与总助一致的记忆、规则与能力清单。</div>
+  <div class="callout tip"><b class="cap">三重保障</b>记忆：全量档案 knowledge.md / knowledge.json 双格式，Obsidian vault 可直接打开；文件：本地 D 盘主库 + GitHub 云端备份（同一仓库）；聊天内容：重要结论即时落盘进知识库并同步，不依赖单个聊天窗口。</div>
 </section>
 
 
@@ -468,6 +484,14 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
         <tr><td>巡检知识库</td><td>看 Hub 数 / 孤儿数 / 未解析链接，参照「知识图谱」面板</td></tr>
         <tr><td>部署更新</td><td>同步 _deploy 目录 → git push origin main</td></tr>
       </table>
+
+      <h3 id="g-obs">8 · Obsidian 直接使用（下载即用 · 图谱与网页完全一致）</h3>
+      <p>整个知识库已导出为 Obsidian 仓库（vault）：<b>115 篇笔记 + 136 条双链</b>。在 Obsidian 中打开图谱（Ctrl+G），节点、连线、分类配色与网页版完全一致——因为两者共用同一份图谱数据。</p>
+      <div class="callout info"><b class="cap">下载</b>方法一：直接下载本仓库根目录的 <code>obsidian-vault.zip</code>；方法二：GitHub 仓库 master-xtc/zongzhu-brain → Code → Download ZIP → 解压后取 <code>obsidian-vault</code> 文件夹。</div>
+      <div class="step-card"><div class="step-num">1</div><div><b>解压</b><p>把 obsidian-vault 文件夹解压到 D 盘任意位置（如 D:\总助大脑-vault）。</p></div></div>
+      <div class="step-card"><div class="step-num">2</div><div><b>打开</b><p>Obsidian →「打开其他仓库」→「打开文件夹作为仓库」→ 选择该文件夹。</p></div></div>
+      <div class="step-card"><div class="step-num">3</div><div><b>使用</b><p>从「00-总览/总助大脑_MOC.md」开始浏览；按笔记内双链跳转，图谱自动呈现完整关联。</p></div></div>
+      <div class="callout warn"><b class="cap">新 AI 接任与保障</b>① 读：把本页激活指令或 obsidian-vault 路径（或 99-档案/knowledge_全量档案.md）交给新 AI；② 认：让新 AI 先读「总助大脑_MOC.md」与「01-规则」再干活；③ 写：新知识按「提示词库 → 知识库运营」规范回写并同步 GitHub。保障：主库在本地 D 盘、云备份在 GitHub 同仓库、聊天重要结论即时落盘，不依赖任何单个聊天窗口。</div>
     </div>
     <div class="guide-toc">
       <b>本页目录</b>
@@ -478,24 +502,31 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
       <a data-go="g-graph">5 图谱玩法</a>
       <a data-go="g-ai">6 AI 对接手册</a>
       <a data-go="g-quick">7 常用速查</a>
+      <a data-go="g-obs">8 Obsidian 直接使用</a>
     </div>
   </div>
 </section>
 
 </main>
 </div><!-- /app-shell -->
-<div class="foot">总助大脑 v1.4 · 2026-08-20 · 数据源：D:\AI员工体系 + Codex 记忆档案 · 深空黑 × 流光金 · 深色/暖色随系统切换</div>
+<div class="foot">总助大脑 v1.4.1 · 2026-08-20 · 数据源：D:\AI员工体系 + Codex 记忆档案 · 深空黑 × 流光金 · 深色/暖色随系统切换</div>
 <script id="kb" type="application/json">{
  "meta": {
   "name": "总助大脑",
   "subject": "总助 Codex · 全量记忆·想法·能力知识库",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "generated_at": "2026-08-20",
   "source_root": "D:\\小说文件\\总助大脑",
   "assets_count": 205,
   "sync": "由 build_kb.py 生成；修改请重跑构建器或直接编辑本文件",
   "url": "https://master-xtc.github.io/zongzhu-brain/",
   "changelog": [
+   {
+    "time": "2026-08-20 06:10",
+    "type": "feature",
+    "title": "v1.4.1：Obsidian vault 下载即用（图谱一致）+ 提示词库独立入口 + 新AI接任与保障手册",
+    "id": "v1.4.1"
+   },
    {
     "time": "2026-08-20 04:50",
     "type": "knowledge",
@@ -4610,6 +4641,26 @@ function renderArchive(){
 function doSearch(){ arcQuery=$('#arcQ').value.trim(); renderArchive(); }
 $('#arcQ').addEventListener('keydown',e=>{ if(e.key==='Enter') doSearch(); });
 
+/* ===== 提示词库 ===== */
+let prSection='全部', prQuery='';
+const PROMPT_CATS=['全部','总索引','内容创作','图像生成','小说写作','开发建站','分析复盘','知识库运营','自动化运营','调度指令'];
+function prCatOf(x){
+  const parts = (x.path||'').split('\\');
+  const i = parts.indexOf('提示词库');
+  if(i<0 || i+1>=parts.length) return '其他';
+  const c = parts[i+1];
+  return /\.md$/i.test(c) ? '总索引' : c;
+}
+function renderPrompts(){
+  $('#prChips').innerHTML = PROMPT_CATS.map(c=>`<button class="chip ${c===prSection?'on':''}" onclick="prSection='${c}';renderPrompts()">${c}</button>`).join('');
+  let list = KB.prompts || [];
+  if(prQuery){ const q=prQuery.toLowerCase(); list = list.filter(x=>(x.title+(x.summary||[]).join('')).toLowerCase().includes(q)); }
+  else if(prSection!=='全部'){ const c=prSection; list = list.filter(x=>prCatOf(x)===c); }
+  $('#prList').innerHTML = list.length? list.map(x=>`<div class="row-item"><b>${x.title}</b><span class="src">${prCatOf(x)}</span>${x.summary&&x.summary[0]?`<p>${x.summary.join('；')}</p>`:''}</div>`).join('') : '<div class="row-item">无匹配结果，换个关键词试试。</div>';
+}
+function doPrSearch(){ prQuery=$('#prQ').value.trim(); renderPrompts(); }
+$('#prQ').addEventListener('keydown',e=>{ if(e.key==='Enter') doPrSearch(); });
+
 /* ===== 对接激活 ===== */
 function renderActivate(){
   $('#actTxt').value = KB.activation.prompt.trim();
@@ -4649,7 +4700,7 @@ function copyPath(){
 // 默认激活知识图谱页（否则 panel 隐藏、容器 0 尺寸）
 const _firstTab = document.querySelector('.tab[data-p="graph"]'); if (_firstTab) _firstTab.classList.add('on');
 const _firstPanel = document.getElementById('p-graph'); if (_firstPanel) _firstPanel.classList.add('on');
-renderOverview(); renderCaps(); renderRules(); renderProjects(); renderReqs(); renderArchive(); renderActivate();
+renderOverview(); renderCaps(); renderRules(); renderProjects(); renderReqs(); renderArchive(); renderPrompts(); renderActivate();
 </script>
 <script src="galaxy.js"></script>
 <script src="galaxy3d.js"></script>
