@@ -11,6 +11,34 @@
   --gold:#C9A96A; --gold-dim:#8f7a4d; --text:#E8E6DF; --text2:#9A968C;
   --line:#2A2A3A; --blue:#6FA8DC; --green:#7FBF7F; --purple:#C77DBA; --orange:#E58A5C;
   --red:#D97A6B; --gray:#8A8F98;
+  --bg3:#0D0D15; --hover:rgba(255,255,255,.05); --panelbg:rgba(14,14,22,.88);
+  --radius:8px; --radius2:12px; --shadow:0 10px 34px rgba(0,0,0,.4);
+  --accent-soft:rgba(201,169,106,.1); --accent-soft2:rgba(201,169,106,.18);
+  --font-ui:"Inter","HarmonyOS Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --font-mono:"JetBrains Mono","Cascadia Code",Consolas,"Courier New",monospace;
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F4EFE6; --bg2:#EDE5D5; --card:#FBF7ED; --card2:#F2EADA;
+  --gold:#8A6D3B; --gold-dim:#A98A4E; --text:#2E2A22; --text2:#6E675A;
+  --line:#DAD0BC; --blue:#4A7FA8; --green:#5E8B5E; --purple:#8F5F87; --orange:#C4764B;
+  --red:#B85C4E; --gray:#8A8478;
+  --bg3:#EFE7D6; --hover:rgba(90,70,30,.06); --panelbg:rgba(251,247,237,.92);
+  --shadow:0 10px 34px rgba(130,100,50,.16);
+  --accent-soft:rgba(138,109,59,.1); --accent-soft2:rgba(138,109,59,.2);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: light){
+  html:not([data-theme="dark"]){
+    --bg:#F4EFE6; --bg2:#EDE5D5; --card:#FBF7ED; --card2:#F2EADA;
+    --gold:#8A6D3B; --gold-dim:#A98A4E; --text:#2E2A22; --text2:#6E675A;
+    --line:#DAD0BC; --blue:#4A7FA8; --green:#5E8B5E; --purple:#8F5F87; --orange:#C4764B;
+    --red:#B85C4E; --gray:#8A8478;
+    --bg3:#EFE7D6; --hover:rgba(90,70,30,.06); --panelbg:rgba(251,247,237,.92);
+    --shadow:0 10px 34px rgba(130,100,50,.16);
+    --accent-soft:rgba(138,109,59,.1); --accent-soft2:rgba(138,109,59,.2);
+    color-scheme:light;
+  }
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC",sans-serif;min-height:100vh}
@@ -106,25 +134,133 @@ pre.code{background:#0D0D15;border:1px solid var(--line);border-radius:10px;padd
 ::-webkit-scrollbar{width:8px;height:8px}
 ::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
 ::-webkit-scrollbar-track{background:transparent}
+
+/* ===== Obsidian 风格：标题栏 / 侧栏 / 命令面板 / 指南 ===== */
+html,body{font-family:var(--font-ui)}
+body{display:flex;flex-direction:column;min-height:100vh}
+body.sb-open{overflow:hidden}
+.titlebar{height:38px;display:flex;align-items:center;gap:10px;padding:0 10px 0 14px;background:var(--bg2);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60;user-select:none}
+.titlebar .tb-logo{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text)}
+.titlebar .tb-logo svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.8}
+.titlebar .tb-title{flex:1;text-align:center;font-size:12px;color:var(--text2);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.titlebar .tb-controls{display:flex;gap:2px}
+.titlebar .tb-btn{width:30px;height:26px;display:flex;align-items:center;justify-content:center;color:var(--text2);border-radius:5px;cursor:pointer;font-size:12px}
+.titlebar .tb-btn:hover{background:var(--hover);color:var(--text)}
+.titlebar .tb-close:hover{background:#C0392B;color:#fff}
+.app-shell{display:flex;flex:1;min-height:0}
+.ribbon{width:44px;background:var(--bg2);border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;padding:8px 0;gap:6px;flex-shrink:0}
+.ribbon .rb-btn{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text2);position:relative}
+.ribbon .rb-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7}
+.ribbon .rb-btn:hover{background:var(--hover);color:var(--text)}
+.ribbon .rb-btn.on{color:var(--gold);background:var(--accent-soft)}
+.sidebar{width:158px;background:var(--bg2);border-right:1px solid var(--line);padding:10px 8px;overflow-y:auto;flex-shrink:0}
+.sidebar .sb-group{font-size:10.5px;color:var(--text2);letter-spacing:1.5px;text-transform:uppercase;padding:8px 10px 4px;opacity:.8}
+.sidebar nav{display:flex;flex-direction:column;gap:1px;margin-left:0}
+.sidebar .tab{justify-content:flex-start;padding:7px 10px;border-radius:6px;font-size:13px;border:none;width:100%;gap:8px}
+.sidebar .tab svg{width:15px;height:15px;opacity:.85}
+.sidebar .tab.on{background:var(--accent-soft);border-left:2px solid var(--gold);border-radius:4px}
+.sidebar .sb-foot{margin-top:auto;padding:10px;font-size:11px;color:var(--text2);line-height:1.6;border-top:1px solid var(--line)}
+main.wrap{flex:1;min-width:0;padding:26px 30px 90px;max-width:none}
+.theme-btn{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text2);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:4px 8px;cursor:pointer}
+.theme-btn:hover{color:var(--gold);border-color:var(--gold-dim)}
+.theme-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8}
+/* 命令面板 */
+.cmd-modal{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;display:none;align-items:flex-start;justify-content:center;padding-top:14vh}
+.cmd-modal.on{display:flex}
+.cmd-box{width:min(560px,92vw);background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);overflow:hidden}
+.cmd-input{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.cmd-input svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:2}
+.cmd-input input{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-size:14px;font-family:var(--font-ui)}
+.cmd-list{max-height:46vh;overflow-y:auto;padding:6px}
+.cmd-item{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:7px;cursor:pointer;font-size:13.5px}
+.cmd-item .ci-ic{width:20px;height:20px;display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.cmd-item .ci-ic svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8}
+.cmd-item .ci-k{color:var(--gold);font-size:11px;margin-left:auto;padding-left:12px;white-space:nowrap}
+.cmd-item:hover,.cmd-item.sel{background:var(--accent-soft)}
+.cmd-empty{padding:18px;text-align:center;color:var(--text2);font-size:13px}
+/* 指南页排版 */
+.guide-doc{max-width:880px}
+.guide-doc h2{margin-top:6px}
+.guide-doc h3{color:var(--gold);font-size:17px;margin:34px 0 12px;padding-left:10px;border-left:3px solid var(--gold);letter-spacing:.5px}
+.guide-doc h4{font-size:14px;margin:18px 0 8px;color:var(--text)}
+.guide-doc p,.guide-doc li{font-size:14px;line-height:1.9;color:var(--text)}
+.guide-doc ul,.guide-doc ol{padding-left:22px;margin:8px 0}
+.guide-doc li{margin:5px 0}
+.guide-doc code{font-family:var(--font-mono);font-size:12.5px;background:var(--bg3);border:1px solid var(--line);padding:1.5px 6px;border-radius:4px;color:var(--gold)}
+.guide-doc pre{background:var(--bg3);border:1px solid var(--line);border-radius:8px;padding:13px 15px;overflow-x:auto;margin:10px 0}
+.guide-doc pre code{background:none;border:none;padding:0;color:var(--text);font-size:12.5px;line-height:1.75}
+.guide-doc table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+.guide-doc th{background:var(--bg3);color:var(--gold);text-align:left;padding:9px 12px;border:1px solid var(--line);font-weight:600}
+.guide-doc td{padding:8px 12px;border:1px solid var(--line);color:var(--text);vertical-align:top}
+.guide-doc tr:nth-child(even) td{background:var(--bg3)}
+.guide-doc .callout{border-radius:8px;padding:12px 15px;margin:14px 0;border:1px solid var(--line);border-left-width:3px;font-size:13.5px;line-height:1.8}
+.guide-doc .callout.tip{border-left-color:#5E8B5E;background:linear-gradient(90deg,rgba(94,139,94,.08),transparent)}
+.guide-doc .callout.warn{border-left-color:#C4764B;background:linear-gradient(90deg,rgba(196,118,75,.09),transparent)}
+.guide-doc .callout.info{border-left-color:var(--gold);background:linear-gradient(90deg,rgba(201,169,106,.1),transparent)}
+.guide-doc .callout b.cap{display:block;margin-bottom:4px;font-size:12px;letter-spacing:1px;color:var(--gold)}
+.guide-toc{position:sticky;top:56px;align-self:flex-start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:13px;min-width:210px}
+.guide-toc b{display:block;color:var(--gold);margin-bottom:8px;font-size:12px;letter-spacing:1.5px}
+.guide-toc a{display:block;color:var(--text2);padding:4px 0;cursor:pointer;line-height:1.5}
+.guide-toc a:hover{color:var(--gold)}
+.guide-layout{display:flex;gap:26px;align-items:flex-start}
+.step-card{display:flex;gap:14px;padding:14px;background:var(--card);border:1px solid var(--line);border-radius:10px;margin:10px 0}
+.step-card .step-num{width:34px;height:34px;flex-shrink:0;border-radius:8px;background:var(--accent-soft);border:1px solid var(--gold-dim);color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.step-card b{display:block;margin-bottom:4px}
+.step-card p{font-size:13px;color:var(--text2);line-height:1.7;margin:0}
+kbd{font-family:var(--font-mono);font-size:11.5px;background:var(--bg3);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 7px;color:var(--text);margin:0 2px}
+/* 旧 header 隐藏（改造为 Obsidian 布局） */
+header{display:none}
+@media(max-width:860px){
+  .ribbon{display:none}
+  .sidebar{position:fixed;left:-240px;top:38px;bottom:0;width:220px;z-index:90;transition:left .18s;box-shadow:var(--shadow)}
+  .sidebar.open{left:0}
+  main.wrap{padding:18px 14px 80px}
+  .titlebar .tb-title{display:none}
+  .guide-layout{flex-direction:column}
+  .guide-toc{position:static;width:100%}
+}
+
 </style>
 </head>
 <body>
-<header><div class="hd">
-  <div class="logo">
-    <svg viewBox="0 0 24 24"><path d="M12 3c-4 0-7 2.5-7 6.5 0 3 1.6 5.2 4 6.6V18a1 1 0 001 1h4a1 1 0 001-1v-1.9c2.4-1.4 4-3.6 4-6.6C19 5.5 16 3 12 3z"/><circle cx="12" cy="9" r="2.6"/><path d="M9.5 20h5"/></svg>
-    <span>总助大脑 <span class="gold">· 全量记忆与能力知识库</span></span>
+<div class="titlebar">
+  <div class="tb-logo"><svg viewBox="0 0 24 24"><path d="M12 3c-4 0-7 2.5-7 6.5 0 3 1.6 5.2 4 6.6V18a1 1 0 001 1h4a1 1 0 001-1v-1.9c2.4-1.4 4-3.6 4-6.6C19 5.5 16 3 12 3z"/><circle cx="12" cy="9" r="2.6"/><path d="M9.5 20h5"/></svg>总助大脑</div>
+  <div class="tb-title">总助大脑 v1.4 · Codex × Obsidian 自生长知识库 · 可视化 / 可对接 / 可积累</div>
+  <div class="tb-controls">
+    <div class="theme-btn" id="themeBtn" title="主题切换（跟随系统 / 深色 / 暖色）"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3L19 19M19 5l-1.7 1.7M6.7 17.3L5 19"/></svg><span id="themeLabel">跟随系统</span></div>
+    <div class="tb-btn" id="cmdBtn" title="命令面板 Ctrl+P"><svg viewBox="0 0 24 24"><path d="M7 6a3 3 0 103 3V6H7zM17 6a3 3 0 11-3 3h3V6zM7 15a3 3 0 103-3H7v3zM17 15a3 3 0 11-3-3h3v3z" style="fill:none;stroke:currentColor;stroke-width:1.7"/></svg></div>
+    <div class="tb-btn" title="最小化">—</div>
+    <div class="tb-btn" title="最大化">□</div>
+    <div class="tb-btn tb-close" title="关闭">×</div>
   </div>
-  <nav id="nav">
-    <div class="tab on" data-p="overview"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>总览</div>
-    <div class="tab" data-p="graph"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="M8 7.5l7.5-.5M7 8.5l1.5 8M14 9l-3.5 7.5"/></svg>知识图谱</div>
-    <div class="tab" data-p="caps"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z"/><path d="M9 12l2 2 4-4"/></svg>能力全景</div>
-    <div class="tab" data-p="rules"><svg viewBox="0 0 24 24"><path d="M4 4h16v13H9l-5 3z"/><path d="M8 9h8M8 13h5"/></svg>规则红线</div>
-    <div class="tab" data-p="projects"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg>项目主线</div>
-    <div class="tab" data-p="reqs"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>需求库</div>
-    <div class="tab" data-p="archive"><svg viewBox="0 0 24 24"><path d="M4 5h16v4H4z"/><path d="M6 9v10h12V9"/><path d="M10 13h4"/></svg>记忆档案</div>
-    <div class="tab" data-p="activate"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg>对接激活</div>
-  </nav>
-</div></header>
+</div>
+<div class="app-shell">
+  <div class="ribbon" id="ribbon">
+    <div class="rb-btn on" data-r="overview" title="总览"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+    <div class="rb-btn" data-r="guide" title="使用指南"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/></svg></div>
+    <div class="rb-btn" data-r="graph" title="知识图谱"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="M8 7.5l7.5-.5M7 8.5l1.5 8M14 9l-3.5 7.5"/></svg></div>
+    <div class="rb-btn" data-r="caps" title="能力全景"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div class="rb-btn" data-r="rules" title="规则红线"><svg viewBox="0 0 24 24"><path d="M4 4h16v13H9l-5 3z"/><path d="M8 9h8M8 13h5"/></svg></div>
+    <div class="rb-btn" data-r="projects" title="项目主线"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
+    <div class="rb-btn" data-r="reqs" title="需求库"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+    <div class="rb-btn" data-r="archive" title="记忆档案"><svg viewBox="0 0 24 24"><path d="M4 5h16v4H4z"/><path d="M6 9v10h12V9"/><path d="M10 13h4"/></svg></div>
+    <div class="rb-btn" data-r="activate" title="对接激活"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></div>
+  </div>
+  <div class="sidebar" id="sidebar">
+    <div class="sb-group">导航</div>
+    <nav id="nav">
+      <div class="tab on" data-p="overview"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>总览</div>
+      <div class="tab" data-p="guide"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/></svg>使用指南</div>
+      <div class="tab" data-p="graph"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="M8 7.5l7.5-.5M7 8.5l1.5 8M14 9l-3.5 7.5"/></svg>知识图谱</div>
+      <div class="tab" data-p="caps"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z"/><path d="M9 12l2 2 4-4"/></svg>能力全景</div>
+      <div class="tab" data-p="rules"><svg viewBox="0 0 24 24"><path d="M4 4h16v13H9l-5 3z"/><path d="M8 9h8M8 13h5"/></svg>规则红线</div>
+      <div class="tab" data-p="projects"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg>项目主线</div>
+      <div class="tab" data-p="reqs"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>需求库</div>
+      <div class="tab" data-p="archive"><svg viewBox="0 0 24 24"><path d="M4 5h16v4H4z"/><path d="M6 9v10h12V9"/><path d="M10 13h4"/></svg>记忆档案</div>
+      <div class="tab" data-p="activate"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg>对接激活</div>
+    </nav>
+    <div class="sb-foot">数据源：D:\AI员工体系 + Codex 记忆档案<br>版本 v1.4 · 2026-08-20</div>
+  </div>
 <main class="wrap" id="main">
 
 <section class="panel on" id="p-overview">
@@ -256,18 +392,141 @@ pre.code{background:#0D0D15;border:1px solid var(--line);border-radius:10px;padd
   <pre class="code" id="mcpDoc"></pre>
 </section>
 
+
+<section class="panel" id="p-guide">
+  <h2>使用指南 <span class="en">HOW TO USE · Obsidian 方法论驱动的自生长知识库</span></h2>
+  <div class="guide-layout">
+    <div class="guide-doc">
+      <h3 id="g-what">1 · 知识库是什么</h3>
+      <p>一句话：<b>Obsidian 是「看知识库的」，AI 是「操作它的」</b>；知识库本质是一个 Markdown 目录。本页面就是总助大脑的网页化身——左侧栏是文件树，中间是内容区，图谱是关系图谱，本页就是 README。</p>
+      <div class="callout info"><b class="cap">三层架构</b>① 全量档案：data/knowledge.md（人读）+ data/knowledge.json（机读）；② 可视化：本页 2D 铺展图谱与 Three.js 3D 星系；③ 对接通道：HTTP API / MCP / 文件直读。</div>
+
+      <h3 id="g-map">2 · 目录地图（PARA 对照）</h3>
+      <p>姜胡说的工作台方法论：项目 / 资产 / 资源 / 归档 + 灵感库 / 技能。总助大脑的每个 Tab 都对应一个用途：</p>
+      <table>
+        <tr><th>方法论点位</th><th>总助大脑对应</th><th>用途</th></tr>
+        <tr><td>项目（正在做的事）</td><td>项目主线 / 需求库</td><td>当前主线全景、习总需求与能力增强清单</td></tr>
+        <tr><td>资产（处理好的知识）</td><td>能力全景 / 记忆档案</td><td>七大域能力、已沉淀的记忆与复盘</td></tr>
+        <tr><td>资源（外来参考）</td><td>知识图谱 / 规则红线</td><td>全部节点与关联、底层契约与禁忌</td></tr>
+        <tr><td>归档（暂时不用）</td><td>growth/reviews 复盘库</td><td>历史任务复盘，查库复用的依据</td></tr>
+        <tr><td>灵感库（待处理）</td><td>需求库 REQ 清单</td><td>待办想法、能力增强申请</td></tr>
+        <tr><td>技能（处理模板）</td><td>提示词库 / skills</td><td>52 条提示词、可复用技能文档</td></tr>
+      </table>
+
+      <h3 id="g-start">3 · 五步上手</h3>
+      <div class="step-card"><div class="step-num">1</div><div><b>看总览</b><p>打开「总览」Tab，确认资产规模（规则/能力/项目/需求）与当前主线，了解全貌。</p></div></div>
+      <div class="step-card"><div class="step-num">2</div><div><b>逛图谱</b><p>进入「知识图谱」，2D 铺展看全貌（金色 Hub 是核心入口、红色是孤儿节点），3D 星系看关系；点节点看详情与邻居，双击重置。</p></div></div>
+      <div class="step-card"><div class="step-num">3</div><div><b>读档案</b><p>按需翻「规则红线」「能力全景」「记忆档案」，用 Ctrl+P 命令面板快速跳转。</p></div></div>
+      <div class="step-card"><div class="step-num">4</div><div><b>照本指南</b><p>新知识怎么进库、AI 怎么对接、图谱怎么玩，全部在本页，照着做即可。</p></div></div>
+      <div class="step-card"><div class="step-num">5</div><div><b>对接任意 AI</b><p>在「对接激活」Tab 复制三通道地址，任何 AI 读到档案即可接任总助。</p></div></div>
+
+      <h3 id="g-loop">4 · 自生长工作流</h3>
+      <p>参照 Xuan酱的「自生长」四层（原始资料 → 处理资料 → Skill 库 → 输出），总助大脑的闭环是：<b>抓取 → 整理 → 复盘 → 迭代 → 输出</b>。</p>
+      <ol>
+        <li><b>抓取</b>：任何对话中出现的有价值内容，立即写入知识库；</li>
+        <li><b>整理</b>：结构化进五库（规则/能力/项目/需求/记忆）；</li>
+        <li><b>复盘</b>：任务后写 reviews 固定结构；</li>
+        <li><b>迭代</b>：每周成长整合 + R30 规则（对话后自动积累）；</li>
+        <li><b>输出</b>：可视化刷新，可导出文档、PPT、视频。</li>
+      </ol>
+      <pre><code># 写入一条新知识（自动刷新档案与可视化）
+python D:\小说文件\总助大脑\_build\sync_kb.py --type knowledge --title "方法论点" --detail "具体内容"
+# 重扫五库（规则/能力/项目/需求/记忆全量重建）
+python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
+      <div class="callout tip"><b class="cap">金句</b>知识不是用来存的，是用来查自己的——每进一条新知识，都要问：它和我已有的什么相连？能变成什么行动？</div>
+
+      <h3 id="g-graph">5 · 图谱玩法</h3>
+      <table>
+        <tr><th>你想做什么</th><th>操作</th></tr>
+        <tr><td>看全貌</td><td>2D 平面（9 扇区铺展）或 3D 星系（自动旋转）</td></tr>
+        <tr><td>找核心</td><td>金色描边节点 = Hub（链接数 Top 20%）；点它看邻居</td></tr>
+        <tr><td>查断层 / 清理</td><td>红色描边 = 孤儿节点；「查路径」可查两篇笔记最短路径</td></tr>
+        <tr><td>调视觉</td><td>右侧面板 36 项参数 + 8 大预设（银河/旋臂/烟火/极简…）</td></tr>
+        <tr><td>指令演示</td><td>输入「连接两篇：A，B」或「调成螺旋状」，一键执行</td></tr>
+        <tr><td>缩放平移</td><td>滚轮缩放、拖拽平移、双击重置</td></tr>
+      </table>
+
+      <h3 id="g-ai">6 · AI 对接手册</h3>
+      <p>Blink 的结论：本地 Markdown = 任何 AI 都能直接访问；双向链接 = AI 洞察你的思维网络；长期记忆 = 每个 AI 秒懂你。三通道：</p>
+      <table>
+        <tr><th>通道</th><th>地址</th><th>用途</th></tr>
+        <tr><td>文件直读</td><td><code>D:\小说文件\总助大脑\data\knowledge.md</code></td><td>任何 AI 读此文件即激活</td></tr>
+        <tr><td>HTTP API</td><td><code>http://localhost:8787/api/knowledge</code></td><td>程序化查询结构化数据</td></tr>
+        <tr><td>MCP</td><td><code>mcp\server.js</code></td><td>Codex/Claude 等直接调用</td></tr>
+      </table>
+      <pre><code># 给任意 AI 的开场提示词
+你是总助。先读 D:\小说文件\总助大脑\data\knowledge.md 恢复全部上下文，
+再按其中规则工作；所有新知识按 R30 规则回写知识库。</code></pre>
+      <div class="callout tip"><b class="cap">数据主权</b>全部数据在本地 D 盘，无云锁；换工具、换 AI 都不丢记忆。</div>
+
+      <h3 id="g-quick">7 · 常用速查</h3>
+      <table>
+        <tr><th>操作</th><th>方式</th></tr>
+        <tr><td>命令面板</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd>（搜索并跳转任意页面 / 指令）</td></tr>
+        <tr><td>切换主题</td><td>右上角主题按钮：跟随系统 → 深色 → 暖色</td></tr>
+        <tr><td>新增知识</td><td>sync_kb.py 写入（见第 4 节）</td></tr>
+        <tr><td>巡检知识库</td><td>看 Hub 数 / 孤儿数 / 未解析链接，参照「知识图谱」面板</td></tr>
+        <tr><td>部署更新</td><td>同步 _deploy 目录 → git push origin main</td></tr>
+      </table>
+    </div>
+    <div class="guide-toc">
+      <b>本页目录</b>
+      <a data-go="g-what">1 知识库是什么</a>
+      <a data-go="g-map">2 目录地图</a>
+      <a data-go="g-start">3 五步上手</a>
+      <a data-go="g-loop">4 自生长工作流</a>
+      <a data-go="g-graph">5 图谱玩法</a>
+      <a data-go="g-ai">6 AI 对接手册</a>
+      <a data-go="g-quick">7 常用速查</a>
+    </div>
+  </div>
+</section>
+
 </main>
-<div class="foot">总助大脑 v1.3.1 · 2026-08-20 · 数据源：D:\AI员工体系 + Codex 记忆档案 · 深空黑 #0A0A0F × 流光金 #C9A96A</div>
+</div><!-- /app-shell -->
+<div class="foot">总助大脑 v1.4 · 2026-08-20 · 数据源：D:\AI员工体系 + Codex 记忆档案 · 深空黑 × 流光金 · 深色/暖色随系统切换</div>
 <script id="kb" type="application/json">{
  "meta": {
   "name": "总助大脑",
   "subject": "总助 Codex · 全量记忆·想法·能力知识库",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "generated_at": "2026-08-20",
   "source_root": "D:\\小说文件\\总助大脑",
   "assets_count": 205,
   "sync": "由 build_kb.py 生成；修改请重跑构建器或直接编辑本文件",
-  "url": "https://master-xtc.github.io/zongzhu-brain/"
+  "url": "https://master-xtc.github.io/zongzhu-brain/",
+  "changelog": [
+   {
+    "time": "2026-08-20 04:50",
+    "type": "knowledge",
+    "title": "自生长知识库方法论（Xuan酱）",
+    "id": "kno-01"
+   },
+   {
+    "time": "2026-08-20 04:50",
+    "type": "knowledge",
+    "title": "Obsidian入门全功能（摄影师云飞）",
+    "id": "kno-02"
+   },
+   {
+    "time": "2026-08-20 04:50",
+    "type": "knowledge",
+    "title": "AI+知识库工作台与PARA目录（姜胡说）",
+    "id": "kno-03"
+   },
+   {
+    "time": "2026-08-20 04:50",
+    "type": "knowledge",
+    "title": "Obsidian是AI时代最佳知识管理工具（Blink）",
+    "id": "kno-04"
+   },
+   {
+    "time": "2026-08-20 04:50",
+    "type": "memory",
+    "title": "抖音Obsidian方法论四讲学习（2026-08-20）",
+    "id": "mem-02"
+   }
+  ]
  },
  "identity": {
   "title": "总助（Codex）",
@@ -757,6 +1016,38 @@ pre.code{background:#0D0D15;border:1px solid var(--line);border-radius:10px;padd
    "title": "任务路由判读单",
    "content": "提示词库\\调度指令\\提示词_前置分发_任务路由判读单_决策矩阵_v1.md：判读单六字段+5问题决策树+任务类型×执行资源覆盖矩阵+四操作+派单五要素。",
    "src": "复盘 20260814"
+  },
+  {
+   "id": "kno-01",
+   "title": "自生长知识库方法论（Xuan酱）",
+   "detail": "抖音@Xuan酱《Codex联动Obsidian搭建超强知识库》：核心是卡帕西自生长四层——原始资料→处理后的资料→Skill库/方法库→输出文件夹。落地五步：1 装Codex+Obsidian打通建仓库；2 AI自动抓取热点、筛选重点、整理成文档（可导入其他平台）；3 搭建迭代系统用定时任务定期复盘；4 让AI定制专属Skill管理运用知识库；5 利用知识库批量产出文档/PPT/视频。要点：知识库能定时抓热点、自动整理、定期复盘、自动迭代生长。",
+   "domain": "方法论",
+   "src": "抖音 Xuan酱 2026-05-29",
+   "created_at": "2026-08-20 04:50"
+  },
+  {
+   "id": "kno-02",
+   "title": "Obsidian入门全功能（摄影师云飞）",
+   "detail": "抖音@摄影师云飞《个人知识库怎么搭Obsidian入门保姆级》：Obsidian特点——自定义笔记存放位置、纯Markdown、链接与反链。核心操作：创建仓库选位置、Ctrl+N新建笔记、出链反链关联笔记、添加附件。左侧栏功能：新建文件夹/快速切换/关系图谱/白板/今日日记/模板/命令面板/新建数据库/文件列表/搜索/书签。右侧栏：快速切换/文件列表/搜索/书签/新建笔记/新建文件夹/排序/关系图谱/白板/卡片/今日笔记/模板/命令面板/数据库/工作区布局/阅读编辑模式。设置：编辑器/快捷键/核心插件。",
+   "domain": "方法论",
+   "src": "抖音 摄影师云飞 2026-06-10",
+   "created_at": "2026-08-20 04:50"
+  },
+  {
+   "id": "kno-03",
+   "title": "AI+知识库工作台与PARA目录（姜胡说）",
+   "detail": "抖音@姜胡说《AI+知识库我的工作台长这样》：定位——Obsidian是看知识库的，不是知识库本身；AI是操作它的。目录结构：核心4个（项目=正在做的事、资产=处理好的知识、资源=外来参考、归档=暂时用不上）即PARA；扩展2个（灵感库=待处理原材料、技能=自己的处理模板）。告诉AI每个目录用途它就能按情况找文件。知识处理闭环：新知识丢进系统→AI与已有知识建立连接→反向提问（例：书中一句'再好的软件也装不上低版本的操作系统'→反问系统'我们的版本是不是太低了'）→AI建议转为代办项。金句：知识不是用来存的，是用来查自己的。",
+   "domain": "方法论",
+   "src": "抖音 姜胡说 2026-07-04",
+   "created_at": "2026-08-20 04:50"
+  },
+  {
+   "id": "kno-04",
+   "title": "Obsidian是AI时代最佳知识管理工具（Blink）",
+   "detail": "抖音@Blink的AI笔记《为什么Obsidian是AI时代最佳知识管理工具》：四大定位——1 本地Markdown=任何AI都能直接访问修改，工具选择自由；2 双向链接+Obsidian CLI=AI能洞察思维网络、探索知识盲区；3 作为长期记忆库=让每个AI都秒懂你、不用从零开始；4 数据主权在你手里=永远不被软件裹挟。当别的笔记软件往里塞AI功能时，Obsidian用最简单的纯文本架构反而成为AI时代最佳搭档。结语：Obsidian不是完美的，需完善方法论和结构。",
+   "domain": "方法论",
+   "src": "抖音 Blink的AI笔记 2026-03-14",
+   "created_at": "2026-08-20 04:50"
   }
  ],
  "projects": [
@@ -1291,6 +1582,14 @@ pre.code{background:#0D0D15;border:1px solid var(--line);border-radius:10px;padd
     "## Instructions",
     "* This extension contains ad-hoc notes to edit/add/delete memories. You must consider ever"
    ]
+  },
+  {
+   "id": "mem-02",
+   "title": "抖音Obsidian方法论四讲学习（2026-08-20）",
+   "detail": "习总发来4条抖音视频要求学习并落地到总助大脑：①Xuan酱-自生长知识库（卡帕西四层+五步落地）；②摄影师云飞-Obsidian保姆级入门（仓库/反链/左右栏全功能）；③姜胡说-AI+知识库工作台（Obsidian是看库的/AI是操作的，PARA+灵感库+技能目录，知识处理闭环，金句：知识不是用来存的是用来查自己的）；④Blink-AI时代最佳知识管理（本地Markdown/双向链接CLI/长期记忆库/数据主权）。落地：v1.4新增使用指南页（7节：是什么/目录地图/五步上手/自生长工作流/图谱玩法/AI对接/速查），深色暖色随系统主题，Obsidian风格改造。复盘见growth/reviews/20260820_Obsidian知识库方法论学习.md。",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260820_Obsidian知识库方法论学习.md",
+   "src": "习总指令+抖音四讲 2026-08-20",
+   "created_at": "2026-08-20 04:50"
   }
  ],
  "skills": [
@@ -4354,5 +4653,89 @@ renderOverview(); renderCaps(); renderRules(); renderProjects(); renderReqs(); r
 </script>
 <script src="galaxy.js"></script>
 <script src="galaxy3d.js"></script>
+
+<script>
+/* ===== Obsidian 风格交互：主题 / 命令面板 / ribbon ===== */
+(function(){
+  /* 主题：auto 跟随系统 / dark 深色 / light 暖色 */
+  var btn=document.getElementById('themeBtn'), lab=document.getElementById('themeLabel');
+  var modes=['auto','dark','light'], names=['跟随系统','深色','暖色'];
+  var cur=localStorage.getItem('zz-theme')||'auto';
+  function apply(m){
+    cur=m; try{localStorage.setItem('zz-theme',m);}catch(e){}
+    if(m==='auto'){ document.documentElement.removeAttribute('data-theme'); }
+    else{ document.documentElement.setAttribute('data-theme',m); }
+    if(lab) lab.textContent=names[modes.indexOf(m)]||'跟随系统';
+  }
+  apply(cur);
+  if(btn) btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  /* ribbon 与侧栏导航双向同步 */
+  var ribbon=document.getElementById('ribbon');
+  if(ribbon) ribbon.addEventListener('click',function(e){
+    var b=e.target.closest('.rb-btn'); if(!b) return;
+    var tab=document.querySelector('.tab[data-p="'+b.dataset.r+'"]');
+    if(tab) tab.click();
+  });
+  var nav=document.getElementById('nav');
+  if(nav) nav.addEventListener('click',function(e){
+    var t=e.target.closest('.tab'); if(!t) return;
+    document.querySelectorAll('.rb-btn').forEach(function(x){ x.classList.toggle('on', x.dataset.r===t.dataset.p); });
+  });
+  /* 移动端：点 logo 开侧栏 */
+  var logo=document.querySelector('.tb-logo'), sb=document.getElementById('sidebar');
+  if(logo && sb) logo.addEventListener('click',function(){ sb.classList.toggle('open'); });
+  document.addEventListener('click',function(e){
+    if(sb && sb.classList.contains('open') && !sb.contains(e.target) && !e.target.closest('.tb-logo')) sb.classList.remove('open');
+  });
+  /* 命令面板 Ctrl+P */
+  var modal=document.createElement('div'); modal.className='cmd-modal';
+  modal.innerHTML='<div class="cmd-box"><div class="cmd-input"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input placeholder="输入命令或页面名…" id="cmdInput"><div class="tb-btn" id="cmdClose">×</div></div><div class="cmd-list" id="cmdList"></div></div>';
+  document.body.appendChild(modal);
+  var inp=modal.querySelector('#cmdInput'), lst=modal.querySelector('#cmdList'), sel=-1;
+  var items=[];
+  document.querySelectorAll('.tab').forEach(function(t){
+    items.push({label:t.textContent.trim(), ic:'<svg viewBox="0 0 24 24"><path d="M4 5h16v4H4z"/><path d="M6 9v10h12V9"/><path d="M10 13h4"/></svg>', k:'页面', act:function(){ t.click(); }});
+  });
+  items.push({label:'切换主题（跟随系统/深色/暖色）', ic:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4"/></svg>', k:'Ctrl+P', act:function(){ if(btn) btn.click(); }});
+  items.push({label:'打开使用指南', ic:'<svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/></svg>', k:'快捷', act:function(){ var t=document.querySelector('.tab[data-p="guide"]'); if(t) t.click(); }});
+  items.push({label:'打开知识图谱', ic:'<svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/></svg>', k:'快捷', act:function(){ var t=document.querySelector('.tab[data-p="graph"]'); if(t) t.click(); }});
+  function render(q){
+    var f=items.filter(function(i){ return i.label.toLowerCase().indexOf(q.toLowerCase())>=0; });
+    if(f.length===0){ lst.innerHTML='<div class="cmd-empty">无匹配命令</div>'; sel=-1; return; }
+    lst.innerHTML=f.map(function(i,idx){ return '<div class="cmd-item" data-i="'+idx+'"><span class="ci-ic">'+i.ic+'</span>'+i.label+'<span class="ci-k">'+i.k+'</span></div>'; }).join('');
+    sel=0; lst.querySelector('.cmd-item') && lst.querySelector('.cmd-item').classList.add('sel');
+  }
+  function open(){
+    modal.classList.add('on'); inp.value=''; render(''); sel=0; inp.focus();
+  }
+  function close(){ modal.classList.remove('on'); }
+  inp.addEventListener('input',function(){ render(inp.value); });
+  inp.addEventListener('keydown',function(e){
+    var els=lst.querySelectorAll('.cmd-item');
+    if(e.key==='ArrowDown'){ e.preventDefault(); sel=(sel+1)%els.length; }
+    else if(e.key==='ArrowUp'){ e.preventDefault(); sel=(sel-1+els.length)%els.length; }
+    else if(e.key==='Enter'){ if(els[sel]){ var it=items.filter(function(i){ return i.label.toLowerCase().indexOf(inp.value.toLowerCase())>=0; })[sel]; if(it){ close(); it.act(); } } return; }
+    else if(e.key==='Escape'){ close(); return; }
+    els.forEach(function(x,i){ x.classList.toggle('sel', i===sel); });
+    if(els[sel]) els[sel].scrollIntoView({block:'nearest'});
+  });
+  lst.addEventListener('mousedown',function(e){
+    var it=e.target.closest('.cmd-item'); if(!it) return;
+    var idx=+it.dataset.i; var all=items.filter(function(i){ return i.label.toLowerCase().indexOf(inp.value.toLowerCase())>=0; });
+    close(); all[idx] && all[idx].act();
+  });
+  modal.addEventListener('mousedown',function(e){ if(e.target===modal) close(); });
+  document.getElementById('cmdClose').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){
+    if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='p'){ e.preventDefault(); modal.classList.contains('on')?close():open(); }
+  });
+  document.getElementById('cmdBtn').addEventListener('click',function(){ modal.classList.contains('on')?close():open(); });
+  /* 使用指南目录滚动 */
+  document.querySelectorAll('.guide-toc a[data-go]').forEach(function(a){
+    a.addEventListener('click',function(){ var el=document.getElementById(a.dataset.go); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); });
+  });
+})();
+</script>
+
 </body>
 </html>
