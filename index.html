@@ -379,7 +379,7 @@ header{display:none}
 </section>
 
 <section class="panel" id="p-prompts">
-  <h2>提示词库 <span class="en">PROMPT LIBRARY · 52 条 · 8 大类 · 先查库后开工</span></h2>
+  <h2>提示词库 <span class="en">PROMPT LIBRARY · 54 条 · 8 大类 · 先查库后开工</span></h2>
   <p class="sub">全部提示词资产：内容创作 / 图像生成 / 小说写作 / 开发建站 / 分析复盘 / 知识库运营 / 自动化运营 / 调度指令。开工前先查库，能复用不重写；优质提示词用完即沉淀（R30）。</p>
   <div class="search">
     <input id="prQ" placeholder="输入关键词检索，如：引流、小说、部署、复盘……">
@@ -426,7 +426,7 @@ header{display:none}
         <tr><td>资源（外来参考）</td><td>知识图谱 / 规则红线</td><td>全部节点与关联、底层契约与禁忌</td></tr>
         <tr><td>归档（暂时不用）</td><td>growth/reviews 复盘库</td><td>历史任务复盘，查库复用的依据</td></tr>
         <tr><td>灵感库（待处理）</td><td>需求库 REQ 清单</td><td>待办想法、能力增强申请</td></tr>
-        <tr><td>技能（处理模板）</td><td>提示词库 / skills</td><td>52 条提示词、可复用技能文档</td></tr>
+        <tr><td>技能（处理模板）</td><td>提示词库 / skills</td><td>54 条提示词、可复用技能文档</td></tr>
       </table>
 
       <h3 id="g-start">3 · 五步上手</h3>
@@ -2345,6 +2345,26 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
     "## 基本信息",
     "- **名称**：提示词_调度_新会话开场交接_通用_v2"
    ]
+  },
+  {
+   "id": "prompt-53",
+   "title": "提示词_开发建站_Obsidian风格知识库页面改造_v1",
+   "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_开发建站_Obsidian风格知识库页面改造_v1.md",
+   "summary": [
+    "# 提示词_开发建站_Obsidian风格知识库页面改造_v1",
+    "## 名称",
+    "## 用途"
+   ]
+  },
+  {
+   "id": "prompt-54",
+   "title": "提示词_阶段交接_抖音Obsidian四讲字幕级学习_v1",
+   "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_阶段交接_抖音Obsidian四讲字幕级学习_v1.md",
+   "summary": [
+    "# 提示词 · 阶段交接：抖音 Obsidian 四讲字幕级学习（v1.0）",
+    "> 归属：调度指令 / 新会话交接",
+    "> 版本：v1.0 · 2026-08-20"
+   ]
   }
  ],
  "reviews": [
@@ -3036,6 +3056,16 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
     "# 20260814 复盘：Hermes 值班视觉自检（贵州宣传片抽帧）",
     "## 做了什么",
     "- 习总要求执行建议②：验证 Hermes 常驻岗带图值班实战"
+   ]
+  },
+  {
+   "id": "rev-70",
+   "title": "20260820_抖音Obsidian四讲字幕级学习",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260820_抖音Obsidian四讲字幕级学习.md",
+   "summary": [
+    "# 复盘 20260820 抖音 Obsidian 四讲：字幕级学习 + 知识库 v1.4.2",
+    "## 做了什么",
+    "- 查库：读团队共享记忆、v1.4.1 复盘、任务书（D:\\抖音提取文案和执行\\obsidian_kb_series\\视频学习任务书_抖音Obsidian四讲_20260820.m"
    ]
   }
  ],
@@ -4450,7 +4480,7 @@ function renderOverview(){
     ['对接激活', 'activate', '三通道让任意 AI 接任总助'],
     ['知识图谱', 'graph', '115 节点 · 136 关联可视化'],
     ['能力全景', 'caps', '视频/网页/视觉/文案/自动化/协作/调度'],
-    ['记忆档案', 'archive', '记忆23+技能19+提示词28+复盘67'],
+    ['记忆档案', 'archive', '记忆24+技能20+提示词54+复盘70'],
   ].map(([l,p,d])=>`<div class="card" style="cursor:pointer" onclick="go('${p}')"><b style="color:var(--gold)">${l}</b><p class="sub" style="margin:6px 0 0">${d}</p></div>`).join('');
   $('#projMini').innerHTML = KB.projects.slice(0,6).map(p=>`
     <div class="card"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><b style="color:var(--text)">${p.name}</b><span class="badge ${p.status.includes('线')?'gold':''}">${p.status}</span></div>
