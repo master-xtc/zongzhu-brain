@@ -1,0 +1,110 @@
+{
+ "collapse-filter": false,
+ "search": "-path:\"00-总览/总助大脑_MOC.md\" -path:08-记忆 -path:09-复盘 -path:10-提示词库 -path:11-技能 -path:99-档案",
+ "showTags": false,
+ "showAttachments": false,
+ "hideUnresolved": false,
+ "showOrphans": true,
+ "collapse-color-groups": false,
+ "colorGroups": [
+  {
+   "query": "path:00-总览",
+   "color": {
+    "a": 1,
+    "rgb": [
+     201,
+     169,
+     106
+    ]
+   }
+  },
+  {
+   "query": "path:01-规则",
+   "color": {
+    "a": 1,
+    "rgb": [
+     212,
+     169,
+     78
+    ]
+   }
+  },
+  {
+   "query": "path:02-能力",
+   "color": {
+    "a": 1,
+    "rgb": [
+     111,
+     168,
+     220
+    ]
+   }
+  },
+  {
+   "query": "path:03-知识",
+   "color": {
+    "a": 1,
+    "rgb": [
+     127,
+     191,
+     127
+    ]
+   }
+  },
+  {
+   "query": "path:04-项目",
+   "color": {
+    "a": 1,
+    "rgb": [
+     199,
+     125,
+     186
+    ]
+   }
+  },
+  {
+   "query": "path:05-员工",
+   "color": {
+    "a": 1,
+    "rgb": [
+     229,
+     138,
+     92
+    ]
+   }
+  },
+  {
+   "query": "path:06-工具",
+   "color": {
+    "a": 1,
+    "rgb": [
+     138,
+     143,
+     152
+    ]
+   }
+  },
+  {
+   "query": "path:07-需求",
+   "color": {
+    "a": 1,
+    "rgb": [
+     111,
+     181,
+     181
+    ]
+   }
+  }
+ ],
+ "collapse-display": false,
+ "showArrow": false,
+ "textFadeMultiplier": 0,
+ "nodeSizeMultiplier": 1.1,
+ "lineSizeMultiplier": 1,
+ "collapse-forces": false,
+ "centerStrength": 0.45,
+ "repelStrength": 8,
+ "linkStrength": 0.6,
+ "linkDistance": 130,
+ "scale": 1
+}
