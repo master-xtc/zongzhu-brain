@@ -261,7 +261,7 @@ header{display:none}
       <div class="tab" data-p="prompts"><svg viewBox="0 0 24 24"><path d="M4 5h16v4H4z"/><path d="M6 9v10h12V9"/><path d="M10 13h4"/></svg>提示词库</div>
       <div class="tab" data-p="activate"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg>对接激活</div>
     </nav>
-    <div class="sb-foot">数据源：D:\AI员工体系 + Codex 记忆档案<br>版本 v1.4.1 · 2026-08-20</div>
+    <div class="sb-foot">数据源：D:\AI员工体系 + Codex 记忆档案<br>版本 v1.4.2 · 2026-08-20</div>
   </div>
 <main class="wrap" id="main">
 
@@ -509,7 +509,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
 
 </main>
 </div><!-- /app-shell -->
-<div class="foot">总助大脑 v1.4.1 · 2026-08-20 · 数据源：D:\AI员工体系 + Codex 记忆档案 · 深空黑 × 流光金 · 深色/暖色随系统切换</div>
+<div class="foot">总助大脑 v1.4.2 · 2026-08-20 · 数据源：D:\AI员工体系 + Codex 记忆档案 · 深空黑 × 流光金 · 深色/暖色随系统切换</div>
 <script id="kb" type="application/json">{
  "meta": {
   "name": "总助大脑",
@@ -4448,7 +4448,7 @@ function renderOverview(){
     <div class="num">${n}</div><div class="lbl">${l}</div><div style="font-size:12px;color:var(--text2)">${d}</div></div>`).join('');
   $('#quick').innerHTML = [
     ['对接激活', 'activate', '三通道让任意 AI 接任总助'],
-    ['知识图谱', 'graph', '108 节点 · 129 关联可视化'],
+    ['知识图谱', 'graph', '115 节点 · 136 关联可视化'],
     ['能力全景', 'caps', '视频/网页/视觉/文案/自动化/协作/调度'],
     ['记忆档案', 'archive', '记忆23+技能19+提示词28+复盘67'],
   ].map(([l,p,d])=>`<div class="card" style="cursor:pointer" onclick="go('${p}')"><b style="color:var(--gold)">${l}</b><p class="sub" style="margin:6px 0 0">${d}</p></div>`).join('');
