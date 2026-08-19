@@ -2,25 +2,12 @@
  "meta": {
   "name": "总助大脑",
   "subject": "总助 Codex · 全量记忆·想法·能力知识库",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "generated_at": "2026-08-20",
   "source_root": "D:\\小说文件\\总助大脑",
   "assets_count": 169,
   "sync": "由 build_kb.py 生成；修改请重跑构建器或直接编辑本文件",
-  "changelog": [
-   {
-    "time": "2026-08-20 03:35",
-    "type": "memory",
-    "title": "习总指令：总助大脑全量沉淀机制（2026-08-20）",
-    "id": "mem-01"
-   },
-   {
-    "time": "2026-08-20 03:35",
-    "type": "requirement",
-    "title": "其他 AI 写入总助大脑通道",
-    "id": "req-01"
-   }
-  ]
+  "url": "https://master-xtc.github.io/zongzhu-brain/"
  },
  "identity": {
   "title": "总助（Codex）",
@@ -794,16 +781,6 @@
    "acceptance": "迁移完成且全部路径引用更新",
    "created_at": "2026-08-20",
    "updated_at": ""
-  },
-  {
-   "id": "REQ-05",
-   "title": "其他 AI 写入总助大脑通道",
-   "detail": "习总要求所有有价值内容都能写入总助大脑；除总助外，其他 AI（豆包/Hermes/WorkBuddy/Claude 等）也应能通过 MCP 或 HTTP 直接登记需求、记忆与知识点，实现全员共写共享；方案：在 MCP 增加 sync_entry 写工具或开放 /api/sync POST 端点，待习总批准后实施。",
-   "cat": "能力增强",
-   "priority": "中",
-   "status": "待批准",
-   "acceptance": "任意员工 AI 通过 MCP/HTTP 一条命令登记条目并自动刷新可视化和档案",
-   "created_at": "2026-08-20 03:35"
   }
  ],
  "notes": [],
@@ -1035,14 +1012,6 @@
     "## Instructions",
     "* This extension contains ad-hoc notes to edit/add/delete memories. You must consider ever"
    ]
-  },
-  {
-   "id": "mem-01",
-   "title": "习总指令：总助大脑全量沉淀机制（2026-08-20）",
-   "detail": "习总要求：以后所有记忆和规则更新都要写入总助大脑沉淀；所有有价值的内容和条件都要支持写入；所有能力和需求也是；内容越详细越好。落地：R29 规则 + sync_kb.py 增量写入器，一条命令写入任意板块并自动刷新 knowledge.md 与 index.html。",
-   "path": "D:\\小说文件\\总助大脑\\data\\knowledge.md",
-   "src": "习总即时指令 2026-08-20",
-   "created_at": "2026-08-20 03:35"
   }
  ],
  "skills": [

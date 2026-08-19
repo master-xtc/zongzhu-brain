@@ -2,6 +2,7 @@
 
 > 本档案是「总助 Codex」的记忆、想法、能力、规则的**单文件全集**，供任意 AI 读取后无缝接任总助岗位。
 > 生成：2026-08-20 ｜ 数据源：D:\AI员工体系（总则/共享记忆/提示词库/growth）+ C:\Users\XTC\.codex\memories
+> 线上可视化：https://master-xtc.github.io/zongzhu-brain/（Galaxy 3D 知识图谱）
 > 结构化版：同目录 knowledge.json ｜ 可视化：..\index.html ｜ 对接：HTTP API + MCP（见使用说明）
 
 ## 〇、激活指令（读我即激活）
@@ -172,7 +173,6 @@
 | 可视化页审美验收 | 验收 | 中 | 待办 | 习总打开 index.html 亲自验收知识图谱与整体视觉（深空黑+流光金+SVG线性图标），确认后转正式版；总助已做结 |
 | HTTP/MCP 服务开机自启 | 能力增强 | 中 | 待批准 | api/server.js（8787）与 mcp/server.js 加入开机自启，方便任意 AI 随时对接总助大脑；需 |
 | 知识库迁移到团队资产位 | 规划 | 低 | 待决 | 将 D:\小说文件\总助大脑 迁至 D:\AI员工体系\总助大脑（团队公共资产位），迁移后同步更新使用说明与全部路径引用 |
-| 其他 AI 写入总助大脑通道 | 能力增强 | 中 | 待批准 | 习总要求所有有价值内容都能写入总助大脑；除总助外，其他 AI（豆包/Hermes/WorkBuddy/Claude 等） |
 
 ## 九、记忆档案索引（23 项，详见 C:\Users\XTC\.codex\memories\）
 
@@ -199,7 +199,6 @@
 - 视频分析流水线（已沉淀，可复用） ｜ C:\Users\XTC\.codex\memories\视频分析流水线与QwenMMPlugins方案_20260813.md
 - 一、设备硬件基线 ｜ C:\Users\XTC\.codex\memories\设备硬件与电源配置_联想Y9000P_20260813.md
 - Ad-hoc notes ｜ C:\Users\XTC\.codex\memories\extensions\ad_hoc\instructions.md
-- 习总指令：总助大脑全量沉淀机制（2026-08-20） ｜ D:\小说文件\总助大脑\data\knowledge.md
 
 ## 十、技能沉淀索引（19 项，详见 D:\AI员工体系\growth\skills\）
 
