@@ -226,7 +226,7 @@
     document.querySelectorAll(rootSel + ' [data-param]').forEach(el => {
       const k = el.dataset.param;
       const set = () => { const v = el.type === 'checkbox' ? el.checked : (paramMap[k] && paramMap[k].type === 'float' ? parseFloat(el.value) : el.value); PARAMS[k] = v; };
-      const reheated = () => { if (window.__GALAXY_REHEAT) window.__GALAXY_REHEAT(); else simulate(90); };
+      const reheated = () => { if (window.__GALAXY_REHEAT) window.__GALAXY_REHEAT(); else simulate(90); if (window.__GALAXY_2D_RELAYOUT) window.__GALAXY_2D_RELAYOUT(); };
       el.addEventListener('input', () => { set(); if (paramMap[k] && paramMap[k].reheat) reheated(); });
       el.addEventListener('change', () => { set(); if (paramMap[k] && paramMap[k].reheat) reheated(); if (k === 'quality') { initStars(); } });
     });
@@ -246,7 +246,7 @@
   document.addEventListener('click', e => {
     const b = e.target.closest('#presetBox .chip'); if (!b) return;
     Object.assign(PARAMS, JSON.parse(JSON.stringify(PRESETS[b.dataset.p])));
-    syncUI(); simulate(200); flash(b.dataset.p);
+    syncUI(); if (window.__GALAXY_REHEAT) window.__GALAXY_REHEAT(); else simulate(200); if (window.__GALAXY_2D_RELAYOUT) window.__GALAXY_2D_RELAYOUT(); flash(b.dataset.p);
   });
   function syncUI() {
     document.querySelectorAll('#galaxyWrap [data-param]').forEach(el => {
@@ -362,7 +362,7 @@
   renderSaved();
   document.addEventListener('click', e => {
     const load = e.target.closest('#savedPresets [data-s]'), del = e.target.closest('#savedPresets [data-d]');
-    if (load) { Object.assign(PARAMS, savedList()[load.dataset.s]); syncUI(); simulate(200); flash('自存预设：' + load.dataset.s); }
+    if (load) { Object.assign(PARAMS, savedList()[load.dataset.s]); syncUI(); if (window.__GALAXY_REHEAT) window.__GALAXY_REHEAT(); else simulate(200); if (window.__GALAXY_2D_RELAYOUT) window.__GALAXY_2D_RELAYOUT(); flash('自存预设：' + load.dataset.s); }
     if (del) { const s = savedList(); delete s[del.dataset.d]; localStorage.setItem(savedKey, JSON.stringify(s)); renderSaved(); }
   });
   $('#btnSave')?.addEventListener('click', () => {
@@ -376,5 +376,5 @@
 
   // 2D/3D 模式切换
   document.getElementById('mode3d')?.addEventListener('click', () => { document.getElementById('galaxyWrap').style.display = 'block'; document.getElementById('graphWrap').style.display = 'none'; setTimeout(resize, 30); });
-  document.getElementById('mode2d')?.addEventListener('click', () => { document.getElementById('galaxyWrap').style.display = 'none'; document.getElementById('graphWrap').style.display = 'block'; if (!window.gInit) window.gInit || initGraph(); });
+  document.getElementById('mode2d')?.addEventListener('click', () => { document.getElementById('galaxyWrap').style.display = 'none'; document.getElementById('graphWrap').style.display = 'block'; if (!window.gInit) initGraph(); else if (window.__GALAXY_2D_RELAYOUT) window.__GALAXY_2D_RELAYOUT(); });
 })();
