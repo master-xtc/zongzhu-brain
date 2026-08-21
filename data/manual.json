@@ -15,6 +15,24 @@
    "path": "D:\\AI员工体系\\growth\\reviews\\20260820_Obsidian知识库方法论学习.md",
    "src": "习总指令+抖音四讲 2026-08-20",
    "created_at": "2026-08-20 04:50"
+  },
+  {
+   "id": "mem-03",
+   "title": "豆包ARK_KEY与Netlify配置就绪状态",
+   "detail": "2026-08-21已就绪：①Hermes.env存在ARK_API_KEY(46字符)实测调用ark.cn-beijing.volces.com返回HTTP200有效，复用为网站视觉Key；②已用netlify env:set配到fitness-command站点ARK_API_KEY与GUEST_CREATE_KEY(强随机32hex)，重新部署deploy 6a881aab生效，旧默认密钥fc-guest-2026实测返回403(隐患已修复)；③Netlify CLI 25.6.0已登录(yeahxtc20you@gmail.com)项目已链接，可用netlify env:set/env:list维护环境变量。Key值不写文档。",
+   "path": "D:\\健身教练\\对接文件_健身网站AI自动录入升级_v1_20260821.md",
+   "src": "总助 20260821 实测",
+   "created_at": "2026-08-21 17:36"
+  }
+ ],
+ "knowledge": [
+  {
+   "id": "kno-01",
+   "title": "健身网站AI自动录入升级方案",
+   "detail": "健身指挥台(fitness-command.netlify.app)AI化四块方案：①拍照算热量=新增Netlify Function food-analyze，前端canvas压缩图片后调ark视觉API，结果写localStorage复用p0.js calorieItems；②拍照自动体态自评=posture-analyze函数返回score+建议；③拍照展板卡通化=纯前端SVG贴纸+圆角卡片，保留v6炸裂特效；④每晚23:00自动打分=Netlify Scheduled Function(daily-score)，前端仅同步文本快照到Blobs daily-snapshots(不含照片)，评分写回daily-scores次日展示。完整交接文档:D:\\健身教练\\对接文件_健身网站AI自动录入升级_v1_20260821.md。红线:照片本机处理不留存服务器。",
+   "domain": "开发建站",
+   "src": "总助 20260821 对接文件",
+   "created_at": "2026-08-21 17:37"
   }
  ]
 }

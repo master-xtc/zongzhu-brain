@@ -517,7 +517,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
   "version": "1.4.1",
   "generated_at": "2026-08-20",
   "source_root": "D:\\小说文件\\总助大脑",
-  "assets_count": 205,
+  "assets_count": 520,
   "sync": "由 build_kb.py 生成；修改请重跑构建器或直接编辑本文件",
   "url": "https://master-xtc.github.io/zongzhu-brain/",
   "changelog": [
@@ -1079,6 +1079,14 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    "domain": "方法论",
    "src": "抖音 Blink的AI笔记 2026-03-14",
    "created_at": "2026-08-20 04:50"
+  },
+  {
+   "id": "kno-05",
+   "title": "健身网站AI自动录入升级方案",
+   "detail": "健身指挥台(fitness-command.netlify.app)AI化四块方案：①拍照算热量=新增Netlify Function food-analyze，前端canvas压缩图片后调ark视觉API，结果写localStorage复用p0.js calorieItems；②拍照自动体态自评=posture-analyze函数返回score+建议；③拍照展板卡通化=纯前端SVG贴纸+圆角卡片，保留v6炸裂特效；④每晚23:00自动打分=Netlify Scheduled Function(daily-score)，前端仅同步文本快照到Blobs daily-snapshots(不含照片)，评分写回daily-scores次日展示。完整交接文档:D:\\健身教练\\对接文件_健身网站AI自动录入升级_v1_20260821.md。红线:照片本机处理不留存服务器。",
+   "domain": "开发建站",
+   "src": "总助 20260821 对接文件",
+   "created_at": "2026-08-21 17:37"
   }
  ],
  "projects": [
@@ -1621,6 +1629,14 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    "path": "D:\\AI员工体系\\growth\\reviews\\20260820_Obsidian知识库方法论学习.md",
    "src": "习总指令+抖音四讲 2026-08-20",
    "created_at": "2026-08-20 04:50"
+  },
+  {
+   "id": "mem-24",
+   "title": "豆包ARK_KEY与Netlify配置就绪状态",
+   "detail": "2026-08-21已就绪：①Hermes.env存在ARK_API_KEY(46字符)实测调用ark.cn-beijing.volces.com返回HTTP200有效，复用为网站视觉Key；②已用netlify env:set配到fitness-command站点ARK_API_KEY与GUEST_CREATE_KEY(强随机32hex)，重新部署deploy 6a881aab生效，旧默认密钥fc-guest-2026实测返回403(隐患已修复)；③Netlify CLI 25.6.0已登录(yeahxtc20you@gmail.com)项目已链接，可用netlify env:set/env:list维护环境变量。Key值不写文档。",
+   "path": "D:\\健身教练\\对接文件_健身网站AI自动录入升级_v1_20260821.md",
+   "src": "总助 20260821 实测",
+   "created_at": "2026-08-21 17:36"
   }
  ],
  "skills": [
@@ -1822,6 +1838,26 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
     "# 技能_Claude与DSH启动排障",
     "## 技能名",
     "## 触发场景"
+   ]
+  },
+  {
+   "id": "skill-21",
+   "title": "技能：可视化双引擎联动与隐藏容器守卫",
+   "path": "D:\\AI员工体系\\growth\\skills\\可视化_双引擎联动与隐藏容器守卫.md",
+   "summary": [
+    "# 技能：可视化双引擎联动与隐藏容器守卫",
+    "## 技能名",
+    "## 触发场景"
+   ]
+  },
+  {
+   "id": "skill-22",
+   "title": "技能：证券教学法",
+   "path": "D:\\AI员工体系\\growth\\skills\\证券_证券教学法.md",
+   "summary": [
+    "# 技能：证券教学法",
+    "- 技能名：证券教学法",
+    "- 触发场景：习总要求系统学习金融/证券，或需要把零散股票知识升级为体系"
    ]
   }
  ],
@@ -3066,6 +3102,106 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
     "# 复盘 20260820 抖音 Obsidian 四讲：字幕级学习 + 知识库 v1.4.2",
     "## 做了什么",
     "- 查库：读团队共享记忆、v1.4.1 复盘、任务书（D:\\抖音提取文案和执行\\obsidian_kb_series\\视频学习任务书_抖音Obsidian四讲_20260820.m"
+   ]
+  },
+  {
+   "id": "rev-71",
+   "title": "学习复盘：Obsidian 知识库方法论四讲（抖音 2026-08-20）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260820_Obsidian知识库方法论学习.md",
+   "summary": [
+    "# 学习复盘：Obsidian 知识库方法论四讲（抖音 2026-08-20）",
+    "> 来源：4 条抖音视频（Xuan酱 / 摄影师云飞 / 姜胡说 / Blink 的 AI 笔记）",
+    "> 用途：以总助大脑为载体落地「运用指南」+ 自生长知识库工作流"
+   ]
+  },
+  {
+   "id": "rev-72",
+   "title": "复盘：帝王术识人术思维体系搭建（2026-08-20）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260820_帝王术识人术思维体系搭建.md",
+   "summary": [
+    "# 复盘：帝王术识人术思维体系搭建（2026-08-20）",
+    "## 做了什么",
+    "- 查库：团队共享记忆、提示词库、growth 沉淀、记忆档案、情商培养库，确认无同类沉淀（首次开展）。"
+   ]
+  },
+  {
+   "id": "rev-73",
+   "title": "复盘：总助大脑 v1.3.1 图谱升级（2D 铺展 + 3D 插件级 + 本地化）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260820_总助大脑v1.3图谱升级.md",
+   "summary": [
+    "# 复盘：总助大脑 v1.3.1 图谱升级（2D 铺展 + 3D 插件级 + 本地化）",
+    "> 日期：2026-08-20 ｜ 任务名：总助大脑 v1.3 图谱升级 ｜ 执行：总助 Codex",
+    "## 做了什么"
+   ]
+  },
+  {
+   "id": "rev-74",
+   "title": "复盘 20260820 总助大脑v1.4.1：Obsidian直用 + 提示词库入口 + 密钥事故处理",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260820_总助大脑v1.4.1_Obsidian直用与提示词库入口.md",
+   "summary": [
+    "# 复盘 20260820 总助大脑v1.4.1：Obsidian直用 + 提示词库入口 + 密钥事故处理",
+    "## 做了什么",
+    "- 网页新增「提示词库」独立面板（52 条 / 8 大类 + 总索引，分类筛选 + 全局全文检索），侧栏导航与 ribbon 双入口；"
+   ]
+  },
+  {
+   "id": "rev-75",
+   "title": "复盘：总助大脑 v1.4（Obsidian 风格改造 + 使用指南 + 主题系统 + 抖音方法论沉淀）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260820_总助大脑v1.4Obsidian化.md",
+   "summary": [
+    "# 复盘：总助大脑 v1.4（Obsidian 风格改造 + 使用指南 + 主题系统 + 抖音方法论沉淀）",
+    "> 日期：2026-08-20 ｜ 任务名：总助大脑 v1.4 升级 ｜ 执行：总助 Codex",
+    "## 做了什么"
+   ]
+  },
+  {
+   "id": "rev-76",
+   "title": "复盘 20260820 抖音 Obsidian 四讲：字幕级学习 + 知识库 v1.4.2",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260820_抖音Obsidian四讲字幕级学习.md",
+   "summary": [
+    "# 复盘 20260820 抖音 Obsidian 四讲：字幕级学习 + 知识库 v1.4.2",
+    "## 做了什么",
+    "- 查库：读团队共享记忆、v1.4.1 复盘、任务书（D:\\抖音提取文案和执行\\obsidian_kb_series\\视频学习任务书_抖音Obsidian四讲_20260820.m"
+   ]
+  },
+  {
+   "id": "rev-77",
+   "title": "复盘：证券学习体系搭建",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260820_证券学习体系搭建.md",
+   "summary": [
+    "# 复盘：证券学习体系搭建",
+    "- 日期：2026-08-20",
+    "- 任务：把用户从“零散看股票视频”升级为“系统学证券”，偏向证券全品类。"
+   ]
+  },
+  {
+   "id": "rev-78",
+   "title": "20260821_DSH与Claude重启修复",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260821_DSH与Claude重启修复.md",
+   "summary": [
+    "# 20260821_DSH与Claude重启修复",
+    "## 做了什么",
+    "- 排查 DSH（DeepSeek Harness）与 Claude 执行岗\"关闭后彻底打不开\"问题。"
+   ]
+  },
+  {
+   "id": "rev-79",
+   "title": "20260821 健身网站AI自动录入升级对接文件",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260821_健身网站AI自动录入升级对接文件.md",
+   "summary": [
+    "# 20260821 健身网站AI自动录入升级对接文件",
+    "## 做了什么",
+    "- 查库：团队共享记忆 + growth reviews/skills + 提示词库建站类 + 健身网站功能清单"
+   ]
+  },
+  {
+   "id": "rev-80",
+   "title": "20260821 显卡驱动与VSCode维护复盘",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260821_显卡驱动与VSCode维护复盘.md",
+   "summary": [
+    "# 20260821 显卡驱动与VSCode维护复盘",
+    "## 做了什么",
+    "## 结果"
    ]
   }
  ],

@@ -198,6 +198,7 @@
 16. 纯文本寿命：笔记就是电脑上的Markdown文件，纯文本从1970年到2170年的电脑都能读取；即使Obsidian明天消失了，笔记依然在，可以用任何Markdown工具打开→数据永远是自己的资产、拥有数据主权。
 17. 结语：AI工具在快速质变，你也应该建立自己的知识库、不断积累量变；量变加质变，你会成为更快用好AI的那群人。
 18. 局限性坦诚：Obsidian不是完美的——界面交互偏技术、数据同步等操作需要单独配置、不是开箱即用；它只是基础工具，做好知识管理还需要完善的方法论+与AI深度结合的方法论；作者后续会持续分享从知识管理方法论到AI深度集成的内容。
+- **健身网站AI自动录入升级方案**（开发建站）：健身指挥台(fitness-command.netlify.app)AI化四块方案：①拍照算热量=新增Netlify Function food-analyze，前端canvas压缩图片后调ark视觉API，结果写localStorage复用p0.js calorieItems；②拍照自动体态自评=posture-analyze函数返回score+建议；③拍照展板卡通化=纯前端SVG贴纸+圆角卡片，保留v6炸裂特效；④每晚23:00自动打分=Netlify Scheduled Function(daily-score)，前端仅同步文本快照到Blobs daily-snapshots(不含照片)，评分写回daily-scores次日展示。完整交接文档:D:\健身教练\对接文件_健身网站AI自动录入升级_v1_20260821.md。红线:照片本机处理不留存服务器。
 
 ## 五、项目主线
 
@@ -276,7 +277,7 @@
 | 知识库迁移到团队资产位 | 规划 | 低 | 待决 | 将 D:\小说文件\总助大脑 迁至 D:\AI员工体系\总助大脑（团队公共资产位），迁移后同步更新使用说明与全部路径引用 |
 | 其他 AI 写入总助大脑通道 | 能力增强 | 中 | 待批准 | 习总要求所有有价值内容都能写入总助大脑；除总助外，其他 AI（豆包/Hermes/WorkBuddy/Claude 等） |
 
-## 九、记忆档案索引（24 项，详见 C:\Users\XTC\.codex\memories\）
+## 九、记忆档案索引（25 项，详见 C:\Users\XTC\.codex\memories\）
 
 - 记忆条目：AI员工体系 v3.2 · Hermes 与豆包接入 ｜ C:\Users\XTC\.codex\memories\ai_team_v3_2_hermes_doubao.md
 - Codex 全局规则（最新版 v2.0） ｜ C:\Users\XTC\.codex\memories\codex_instructions_v2.md
@@ -302,8 +303,9 @@
 - 一、设备硬件基线 ｜ C:\Users\XTC\.codex\memories\设备硬件与电源配置_联想Y9000P_20260813.md
 - Ad-hoc notes ｜ C:\Users\XTC\.codex\memories\extensions\ad_hoc\instructions.md
 - 抖音Obsidian方法论四讲学习（2026-08-20） ｜ D:\AI员工体系\growth\reviews\20260820_Obsidian知识库方法论学习.md
+- 豆包ARK_KEY与Netlify配置就绪状态 ｜ D:\健身教练\对接文件_健身网站AI自动录入升级_v1_20260821.md
 
-## 十、技能沉淀索引（20 项，详见 D:\AI员工体系\growth\skills\）
+## 十、技能沉淀索引（22 项，详见 D:\AI员工体系\growth\skills\）
 
 - 技能沉淀 · BIM_数维快捷键与操作要点 ｜ D:\AI员工体系\growth\skills\BIM_数维快捷键与操作要点.md
 - 技能_ComfyUI_H3拼贴动画_8GB显存快速链路 ｜ D:\AI员工体系\growth\skills\ComfyUI_H3拼贴动画_8GB显存快速链路.md
@@ -325,6 +327,8 @@
 - 视频生产_ffmpeg中文图文轮播渲染_v1 ｜ D:\AI员工体系\growth\skills\视频生产_ffmpeg中文图文轮播渲染_v1.md
 - 技能：视频生产 video-shotcraft 宣传片 ｜ D:\AI员工体系\growth\skills\视频生产_video-shotcraft宣传片技能.md
 - 技能_Claude与DSH启动排障 ｜ D:\AI员工体系\growth\skills\运维_ClaudeCode与DSH启动排障.md
+- 技能：可视化双引擎联动与隐藏容器守卫 ｜ D:\AI员工体系\growth\skills\可视化_双引擎联动与隐藏容器守卫.md
+- 技能：证券教学法 ｜ D:\AI员工体系\growth\skills\证券_证券教学法.md
 
 ## 十一、提示词库索引（54 条，详见 D:\AI员工体系\提示词库\）
 
@@ -383,7 +387,7 @@
 - 提示词_开发建站_Obsidian风格知识库页面改造_v1 ｜ D:\AI员工体系\提示词库\开发建站\提示词_开发建站_Obsidian风格知识库页面改造_v1.md
 - 提示词_阶段交接_抖音Obsidian四讲字幕级学习_v1 ｜ D:\AI员工体系\提示词库\调度指令\提示词_阶段交接_抖音Obsidian四讲字幕级学习_v1.md
 
-## 十二、任务复盘索引（70 项，详见 D:\AI员工体系\growth\reviews\）
+## 十二、任务复盘索引（80 项，详见 D:\AI员工体系\growth\reviews\）
 
 - 做了什么
 - 做了什么
@@ -455,6 +459,16 @@
 - 做了什么
 - 20260814 复盘：Hermes 值班视觉自检（贵州宣传片抽帧）
 - 20260820_抖音Obsidian四讲字幕级学习
+- 学习复盘：Obsidian 知识库方法论四讲（抖音 2026-08-20）
+- 复盘：帝王术识人术思维体系搭建（2026-08-20）
+- 复盘：总助大脑 v1.3.1 图谱升级（2D 铺展 + 3D 插件级 + 本地化）
+- 复盘 20260820 总助大脑v1.4.1：Obsidian直用 + 提示词库入口 + 密钥事故处理
+- 复盘：总助大脑 v1.4（Obsidian 风格改造 + 使用指南 + 主题系统 + 抖音方法论沉淀）
+- 复盘 20260820 抖音 Obsidian 四讲：字幕级学习 + 知识库 v1.4.2
+- 复盘：证券学习体系搭建
+- 20260821_DSH与Claude重启修复
+- 20260821 健身网站AI自动录入升级对接文件
+- 20260821 显卡驱动与VSCode维护复盘
 
 ## 十三、查库清单（开工前必走）
 
