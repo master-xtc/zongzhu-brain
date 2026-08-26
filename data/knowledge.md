@@ -207,7 +207,7 @@
 - 抖音Obsidian方法论四讲学习（2026-08-20） ｜ D:\AI员工体系\growth\reviews\20260820_Obsidian知识库方法论学习.md
 - 豆包ARK_KEY与Netlify配置就绪状态 ｜ D:\健身教练\对接文件_健身网站AI自动录入升级_v1_20260821.md
 
-## 十、技能沉淀索引（26 项，详见 D:\AI员工体系\growth\skills\）
+## 十、技能沉淀索引（28 项，详见 D:\AI员工体系\growth\skills\）
 
 - 技能沉淀 · BIM_数维快捷键与操作要点 ｜ D:\AI员工体系\growth\skills\BIM_数维快捷键与操作要点.md
 - 技能_ComfyUI_H3拼贴动画_8GB显存快速链路 ｜ D:\AI员工体系\growth\skills\ComfyUI_H3拼贴动画_8GB显存快速链路.md
@@ -219,6 +219,7 @@
 - 技能名 ｜ D:\AI员工体系\growth\skills\小说写作_去AI味蒸馏打法.md
 - 技能：APP开发_人机协作闭环（TRAE SOLO 模式方法论） ｜ D:\AI员工体系\growth\skills\开发建站_APP开发人机协作闭环.md
 - 技能名 ｜ D:\AI员工体系\growth\skills\开发建站_PixsoMCP设计转代码链路.md
+- 技能：开发建站_VibeCoding三端打包发布_v1 ｜ D:\AI员工体系\growth\skills\开发建站_VibeCoding三端打包发布_v1.md
 - 技能_开发建站_方舟视觉模型选型实测法 ｜ D:\AI员工体系\growth\skills\开发建站_方舟视觉模型选型实测法.md
 - 技能：本地预览 SW 缓存根治 ｜ D:\AI员工体系\growth\skills\开发建站_本地预览SW缓存根治.md
 - 开发建站_炸裂特效引擎fx.js ｜ D:\AI员工体系\growth\skills\开发建站_炸裂特效引擎fx.js.md
@@ -235,8 +236,9 @@
 - 技能：证券教学法 ｜ D:\AI员工体系\growth\skills\证券_证券教学法.md
 - 技能_Claude与DSH启动排障 ｜ D:\AI员工体系\growth\skills\运维_ClaudeCode与DSH启动排障.md
 - 容器变形动效 · 大白话提示词法（iOS 7 式） ｜ D:\AI员工体系\growth\skills\前端_容器变形动效大白话提示词_v1.md
+- VibeCoding三端打包发布（安卓/iOS/小程序） ｜ D:\AI员工体系\growth\skills\开发建站_VibeCoding三端打包发布_v1.md
 
-## 十一、提示词库索引（58 条，详见 D:\AI员工体系\提示词库\）
+## 十一、提示词库索引（60 条，详见 D:\AI员工体系\提示词库\）
 
 - 提示词库_总索引_全能体系_20260820 ｜ D:\AI员工体系\提示词库\提示词库_总索引_全能体系_20260820.md
 - 提示词库_总索引与使用规范_20260811 ｜ D:\AI员工体系\提示词库\提示词库_总索引与使用规范_20260811.md
@@ -268,6 +270,7 @@
 - 提示词_小说_章节质检_对照设定卡_v2 ｜ D:\AI员工体系\提示词库\小说写作\提示词_小说_章节质检_对照设定卡_v2.md
 - 提示词_小说_防烂尾大纲生成_v2 ｜ D:\AI员工体系\提示词库\小说写作\提示词_小说_防烂尾大纲生成_v2.md
 - 提示词_APP开发需求说明书_SOLO模式_v1 ｜ D:\AI员工体系\提示词库\开发建站\提示词_APP开发需求说明书_SOLO模式_v1.md
+- 提示词_VibeCoding三端打包发布_v1 ｜ D:\AI员工体系\提示词库\开发建站\提示词_VibeCoding三端打包发布_v1.md
 - 提示词_一键部署_NetlifyVercel_v1 ｜ D:\AI员工体系\提示词库\开发建站\提示词_一键部署_NetlifyVercel_v1.md
 - 提示词_容器变形动效_大白话描述_v1 ｜ D:\AI员工体系\提示词库\开发建站\提示词_容器变形动效_大白话描述_v1.md
 - 提示词_小程序零成本上架_豆包WorkBuddy链路_v1 ｜ D:\AI员工体系\提示词库\开发建站\提示词_小程序零成本上架_豆包WorkBuddy链路_v1.md
@@ -296,6 +299,7 @@
 - 提示词_调度_新会话开场交接_通用_v2 ｜ D:\AI员工体系\提示词库\调度指令\提示词_调度_新会话开场交接_通用_v2.md
 - 提示词_阶段交接_抖音Obsidian四讲字幕级学习_v1 ｜ D:\AI员工体系\提示词库\调度指令\提示词_阶段交接_抖音Obsidian四讲字幕级学习_v1.md
 - 容器变形动效 · 大白话描述提示词（iOS 7 式） ｜ D:\AI员工体系\提示词库\开发建站\提示词_容器变形动效_大白话描述_v1.md
+- VibeCoding三端打包发布·全流程指挥提示词 ｜ D:\AI员工体系\提示词库\开发建站\提示词_VibeCoding三端打包发布_v1.md
 
 ## 十二、任务复盘索引（91 项，详见 D:\AI员工体系\growth\reviews\）
 
