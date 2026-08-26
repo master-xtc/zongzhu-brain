@@ -220,6 +220,84 @@ header{display:none}
   .guide-toc{position:static;width:100%}
 }
 
+/* ===== 技能台 v1.5 ===== */
+.skill-layout{display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start}
+@media(max-width:900px){.skill-layout{grid-template-columns:1fr}}
+.sk-list{max-height:560px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;padding-right:4px}
+.sk-item{padding:10px 12px;background:var(--card);border:1px solid var(--line);border-radius:8px;cursor:pointer;font-size:13px;line-height:1.5;transition:.15s}
+.sk-item:hover{border-color:var(--gold-dim)}
+.sk-item.on{border-color:var(--gold);background:var(--accent-soft);color:var(--gold)}
+.sk-item small{display:block;color:var(--text2);font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sk-det p{color:var(--text2);font-size:13px;line-height:1.8;margin:4px 0}
+.sk-det .kv{display:grid;grid-template-columns:90px 1fr;gap:5px 10px;font-size:12.5px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.sk-det .kv b{color:var(--gold);font-weight:600}
+#genReq,#genOut{width:100%;min-height:92px;background:var(--bg3);border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;font-size:13px;font-family:var(--font-mono);resize:vertical;outline:none;line-height:1.7}
+#genReq:focus,#genOut:focus{border-color:var(--gold-dim)}
+#genOut{min-height:160px;margin-top:10px}
+.morph-stage{height:200px;display:flex;align-items:center;justify-content:center;background:var(--bg3);border:1px solid var(--line);border-radius:10px;margin-bottom:12px;position:relative;overflow:hidden}
+.morph-tag{position:absolute;top:8px;left:8px;font-size:11px;color:var(--gold);background:var(--accent-soft);padding:2px 8px;border-radius:20px;border:1px solid var(--gold-dim);z-index:2}
+.morph-ctrl{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.morph-ctrl .btn{padding:6px 12px;font-size:12.5px}
+.morph-desc{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:10px}
+.morph-tpl{background:var(--bg3);border:1px solid var(--line);border-radius:8px;padding:10px;font-size:12px;line-height:1.7;color:var(--text2);font-family:var(--font-mono);max-height:130px;overflow-y:auto;white-space:pre-wrap}
+.m-stage{cursor:pointer;position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+/* m1 圆点变胶囊 */
+.m1-box{width:56px;height:56px;border-radius:50%;background:linear-gradient(180deg,#d9b979,#8a6d3b);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:width .38s cubic-bezier(.4,0,.2,1),border-radius .38s cubic-bezier(.4,0,.2,1),box-shadow .38s;box-shadow:0 4px 18px rgba(201,169,106,.35)}
+.m1-ic{width:24px;height:24px;stroke:#0A0A0F;fill:none;stroke-width:2.2;flex:0 0 auto}
+.m1-txt{color:#0A0A0F;font-weight:700;font-size:14px;white-space:nowrap;opacity:0;transform:translateX(-8px);padding-left:8px;transition:opacity .22s .16s,transform .22s .16s}
+#m-m1.go .m1-box{width:158px;border-radius:28px}
+#m-m1.go .m1-txt{opacity:1;transform:translateX(0)}
+/* m2 胶囊变卡片 */
+.m2-box{width:168px;height:56px;border-radius:28px;background:linear-gradient(180deg,#d9b979,#8a6d3b);display:flex;flex-direction:column;overflow:hidden;transition:width .32s cubic-bezier(.4,0,.2,1),height .38s .08s cubic-bezier(.4,0,.2,1),border-radius .38s;box-shadow:0 4px 18px rgba(201,169,106,.35)}
+.m2-top{display:flex;align-items:center;gap:8px;padding:15px 18px;flex:0 0 auto;color:#0A0A0F}
+.m2-top svg{width:18px;height:18px;stroke:#0A0A0F;fill:none;stroke-width:2.2}
+.m2-top b{font-size:14px}
+.m2-body{opacity:0;transform:translateY(6px);transition:opacity .25s .3s,transform .25s .3s;padding:0 18px 14px;color:#0A0A0F;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.m2-body p{font-size:12px;line-height:1.5}
+.m2-body button{background:#0A0A0F;color:#d9b979;border:none;border-radius:14px;padding:5px 14px;font-size:12px;cursor:pointer}
+#m-m2.go .m2-box{width:252px;height:156px;border-radius:16px}
+#m-m2.go .m2-body{opacity:1;transform:translateY(0)}
+/* m3 紧凑态展开 */
+.m3-box{width:208px;height:84px;border-radius:14px;background:var(--card2);border:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:11px;overflow:hidden;transition:width .36s cubic-bezier(.4,0,.2,1),height .36s cubic-bezier(.4,0,.2,1),padding .36s}
+.m3-cover{width:62px;height:62px;border-radius:10px;background:linear-gradient(135deg,#6FA8DC,#C77DBA);flex:0 0 auto;display:flex;align-items:center;justify-content:center;color:#0A0A0F;font-weight:800;font-size:18px;transition:width .36s,height .36s,border-radius .36s}
+.m3-mid{display:flex;flex-direction:column;gap:7px;min-width:0;flex:1}
+.m3-title{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.m3-prog{height:4px;background:var(--line);border-radius:2px;overflow:hidden;width:84px;transition:width .36s}
+.m3-prog i{display:block;height:100%;width:64%;background:var(--gold);border-radius:2px}
+.m3-acts{display:flex;gap:8px;opacity:.35;transition:opacity .3s .1s}
+.m3-acts button{width:26px;height:26px;border-radius:50%;border:1px solid var(--gold-dim);background:transparent;color:var(--gold);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.m3-acts svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2}
+#m-m3.go .m3-box{width:318px;height:150px;padding:15px}
+#m-m3.go .m3-cover{width:112px;height:112px;border-radius:14px}
+#m-m3.go .m3-prog{width:100%}
+#m-m3.go .m3-acts{opacity:1}
+/* m4 圆角过渡 */
+.m4-box{width:130px;height:130px;overflow:hidden;background:linear-gradient(160deg,#d9b979,#8a6d3b);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#0A0A0F;font-size:13px;font-weight:700;box-shadow:0 6px 24px rgba(201,169,106,.3);cursor:pointer;position:relative;transition:border-radius .55s cubic-bezier(.4,0,.2,1)}
+.m4-lbl{position:absolute;transition:opacity .2s}
+.m4-b{opacity:0}
+#m-m4.go .m4-box{border-radius:16px}
+#m-m4.go .m4-a{opacity:0}
+#m-m4.go .m4-b{opacity:1}
+/* m5 尺寸变形 */
+.m5-anchor{position:absolute;left:24px;top:29px;width:10px;height:10px;border:1px solid var(--gold);border-radius:50%;background:var(--bg);z-index:2}
+.m5-box{position:absolute;left:29px;top:34px;width:120px;height:120px;border-radius:18px;background:var(--card2);border:1px solid var(--gold-dim);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;overflow:hidden;transition:width .45s cubic-bezier(.4,0,.2,1),height .45s cubic-bezier(.4,0,.2,1),border-radius .45s}
+.m5-val{font-size:34px;color:var(--gold);font-weight:800;transition:font-size .45s}
+.m5-unit{font-size:12px;color:var(--text2)}
+#m-m5.go .m5-box{width:230px;height:84px;border-radius:14px}
+#m-m5.go .m5-val{font-size:38px}
+/* m6 内容重排 */
+.m6-box{width:172px;background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px;transition:width .5s cubic-bezier(.4,0,.2,1)}
+.m6-txt{font-size:12.5px;color:var(--text2);line-height:1.7}
+.m6-acts{display:flex;gap:8px;flex-wrap:wrap}
+.m6-b1,.m6-b2{padding:5px 12px;border-radius:20px;border:1px solid var(--gold-dim);background:transparent;color:var(--gold);font-size:12px;cursor:pointer}
+.m6-b2{background:linear-gradient(180deg,var(--gold),#a98a4e);color:#0A0A0F;border:none}
+#m-m6.go .m6-box{width:360px}
+/* m7 反向收回 */
+.m7-box{width:172px;height:56px;border-radius:28px;background:linear-gradient(180deg,#d9b979,#8a6d3b);display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;overflow:hidden;transition:width .42s cubic-bezier(.4,0,.2,1) .18s,border-radius .42s cubic-bezier(.4,0,.2,1) .18s}
+.m7-ic{width:20px;height:20px;stroke:#0A0A0F;fill:none;stroke-width:2.2;flex:0 0 auto}
+.m7-txt{color:#0A0A0F;font-weight:700;font-size:14px;white-space:nowrap;transition:opacity .16s,transform .16s}
+#m-m7.go .m7-box{width:56px;border-radius:50%}
+#m-m7.go .m7-txt{opacity:0;transform:translateX(10px)}
 </style>
 </head>
 <body>
@@ -237,6 +315,7 @@ header{display:none}
 <div class="app-shell">
   <div class="ribbon" id="ribbon">
     <div class="rb-btn on" data-r="overview" title="总览"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+    <div class="rb-btn" data-r="skills" title="技能台"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></div>
     <div class="rb-btn" data-r="guide" title="使用指南"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/></svg></div>
     <div class="rb-btn" data-r="graph" title="知识图谱"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="M8 7.5l7.5-.5M7 8.5l1.5 8M14 9l-3.5 7.5"/></svg></div>
     <div class="rb-btn" data-r="caps" title="能力全景"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
@@ -251,6 +330,7 @@ header{display:none}
     <div class="sb-group">导航</div>
     <nav id="nav">
       <div class="tab on" data-p="overview"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>总览</div>
+      <div class="tab" data-p="skills"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>技能台</div>
       <div class="tab" data-p="guide"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/></svg>使用指南</div>
       <div class="tab" data-p="graph"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="M8 7.5l7.5-.5M7 8.5l1.5 8M14 9l-3.5 7.5"/></svg>知识图谱</div>
       <div class="tab" data-p="caps"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z"/><path d="M9 12l2 2 4-4"/></svg>能力全景</div>
@@ -261,9 +341,37 @@ header{display:none}
       <div class="tab" data-p="prompts"><svg viewBox="0 0 24 24"><path d="M4 5h16v4H4z"/><path d="M6 9v10h12V9"/><path d="M10 13h4"/></svg>提示词库</div>
       <div class="tab" data-p="activate"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg>对接激活</div>
     </nav>
-    <div class="sb-foot">数据源：D:\AI员工体系 + Codex 记忆档案<br>版本 v1.4.2 · 2026-08-20</div>
+    <div class="sb-foot">数据源：D:\AI员工体系 + Codex 记忆档案<br>版本 v1.5.0 · 2026-08-26</div>
   </div>
 <main class="wrap" id="main">
+<section class="panel" id="p-skills">
+  <h2>技能台 <span class="en">SKILL DECK · 选技能 → 填需求 → 一键生成提示词</span></h2>
+  <p class="sub">全部可复用技能在这里可视化调用：左侧点选技能查看详情，填入需求后一键生成标准提示词（自动套用技能要点与验收标准），复制即可投喂任意 AI。下方「容器变形动效」为 7 种 iOS 容器变形动效实时演示库，源自抖音第 10 集《用大白话向AI描述7种ios容器变形动效》，点「载入生成器」即可一键生成大白话描述提示词。</p>
+  <div class="skill-layout">
+    <div>
+      <div class="sec-t" style="margin-top:0">技能清单</div>
+      <div class="search" style="margin-bottom:10px"><input id="skQ" placeholder="搜索技能关键词…"></div>
+      <div class="sk-list" id="skList"></div>
+    </div>
+    <div>
+      <div class="sec-t" style="margin-top:0">技能详情 <span class="en" id="skTitleTag"></span></div>
+      <div class="card sk-det" id="skDetail"></div>
+      <div class="sec-t">提示词生成器 <span class="en">一键生成 · 复制即用</span></div>
+      <div class="card">
+        <textarea id="genReq" placeholder="填写你的具体需求。示例：把播放按钮做成圆点变胶囊动效，展开后显示文字与进度；或输入任意任务，如：给健身网站首页写 3 条引流文案…"></textarea>
+        <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+          <button class="btn" onclick="genSkillPrompt()"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;vertical-align:-2px;margin-right:6px"><path d="M13 2L4 14h6l-1 7 9-12h-6z"/></svg>一键生成提示词</button>
+          <button class="btn ghost" onclick="copyGen()">复制提示词</button>
+          <button class="btn ghost" onclick="clearGen()">清空</button>
+        </div>
+        <textarea id="genOut" readonly placeholder="生成的提示词会显示在这里…"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="sec-t">容器变形动效 · 7 种可视化演示 <span class="en">实时可播 · 图文一一对应 · 点「载入生成器」一键生成</span></div>
+  <div class="grid g2" id="morphGrid"></div>
+</section>
+
 
 <section class="panel on" id="p-overview">
   <h2>资产总览 <span class="en">OVERVIEW</span></h2>
@@ -509,18 +617,24 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
 
 </main>
 </div><!-- /app-shell -->
-<div class="foot">总助大脑 v1.4.2 · 2026-08-20 · 数据源：D:\AI员工体系 + Codex 记忆档案 · 深空黑 × 流光金 · 深色/暖色随系统切换</div>
+<div class="foot">总助大脑 v1.5.0 · 2026-08-26 · 数据源：D:\AI员工体系 + Codex 记忆档案 · 深空黑 × 流光金 · 深色/暖色随系统切换</div>
 <script id="kb" type="application/json">{
  "meta": {
   "name": "总助大脑",
   "subject": "总助 Codex · 全量记忆·想法·能力知识库",
-  "version": "1.4.1",
-  "generated_at": "2026-08-20",
+  "version": "1.5.0",
+  "generated_at": "2026-08-26",
   "source_root": "D:\\小说文件\\总助大脑",
   "assets_count": 520,
   "sync": "由 build_kb.py 生成；修改请重跑构建器或直接编辑本文件",
   "url": "https://master-xtc.github.io/zongzhu-brain/",
   "changelog": [
+   {
+    "time": "2026-08-26 11:20",
+    "type": "feature",
+    "title": "v1.5.0：技能台上线——一键调用技能生成提示词 + 7 种容器变形动效可视化演示（抖音第10集提炼）",
+    "id": "v1.5.0"
+   },
    {
     "time": "2026-08-20 06:10",
     "type": "feature",
@@ -556,6 +670,18 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
     "type": "memory",
     "title": "抖音Obsidian方法论四讲学习（2026-08-20）",
     "id": "mem-02"
+   },
+   {
+    "time": "2026-08-26 11:19",
+    "type": "skill",
+    "title": "容器变形动效 · 大白话提示词法（iOS 7 式）",
+    "id": "skill-01"
+   },
+   {
+    "time": "2026-08-26 11:19",
+    "type": "prompt",
+    "title": "容器变形动效 · 大白话描述提示词（iOS 7 式）",
+    "id": "prompt-01"
    }
   ]
  },
@@ -1859,6 +1985,14 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
     "- 技能名：证券教学法",
     "- 触发场景：习总要求系统学习金融/证券，或需要把零散股票知识升级为体系"
    ]
+  },
+  {
+   "id": "skill-24",
+   "title": "容器变形动效 · 大白话提示词法（iOS 7 式）",
+   "detail": "# 技能：前端_容器变形动效大白话提示词_v1\n\n## 技能名\n容器变形动效 · 大白话提示词法（iOS 7 式）\n\n## 用途\n- 用大白话向 AI 描述 iOS 风格容器变形动效，让 AI 一次生成符合预期的动效代码（CSS / JS / SwiftUI 等均可）\n- 覆盖 7 种最常见的容器形态转换（圆点→胶囊→卡片→收起），避免动效说不清、AI 反复返工\n- 既可用于 Vibe Coding 直接生成，也可作为给下属（WorkBuddy / Claude）的任务说明书\n\n## 触发场景\n- 需要为按钮 / 卡片 / 弹层 / 播放器做容器变形动效\n- 想把 UI 交互做高级，但说不清动效细节\n- 动效被 AI 改错方向（展开了不该展开的、收不回去），用五参数法补全描述重试\n\n## 核心方法论：五参数沟通法（视频总结，必用）\n与 AI 描述容器变形动效，必须说清 5 个参数，缺一个 AI 就靠猜：\n1. 起点：元素初始状态（形状 / 大小 / 内容 / 位置）\n2. 终点：元素结束状态（展开成什么 / 停在什么形态）\n3. 尺寸变化方向：水平展开 / 垂直展开 / 整体缩放 / 只变单一属性\n4. 内容出现时间：内容谁先谁后出现（图标→文字→详情→按钮）\n5. 结束状态：停留展开态，还是可收回；收回时谁先消失（一般逆序）\n\n## 7 种动效逐项拆解（含大白话描述示例）\n| # | 名称 | 动作要点 | 大白话示例 |\n|---|---|---|---|\n| 1 | Circle to Pill 圆点变胶囊 | 点击后圆点水平展开成胶囊，图标和文字依次出现 | 一个圆形图标按钮，点击后水平展开成胶囊，先弹出图标，再滑出文字，最后停在胶囊态 |\n| 2 | Pill to Card 胶囊变卡片 | 胶囊向下展开成卡片，保留图标和标题，逐步露出详情与按钮 | 胶囊点击后向下展开成卡片，图标和标题留在顶部不动，卡片内部依次出现正文和按钮 |\n| 3 | Compact to Expanded 紧凑态展开 | 保持身份不变，扩展可操作区域，封面 / 进度 / 快捷操作重新排位 | 小卡片展开成完整卡片，封面放大当背景，进度条挪到中间，快捷操作按钮排到右侧 |\n| 4 | Corner Radius 圆角过渡 | 单独改变圆角，从全圆逐步收紧为卡片圆角，边框 / 底色 / 结果状态同步稳定 | 容器圆角从 50%（全圆）过渡到 12px（卡片），同时边框和底色平滑过渡，不要跳变 |\n| 5 | Size Morph 尺寸变形 | 容器按明确方向改变宽高，保持比例和锚点，突出主要数值 | 卡片宽度从 100px 拉伸到 320px，高度不变，锚点固定在左上角，数值放大突出显示 |\n| 6 | Content Reflow 内容重排 | 宽度变化时，文字和按钮重新排布，保持阅读顺序 | 容器变宽后，一行放不下的文字自动重排成两行，按钮从图标态变成带文字的完整按钮，阅读顺序从左到右 |\n| 7 | Reverse Collapse 反向收回 | 先收起次要按钮和正文，再缩短卡片和胶囊，最后回到圆点 | 收起时顺序反过来：先隐藏按钮和正文，再把卡片缩回胶囊，最后回到圆点 |\n\n## 通用提示词模板（大白话版）\n我要给【目标组件】做一个「【动效名称】」动效。\n- 起点：【起点状态】\n- 终点：【终点状态】\n- 尺寸变化方向：【水平 / 垂直 / 整体 / 单属性】\n- 内容出现时间：【谁先谁后】\n- 结束状态：【停留 / 可收回，收回顺序】\n- 时长与缓动：【如 300ms，缓入缓出】\n- 技术要求：【如 CSS + 原生 JS、SwiftUI、移动端优先】\n请按以上描述实现，先给完整可运行代码，再解释关键实现点；收回动效按展开的逆序处理。\n\n## 反例规避（视频强调的坑）\n- 只写“做个动画效果”——没给起点 / 终点，AI 只能乱猜\n- 只说“圆角变一下”——没说从多少变到多少、边框底色是否同步\n- 展开和收回不写顺序——收回必须是从终点逆序回起点\n- 不写内容时序——图标 / 文字 / 按钮同时出现会显得生硬\n\n## 验收标准\n- 生成代码中能明确找到起点、终点、尺寸变化方向、内容出现时间、结束状态五要素\n- 动画中间态可暂停检查（transition 或 keyframes 可调）\n- 收回动画为展开的逆序，节奏一致\n- 移动端不卡顿（优先 transform + opacity，不用 layout 属性做动画）\n\n## 适用模型\n- 总助 Codex 直接可用；派下属执行时附本技能路径 + 五参数清单\n\n## 使用记录\n- 2026-08-26：抖音第10集《用大白话向AI描述7种ios容器变形动效》视频分析提炼（作者：ai容器变形指令大全，2:16）；配套提示词：提示词库\\开发建站\\提示词_容器变形动效_大白话描述_v1.md",
+   "path": "D:\\AI员工体系\\growth\\skills\\前端_容器变形动效大白话提示词_v1.md",
+   "src": "抖音第10集分析",
+   "created_at": "2026-08-26 11:19"
   }
  ],
  "prompts": [
@@ -2401,6 +2535,14 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
     "> 归属：调度指令 / 新会话交接",
     "> 版本：v1.0 · 2026-08-20"
    ]
+  },
+  {
+   "id": "prompt-56",
+   "title": "容器变形动效 · 大白话描述提示词（iOS 7 式）",
+   "detail": "# 提示词_容器变形动效_大白话描述_v1\n\n## 一、名称\n容器变形动效 · 大白话描述提示词（iOS 7 式）\n\n## 二、用途\n- 用大白话向 AI 描述 iOS 风格容器变形动效，让 AI 一次生成符合预期的动效代码（CSS / JS / SwiftUI 等）\n- 覆盖 7 种最常见容器形态转换：圆点变胶囊 / 胶囊变卡片 / 紧凑态展开 / 圆角过渡 / 尺寸变形 / 内容重排 / 反向收回\n- 既可直接投喂 AI 编程工具（Vibe Coding），也可作为给下属 AI 的任务说明书\n\n## 三、适用场景\n- 为按钮 / 卡片 / 弹层 / 播放器 / 数据卡片做容器变形动效\n- 动效需求描述不清、AI 反复返工改方向时，用五参数法补全描述\n- 需要统一团队动效描述规范（对接 WorkBuddy / Claude / Hermes 任务书）\n\n## 四、变量位\n| 变量 | 含义 | 示例值 |\n|---|---|---|\n| 【目标组件】 | 做动效的元素 | 登录按钮 / 音乐卡片 |\n| 【动效名称】 | 7 种之一，或自定义 | 圆点变胶囊 |\n| 【起点】 | 初始形状 / 大小 / 内容 / 位置 | 一个 44px 圆形图标按钮 |\n| 【终点】 | 结束形态 | 胶囊按钮，内含图标和文字 |\n| 【方向】 | 水平 / 垂直 / 整体 / 单属性 | 水平展开 |\n| 【内容时序】 | 谁先谁后出现 | 先图标后文字 |\n| 【结束状态】 | 停留 / 可收回 + 收回顺序 | 停留展开态，点击逆序收回 |\n| 【时长缓动】 | 时长与缓动函数 | 300ms 缓入缓出 |\n| 【技术要求】 | 技术栈 / 平台 | CSS + 原生 JS，移动端优先 |\n\n## 五、正文模板（大白话版，至少 150 字）\n我要给【目标组件】做一个「【动效名称】」动效。\n- 起点：【起点】。\n- 终点：【终点】。\n- 尺寸变化方向：【方向】。\n- 内容出现时间：【内容时序】。\n- 结束状态：【结束状态】。\n- 时长与缓动：【时长缓动】。\n- 技术要求：【技术要求】。\n请按以上描述实现：① 先给完整可运行代码；② 用大白话解释关键实现点；③ 收回动效严格按展开的逆序处理，节奏一致；④ 优先使用 transform 和 opacity 做动画以保证移动端流畅。\n\n## 六、变体\n1. 精简版（给快模型）：把五参数浓缩成一句话：「【目标组件】从【起点】【方向】变成【终点】，【内容时序】，结束时【结束状态】，时长【时长缓动】」\n2. 分步版（要中间态）：五参数 + 要求「把动效拆成 3 步：形态变化 / 内容入场 / 最终停留，每步单独标注时间点」\n3. 回退版（要收起）：在五参数后追加「再给一个收起动画：先【先收起的内容】，再缩回【中间形态】，最后回到【起点】」\n4. SwiftUI 版：技术要求替换为「SwiftUI，用 withAnimation + matchedGeometryEffect 实现平滑形变」\n5. 7 种动效独立模板（来自技能《前端_容器变形动效大白话提示词_v1》表格，每种一行大白话示例，直接取用）\n\n## 七、验收标准\n- 生成代码能对应上五参数（起点 / 终点 / 方向 / 内容时序 / 结束状态），缺一算不合格\n- 中间态可暂停检查；收回为展开逆序；移动端流畅（transform / opacity）\n- 无多余装饰、无路径错误、无死链；命名符合规范\n\n## 八、使用记录\n- 2026-08-26：依据抖音第10集《用大白话向AI描述7种ios容器变形动效》提炼（作者：ai容器变形指令大全，02:16，AI生成声明）；技能沉淀《前端_容器变形动效大白话提示词_v1.md》；已在总助大脑「技能台」可视化上线，含 7 种动效实时演示 + 一键生成提示词",
+   "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_容器变形动效_大白话描述_v1.md",
+   "src": "抖音第10集分析",
+   "created_at": "2026-08-26 11:19"
   }
  ],
  "reviews": [
@@ -4613,6 +4755,7 @@ function renderOverview(){
     <div class="card kpi"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div>
     <div class="num">${n}</div><div class="lbl">${l}</div><div style="font-size:12px;color:var(--text2)">${d}</div></div>`).join('');
   $('#quick').innerHTML = [
+    ['技能台', 'skills', '一键选技能·填需求·生成提示词'],
     ['对接激活', 'activate', '三通道让任意 AI 接任总助'],
     ['知识图谱', 'graph', '115 节点 · 136 关联可视化'],
     ['能力全景', 'caps', '视频/网页/视觉/文案/自动化/协作/调度'],
@@ -4862,11 +5005,119 @@ function copyPath(){
   navigator.clipboard.writeText('D:\\小说文件\\总助大脑\\data\\knowledge.md').then(()=>alert('档案路径已复制 ✓'));
 }
 
+/* ===== 技能台 v1.5 ===== */
+let curSkill=null, skQuery='', skFiltered=[];
+function skTitle(x){ return (x.title||'').replace(/^(技能沉淀\s*[·:：]\s*|技能[_·:：]\s*)/,'').replace(/^提示词[_·:：]/,'').trim(); }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function skBody(x){
+  if(x.detail){ return x.detail.split('\n').map(l=>l.replace(/^[#>|*\s]+/,'')).filter(Boolean).join('；').slice(0,900); }
+  return (x.summary||[]).join('；').replace(/^[#>\s]+/,'').slice(0,900);
+}
+function renderSkillList(){
+  const q=skQuery.toLowerCase();
+  skFiltered=(KB.skills||[]).filter(x=>!q||(x.title+(x.summary||[]).join('')).toLowerCase().includes(q));
+  $('#skList').innerHTML = skFiltered.map((x,i)=>`<div class="sk-item ${x===curSkill?'on':''}" onclick="selSkill(${i})"><b>${esc(skTitle(x))}</b><small>${esc((x.path||'').split('\\').pop())}</small></div>`).join('')||'<div class="row-item">无匹配技能。</div>';
+  if(!curSkill && skFiltered.length) selSkill(0);
+}
+function selSkill(i){
+  curSkill=skFiltered[i]; if(!curSkill) return;
+  renderSkillList();
+  $('#skTitleTag').textContent=skTitle(curSkill);
+  $('#skDetail').innerHTML=`<p>${esc(skBody(curSkill))}</p><div class="kv"><b>技能 ID</b><span>${curSkill.id}</span><b>沉淀路径</b><span style="word-break:break-all">${esc(curSkill.path||'')}</span><b>来源</b><span>${esc(curSkill.src||'技能沉淀库')}</span></div>`;
+}
+function genSkillPrompt(){
+  const req=$('#genReq').value.trim();
+  const s=curSkill; if(!s){ alert('请先在左侧选择一个技能'); return; }
+  const L=[];
+  L.push(`# 任务：${skTitle(s)}`); L.push('');
+  L.push('## 背景');
+  L.push(`你是一名资深执行者。请严格按沉淀技能《${skTitle(s)}》完成任务，先复用既有经验，不重复造轮子。`);
+  L.push(`技能文件：${s.path}`); L.push('');
+  L.push('## 本次需求');
+  L.push(req || '（未填写具体需求，请按技能标准流程输出完整可落地的方案）'); L.push('');
+  L.push('## 技能要点');
+  (s.detail?s.detail.split('\n').slice(0,40):(s.summary||[])).forEach(l=>{
+    const t=l.replace(/^[#>|*\s]+/,'').trim();
+    if(t && !/^(技能名|使用记录|适用模型)/.test(t)) L.push(`- ${t.slice(0,120)}`);
+  });
+  L.push(''); L.push('## 输出要求');
+  L.push('1. 结论先行、清单化呈现；2. 若产出代码/文案/方案，先给完整版再解释关键点；3. 明示验收标准；4. 完成即落盘到所属主目录，命名按「类别_对象_用途_时间」规范；5. 汇报格式：做了什么 / 结果 / 遗留问题。');
+  $('#genOut').value=L.join('\n');
+}
+function copyGen(){ const t=$('#genOut'); if(!t.value.trim()){ alert('请先生成提示词'); return; } navigator.clipboard.writeText(t.value).then(()=>alert('提示词已复制，可直接粘贴给任意 AI')); }
+function clearGen(){ $('#genReq').value=''; $('#genOut').value=''; }
+$('#skQ').addEventListener('keydown',e=>{ if(e.key==='Enter'){ skQuery=$('#skQ').value.trim(); renderSkillList(); } });
+$('#skQ').addEventListener('input',()=>{ skQuery=$('#skQ').value.trim(); renderSkillList(); });
+
+/* ===== 容器变形动效 · 7 种演示 ===== */
+const MORPHS=[
+{id:'m1',cn:'圆点变胶囊',en:'Circle to Pill',time:'00:10',
+ desc:'点击后圆点水平展开成胶囊，图标和文字依次出现（先图标后文字）。',
+ tpl:'“我要给【目标组件】做一个「圆点变胶囊」动效。起点：【圆形按钮】；终点：【胶囊按钮，含图标和文字】；方向：水平展开；内容时序：先图标后文字；结束状态：停留展开态，可逆序收回；时长：350ms 缓入缓出。”',
+ req:'我要给播放按钮做一个「圆点变胶囊」动效：起点是一个 44px 圆形图标按钮；终点是胶囊按钮，内含图标和文字；尺寸变化方向为水平展开；内容出现时间先图标后文字；结束状态为停留展开态、点击可逆序收回；时长 350ms 缓入缓出；技术要求 CSS 过渡、移动端优先。',
+ html:`<div class="m-stage" id="m-m1" onclick="playMorph('m1')"><div class="m1-box"><svg class="m1-ic" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span class="m1-txt">播放</span></div></div>`},
+{id:'m2',cn:'胶囊变卡片',en:'Pill to Card',time:'00:23',
+ desc:'胶囊向下展开成卡片，保留图标和标题，逐步露出详情与按钮。',
+ tpl:'“我要给【目标组件】做一个「胶囊变卡片」动效。起点：【胶囊，含图标和标题】；终点：【完整卡片，露出正文与按钮】；方向：垂直向下展开；内容时序：保留顶部，再依次出现正文、按钮；结束状态：停留卡片态，可逆序收回。”',
+ req:'我要给订阅按钮做一个「胶囊变卡片」动效：起点是胶囊按钮，内含铃铛图标和“订阅”标题；终点是展开的卡片，顶部保留图标和标题，正文与按钮逐步出现；尺寸变化方向为向下展开；内容出现时间正文先于按钮；结束状态为停留卡片态、可逆序收回；时长 380ms 缓入缓出；技术要求 CSS 过渡。',
+ html:`<div class="m-stage" id="m-m2" onclick="playMorph('m2')"><div class="m2-box"><div class="m2-top"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 8-3 8h18s-3-1-3-8M10 20a2 2 0 0 0 4 0"/></svg><b>订阅</b></div><div class="m2-body"><p>每日推送 7 条财经早报与市场复盘。</p><button>立即订阅</button></div></div></div>`},
+{id:'m3',cn:'紧凑态展开',en:'Compact to Expanded',time:'00:39',
+ desc:'保持身份不变，扩展可操作区域，封面、进度和快捷操作重新排位。',
+ tpl:'“我要给【目标组件】做一个「紧凑态展开」动效。起点：【小卡片：封面+标题+进度】；终点：【完整卡片：封面放大、进度居中、快捷操作排右侧】；方向：整体放大；内容时序：封面先放大，操作按钮最后出现；结束状态：停留展开态。”',
+ req:'我要给歌单卡片做一个「紧凑态展开」动效：起点是紧凑小卡片，含小封面、标题和短进度条；终点是完整大卡片，封面放大当主视觉、进度条拉通、快捷操作按钮（上一首/播放/下一首）出现并排布到右侧；尺寸变化方向为整体放大；内容出现时间封面先、操作按钮最后；结束状态停留展开态、可逆序收回；时长 360ms；技术要求 CSS 过渡。',
+ html:`<div class="m-stage" id="m-m3" onclick="playMorph('m3')"><div class="m3-box"><div class="m3-cover">♬</div><div class="m3-mid"><b class="m3-title">本周歌单</b><div class="m3-prog"><i></i></div><div class="m3-acts"><button><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><button><svg viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></button><button><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div></div></div></div>`},
+{id:'m4',cn:'圆角过渡',en:'Corner Radius',time:'00:55',
+ desc:'单独改变圆角，从全圆逐步收紧为卡片圆角，边框、底色与结果状态同步稳定。',
+ tpl:'“我要给【目标组件】做一个「圆角过渡」动效。起点：【圆角 50% 全圆】；终点：【圆角 16px 卡片】；方向：只变圆角；要求：边框与底色同步平滑过渡、不跳变；结束状态：停留卡片圆角态。”',
+ req:'我要给状态容器做一个「圆角过渡」动效：起点是圆角 50% 的全圆形状；终点是圆角 16px 的卡片形状；变化方向只改变圆角这一项；边框和底色同步平滑过渡，不能跳变；结束状态为停留卡片圆角态、可逆序收回；时长 550ms；技术要求 CSS transition，只用 border-radius。',
+ html:`<div class="m-stage" id="m-m4" onclick="playMorph('m4')"><div class="m4-box"><span class="m4-lbl m4-a">圆角 50%</span><span class="m4-lbl m4-b">圆角 16px</span></div></div>`},
+{id:'m5',cn:'尺寸变形',en:'Size Morph',time:'01:10',
+ desc:'容器按明确方向改变宽高，保持比例和锚点，突出主要数值。',
+ tpl:'“我要给【目标组件】做一个「尺寸变形」动效。起点：【宽 128 高 128】；终点：【宽 268 高 96】；方向：横向拉伸为主；锚点：固定在左上角；要求：核心数值放大突出；结束状态：停留拉伸态。”',
+ req:'我要给运动卡片做一个「尺寸变形」动效：起点是 128×128 的方形卡片，显示“128 步”；终点是 268×96 的横条卡片，锚点固定在左上角，数值放大突出显示；尺寸变化方向为横向拉伸、高度略缩；内容出现时间数值随拉伸同步放大；结束状态停留拉伸态、可逆序收回；时长 450ms；技术要求 CSS transition。',
+ html:`<div class="m-stage" id="m-m5" onclick="playMorph('m5')"><div class="m5-anchor"></div><div class="m5-box"><b class="m5-val">128</b><span class="m5-unit">步 · 今日</span></div></div>`},
+{id:'m6',cn:'内容重排',en:'Content Reflow',time:'01:23',
+ desc:'宽度变化时，文字和按钮重新排布，保持阅读顺序。',
+ tpl:'“我要给【目标组件】做一个「内容重排」动效。起点：【窄容器：文字多行、按钮折叠】；终点：【宽容器：文字单行、按钮完整展开】；要求：阅读顺序从左到右不变；结束状态：停留宽态。”',
+ req:'我要给通知卡片做一个「内容重排」动效：起点是窄容器，描述文字折成多行、操作按钮折叠为图标；终点是宽容器，文字自动重排为更少行数、按钮完整展开显示文字；阅读顺序始终从左到右；尺寸变化方向为宽度拉伸；结束状态停留宽态、可逆序收回；时长 500ms；技术要求 CSS flex-wrap。',
+ html:`<div class="m-stage" id="m-m6" onclick="playMorph('m6')"><div class="m6-box"><p class="m6-txt">播放列表已同步，进入页面后自动继续播放；未读通知会在打开应用后自动标记为已读。</p><div class="m6-acts"><button class="m6-b1">≡ 菜单</button><button class="m6-b2">立即播放</button></div></div></div>`},
+{id:'m7',cn:'反向收回',en:'Reverse Collapse',time:'01:39',
+ desc:'先收起次要按钮和正文，再缩短卡片和胶囊，最后回到圆点（展开的逆序）。',
+ tpl:'“我要给【目标组件】做一个「反向收回」动效。起点：【展开的胶囊/卡片】；终点：【回到圆点】；顺序：先隐藏按钮和正文 → 再缩回胶囊 → 最后回到圆点；结束状态：停在圆点。”',
+ req:'我要给停止按钮做一个「反向收回」动效：起点是展开的胶囊（含图标和“停止并收起”文字）；终点是回到圆形图标；收回顺序为：先隐藏文字，再缩短胶囊，最后回到圆点；与展开完全逆序、节奏一致；时长 420ms；技术要求 CSS transition + 延迟错峰。',
+ html:`<div class="m-stage" id="m-m7" onclick="playMorph('m7')"><div class="m7-box"><svg class="m7-ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg><span class="m7-txt">停止并收起</span></div></div>`}
+];
+function renderMorphs(){
+  $('#morphGrid').innerHTML = MORPHS.map(m=>`
+    <div class="morph-card">
+      <div class="morph-stage"><span class="morph-tag">${m.cn} · ${m.en} · ${m.time}</span>${m.html}</div>
+      <div class="morph-ctrl">
+        <button class="btn" onclick="playMorph('${m.id}')">播放动效</button>
+        <button class="btn ghost" onclick="loadMorphTpl('${m.id}')">载入生成器</button>
+      </div>
+      <div class="morph-desc"><b style="color:var(--gold)">${m.cn}</b> ${m.desc}</div>
+      <div class="morph-tpl">${esc(m.tpl)}</div>
+    </div>`).join('');
+}
+function playMorph(id){
+  const st=document.getElementById('m-'+id); if(!st) return;
+  st.classList.remove('go'); void st.offsetWidth; st.classList.add('go');
+}
+function loadMorphTpl(id){
+  const m=MORPHS.find(x=>x.id===id); if(!m) return;
+  const sk=(KB.skills||[]).find(x=>(x.title||'').includes('容器变形动效'));
+  if(sk){ const i=skFiltered.indexOf(sk); if(i>=0) selSkill(i); }
+  $('#genReq').value=m.req; genSkillPrompt();
+  go('skills');
+  $('#genOut').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function renderSkillDeck(){ renderSkillList(); renderMorphs(); }
+
 /* ===== 启动 ===== */
 // 默认激活知识图谱页（否则 panel 隐藏、容器 0 尺寸）
 const _firstTab = document.querySelector('.tab[data-p="graph"]'); if (_firstTab) _firstTab.classList.add('on');
 const _firstPanel = document.getElementById('p-graph'); if (_firstPanel) _firstPanel.classList.add('on');
-renderOverview(); renderCaps(); renderRules(); renderProjects(); renderReqs(); renderArchive(); renderPrompts(); renderActivate();
+renderSkillDeck(); renderOverview(); renderCaps(); renderRules(); renderProjects(); renderReqs(); renderArchive(); renderPrompts(); renderActivate();
 </script>
 <script src="galaxy.js"></script>
 <script src="galaxy3d.js"></script>
