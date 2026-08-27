@@ -298,6 +298,75 @@ header{display:none}
 .m7-txt{color:#0A0A0F;font-weight:700;font-size:14px;white-space:nowrap;transition:opacity .16s,transform .16s}
 #m-m7.go .m7-box{width:56px;border-radius:50%}
 #m-m7.go .m7-txt{opacity:0;transform:translateX(10px)}
+
+/* ===== 灵感备案 v1.0 ===== */
+.insp-status{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:linear-gradient(180deg,rgba(201,169,106,.08),rgba(201,169,106,.02));border:1px solid var(--gold-dim);border-radius:12px;padding:12px 16px;margin:2px 0 8px}
+.insp-status .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(201,169,106,.8);flex:0 0 auto}
+.insp-status .dot.off{background:var(--gray);box-shadow:none}
+.insp-status b{color:var(--gold);font-size:14px}
+.insp-status span{color:var(--text2);font-size:12.5px}
+.insp-status .cnt{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap}
+.insp-status .cnt i{font-style:normal;color:var(--text2);font-size:12px}
+.insp-status .cnt i b{color:var(--text)}
+.insp-rank{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;transition:.18s;position:relative}
+.insp-rank:hover{border-color:var(--gold-dim);transform:translateY(-2px)}
+.insp-rank .sc{font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.insp-rank .md{font-size:15px;color:var(--text);font-weight:600;line-height:1.5;margin-bottom:8px}
+.insp-score{display:flex;align-items:center;gap:10px;margin:8px 0;flex-wrap:wrap}
+.insp-score .lab{font-size:11.5px;color:var(--text2)}
+.insp-score .dots{display:flex;gap:3px}
+.insp-score .dots i{width:10px;height:10px;border-radius:3px;background:var(--line)}
+.insp-score .dots i.on{background:var(--gold)}
+.insp-score .val{font-size:15px;font-weight:700;color:var(--gold)}
+.insp-score .val.tbd{color:var(--text2);font-weight:400;font-size:12.5px}
+.insp-trend{font-size:11px;color:var(--text2);border:1px solid var(--line);border-radius:12px;padding:0 8px;margin-left:auto;white-space:nowrap}
+.insp-trend.up{color:var(--green);border-color:#3a6a4a}
+.insp-trend.down{color:var(--red);border-color:#6a3a3a}
+.insp-trend.new{color:var(--gold);border-color:var(--gold-dim)}
+.insp-meta{font-size:11.5px;color:var(--text2);line-height:1.8;border-top:1px solid var(--line);margin-top:10px;padding-top:8px}
+.insp-meta .src{color:var(--gold-dim)}
+.insp-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px 16px;cursor:pointer;transition:border-color .18s,transform .18s,box-shadow .18s;position:relative;overflow:hidden}
+.insp-card:hover{border-color:var(--gold-dim);transform:translateY(-2px);box-shadow:0 8px 26px rgba(0,0,0,.35)}
+.insp-card .bar{position:absolute;left:0;top:0;bottom:0;width:3px}
+.insp-card .bar.st-idea{background:var(--purple)}
+.insp-card .bar.st-pending{background:var(--blue)}
+.insp-card .bar.st-validating{background:var(--orange)}
+.insp-card .bar.st-running{background:var(--gold)}
+.insp-card .bar.st-done{background:var(--green)}
+.insp-card .bar.st-archived{background:var(--gray)}
+.insp-card .hd{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.insp-card .hd b{color:var(--text);font-size:14.5px;line-height:1.4;flex:1;min-width:120px}
+.insp-card .sc{font-size:12px;color:var(--gold);border:1px solid var(--gold-dim);border-radius:14px;padding:1px 8px;white-space:nowrap;background:rgba(201,169,106,.06)}
+.insp-st{font-size:11px;border-radius:12px;padding:1px 8px;white-space:nowrap}
+.insp-st.idea{color:var(--purple);border:1px solid #6a3a6a;background:rgba(199,125,186,.06)}
+.insp-st.pending{color:var(--blue);border:1px solid #3a5a7a;background:rgba(111,168,220,.06)}
+.insp-st.validating{color:var(--orange);border:1px solid #7a4a2a;background:rgba(229,138,92,.06)}
+.insp-st.running{color:var(--gold);border:1px solid var(--gold-dim);background:rgba(201,169,106,.06)}
+.insp-st.done{color:var(--green);border:1px solid #3a6a4a;background:rgba(127,191,127,.06)}
+.insp-st.archived{color:var(--gray);border:1px solid #4a4a55;background:rgba(138,143,152,.08)}
+.insp-card .pos{color:var(--text2);font-size:12.5px;line-height:1.6;margin-bottom:10px}
+.insp-tags{display:flex;flex-wrap:wrap;gap:6px}
+.insp-tag{font-size:11px;color:var(--text2);border:1px solid var(--line);border-radius:14px;padding:1px 8px}
+.insp-tag.pain{color:var(--orange);border-color:#7a4a2a;background:rgba(229,138,92,.06)}
+.insp-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s cubic-bezier(.4,0,.2,1)}
+.insp-card.open .insp-more{grid-template-rows:1fr}
+.insp-more .in{overflow:hidden;min-height:0}
+.insp-kv{display:grid;grid-template-columns:64px 1fr;gap:5px 10px;font-size:12.5px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.insp-kv b{color:var(--gold);font-weight:600}
+.insp-kv span{color:var(--text2);line-height:1.6;word-break:break-word}
+.insp-kv .f{color:var(--text)}
+.insp-pain{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;flex-wrap:wrap}
+.insp-pain .p{flex:1;min-width:220px;font-size:13.5px;color:var(--text);line-height:1.6}
+.insp-pain .idea{font-size:12.5px;color:var(--gold)}
+.insp-der{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;flex-wrap:wrap}
+.insp-der .d{font-size:11.5px;color:var(--text2);min-width:74px}
+.insp-der .flow{display:flex;align-items:center;gap:8px;flex:1;min-width:220px;font-size:13px}
+.insp-der .flow .from{color:var(--text)}
+.insp-der .flow .arr{color:var(--gold)}
+.insp-der .flow .to{color:var(--gold);font-weight:600}
+.insp-der .ch{font-size:12px;color:var(--text2);line-height:1.6;min-width:200px;flex:1}
+.insp-empty{padding:26px 20px;text-align:center;color:var(--text2);border:1px dashed var(--line);border-radius:12px;font-size:13px;line-height:2;background:var(--bg3)}
+.insp-empty b{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -316,6 +385,7 @@ header{display:none}
   <div class="ribbon" id="ribbon">
     <div class="rb-btn on" data-r="overview" title="总览"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
     <div class="rb-btn" data-r="skills" title="技能台"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></div>
+    <div class="rb-btn" data-r="inspire" title="灵感备案"><svg viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5A6 6 0 1 0 7.5 11.5c.8.8 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></div>
     <div class="rb-btn" data-r="guide" title="使用指南"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/></svg></div>
     <div class="rb-btn" data-r="graph" title="知识图谱"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="M8 7.5l7.5-.5M7 8.5l1.5 8M14 9l-3.5 7.5"/></svg></div>
     <div class="rb-btn" data-r="caps" title="能力全景"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
@@ -331,6 +401,7 @@ header{display:none}
     <nav id="nav">
       <div class="tab on" data-p="overview"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>总览</div>
       <div class="tab" data-p="skills"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>技能台</div>
+      <div class="tab" data-p="inspire"><svg viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5A6 6 0 1 0 7.5 11.5c.8.8 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>灵感备案</div>
       <div class="tab" data-p="guide"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/></svg>使用指南</div>
       <div class="tab" data-p="graph"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="M8 7.5l7.5-.5M7 8.5l1.5 8M14 9l-3.5 7.5"/></svg>知识图谱</div>
       <div class="tab" data-p="caps"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z"/><path d="M9 12l2 2 4-4"/></svg>能力全景</div>
@@ -372,6 +443,20 @@ header{display:none}
   <div class="grid g2" id="morphGrid"></div>
 </section>
 
+
+<section class="panel" id="p-inspire">
+  <h2>灵感备案 <span class="en">INSPIRE · AI 排行榜 × 灵感看板 · 每日更新</span></h2>
+  <p class="sub">30 秒看懂今天该用哪个 AI、灵感库有没有新东西：榜单按场景分榜并给出性价比指数；灵感卡按状态着色、点击展开细节；痛点登记与裂变衍生池随每日更新滚动积累。数据源：data\灵感备案.json（数据层接入后自动填充，字段缺失显示「待核验」）。</p>
+  <div class="insp-status" id="inspStatus"></div>
+  <div class="sec-t">AI 排行榜 <span class="en">场景分榜 · 性价比指数 = 能力分×0.6 + 价格分×0.4</span></div>
+  <div class="grid g3" id="inspRank"></div>
+  <div class="sec-t">灵感看板 <span class="en">状态色卡 · 点击卡片展开细节</span></div>
+  <div class="grid g3" id="inspIdeas"></div>
+  <div class="sec-t">痛点登记 <span class="en">认知差 · 命中灵感 · 现有产品是否满足</span></div>
+  <div id="inspPains"></div>
+  <div class="sec-t">裂变衍生池 <span class="en">换人群 × 换形态 × 换钩子 × 换变现</span></div>
+  <div id="inspDerived"></div>
+</section>
 
 <section class="panel on" id="p-overview">
   <h2>资产总览 <span class="en">OVERVIEW</span></h2>
@@ -5210,6 +5295,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
   }
  }
 }</script>
+<script id="inspire" type="application/json">{"updatedAt": "2026-08-27", "rankings": [{"scene": "日常对话/分析", "model": "待核验", "capabilityScore": "待核验", "priceTier": "待核验", "reason": "待每日核验", "source": "待核验", "sourceDate": "2026-08-27", "trend": "新增"}, {"scene": "编程/建站", "model": "待核验", "capabilityScore": "待核验", "priceTier": "待核验", "reason": "待每日核验", "source": "待核验", "sourceDate": "2026-08-27", "trend": "新增"}, {"scene": "中文长文/小说", "model": "待核验", "capabilityScore": "待核验", "priceTier": "待核验", "reason": "待每日核验", "source": "待核验", "sourceDate": "2026-08-27", "trend": "新增"}, {"scene": "出图（视觉）", "model": "豆包 doubao-seedream", "capabilityScore": 4, "priceTier": "便宜", "reason": "团队实测基线（价格档位=团队定档默认，精确价格待核验）", "source": "火山方舟定价页", "sourceDate": "2026-08-27", "trend": "维持"}, {"scene": "配音", "model": "edge-tts", "capabilityScore": 4, "priceTier": "免费", "reason": "已沉淀技能（speech/edge-tts）", "source": "团队沉淀·speech技能", "sourceDate": "2026-08-27", "trend": "维持"}, {"scene": "通用性价比", "model": "待核验", "capabilityScore": "待核验", "priceTier": "待核验", "reason": "待每日核验", "source": "待核验", "sourceDate": "2026-08-27", "trend": "新增"}], "ideas": [{"name": "AI 黑话词典+等级测试站", "positioning": "普通人学 AI 第一站", "pain": "想说说不出的 AI 术语", "audience": "AI 新手/职场人/学生", "forms": ["词典", "测试", "生成器"], "hook": "等级测试晒分", "monetize": "课程分销/咨询", "score": 30, "status": "待验证", "tasks": ["T2"]}, {"name": "大学生办事词典", "positioning": "第一次实习/租房/入职百科", "pain": "节点词穷", "audience": "待核验", "forms": ["清单", "生成器"], "hook": "转发给室友", "monetize": "求职辅导/资料包", "score": 29, "status": "待验证", "tasks": ["T2"]}, {"name": "验房装修避坑", "positioning": "收房前必看工具", "pain": "验房/报价单黑话", "audience": "待核验", "forms": ["清单", "词典"], "hook": "清单转发家人", "monetize": "本地商家导流", "score": 27, "status": "待验证", "tasks": ["T2"]}, {"name": "养宠新手词典", "positioning": "新铲屎官工具站", "pain": "疫苗/看病术语", "audience": "待核验", "forms": ["生成器", "日历"], "hook": "疫苗表转家人", "monetize": "用品CPS/医院导流", "score": 27, "status": "待验证", "tasks": ["T2"]}, {"name": "打工人权益", "positioning": "离职/五险一金自查站", "pain": "权益黑话", "audience": "待核验", "forms": ["计算器", "清单"], "hook": "情绪传播", "monetize": "律所导流/求职服务", "score": 25, "status": "待验证", "tasks": ["T2"]}, {"name": "签证材料生成器", "positioning": "出国前材料清单", "pain": "材料术语", "audience": "待核验", "forms": ["清单", "生成器"], "hook": "分享同行人", "monetize": "代办导流", "score": 25, "status": "灵感", "tasks": ["T2"]}], "pains": [{"pain": "想学 AI 但看不懂术语", "idea": "AI 黑话词典+等级测试站", "satisfied": "否"}, {"pain": "第一次办学生-职场手续词穷", "idea": "大学生办事词典", "satisfied": "否"}, {"pain": "收房不懂验房、报价看不懂", "idea": "验房装修避坑", "satisfied": "否"}, {"pain": "新手养宠不懂疫苗/看病", "idea": "养宠新手词典", "satisfied": "否"}, {"pain": "被裁/离职不懂权益", "idea": "打工人权益", "satisfied": "否"}, {"pain": "出国不懂材料流程", "idea": "签证材料生成器", "satisfied": "否"}], "derived": [{"date": "2026-08-27", "from": "大学生办事词典", "variant": "打工人办事词典", "change": "换人群（学生→打工人）"}, {"date": "2026-08-27", "from": "大学生办事词典", "variant": "毕业进度测算测试卡", "change": "换形态=测试，钩子=晒分数"}, {"date": "2026-08-27", "from": "验房装修避坑", "variant": "本地验房师转介绍裂变", "change": "换变现=本地CPL（本地验房师转介绍）"}, {"date": "2026-08-27", "from": "AI 黑话词典+等级测试站", "variant": "提示词生成器带水印", "change": "换形态=生成器（带水印裂变）"}]}</script>
 <script>
 const KB = JSON.parse(document.getElementById('kb').textContent);
 window.KB = KB; // galaxy 引擎（galaxy.js / galaxy3d.js）读取
@@ -5606,11 +5692,93 @@ function loadMorphTpl(id){
 }
 function renderSkillDeck(){ renderSkillList(); renderMorphs(); }
 
+/* ===== 灵感备案 v1.0 ===== */
+const INSPIRE_ST={ '灵感':'idea','待验证':'pending','验证中':'validating','执行中':'running','已变现':'done','已归档':'archived' };
+const INSPIRE_TREND={ '新增':'new','上升':'up','下降':'down','维持':'keep' };
+const INSPIRE_PRICE={ '免费':5,'便宜':4,'中等':3,'偏贵':2,'贵':1 };
+let INSPIRE=null;
+function iv(x){ const s=String(x==null?'':x).trim(); if(!s||s==='待核验'||s==='待每日核验'||s==='-') return '待核验'; return s; }
+function inspArr(k){ return Array.isArray(INSPIRE&&INSPIRE[k])?INSPIRE[k]:[]; }
+function inspEmpty(t,d){ return '<div class="insp-empty"><b>'+esc(t)+'</b><br>'+esc(d)+'</div>'; }
+function inspScore(r){
+  const cap=Number(r.capabilityScore);
+  let ps=Number(r.priceScore);
+  if(!(ps>=1&&ps<=5)) ps=INSPIRE_PRICE[iv(r.priceTier)]||0;
+  if(!(cap>=1&&cap<=5)||!(ps>=1&&ps<=5)) return {v:'待核验',tbd:true};
+  return {v:(cap*0.6+ps*0.4).toFixed(1),tbd:false};
+}
+function loadInspire(done){
+  const el=document.getElementById('inspire');
+  const t=el?el.textContent.trim():'';
+  if(t){ try{ INSPIRE=JSON.parse(t); return done(); }catch(e){ INSPIRE=null; } }
+  if(window.INSPIRE&&typeof window.INSPIRE==='object'){ INSPIRE=window.INSPIRE; return done(); }
+  if(location.protocol==='http:'||location.protocol==='https:'){
+    fetch('data/灵感备案.json').then(r=>r.ok?r.json():null).then(d=>{ INSPIRE=(d&&(d.rankings||d.ideas||d.pains||d.derived))?d:null; done(); }).catch(()=>{ INSPIRE=null; done(); });
+  } else { INSPIRE=null; done(); }
+}
+function renderInspStatus(){
+  const el=$('#inspStatus'); if(!el) return;
+  el.className='insp-status';
+  if(!INSPIRE){ el.innerHTML='<div class="dot off"></div><b>暂无数据</b><span>等待数据层接入 data\\灵感备案.json 后自动填充 · 当前为空态引导</span>'; return; }
+  const up=iv(INSPIRE.updatedAt);
+  const d=new Date(); const today=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  const isToday=up!=='待核验'&&up.slice(0,10)===today;
+  const tag=isToday?'今日已更新':(up==='待核验'?'更新时间待核验':'最近更新 '+up.slice(0,10));
+  const n=[['榜单',inspArr('rankings').length],['灵感',inspArr('ideas').length],['痛点',inspArr('pains').length],['衍生',inspArr('derived').length]];
+  el.innerHTML='<div class="dot"></div><b>'+esc(tag)+'</b><span>来源日期 '+esc(up)+'</span><div class="cnt">'+n.map(x=>'<i>'+x[0]+' <b>'+x[1]+'</b></i>').join('')+'</div>';
+}
+function renderInspRank(){
+  const el=$('#inspRank'); if(!el) return;
+  const list=inspArr('rankings');
+  if(!list.length){ el.innerHTML=inspEmpty('AI 排行榜暂无条目','数据层接入后，各场景最优模型与性价比指数将在这里按场景分榜展示。'); return; }
+  el.innerHTML=list.map(r=>{
+    const cap=Number(r.capabilityScore);
+    const dots=[1,2,3,4,5].map(k=>'<i class="'+(cap>=k?'on':'')+'"></i>').join('');
+    const score=inspScore(r);
+    const tr=r.trend?'<span class="insp-trend '+esc(INSPIRE_TREND[r.trend]||'keep')+'">'+esc(r.trend)+'</span>':'';
+    return '<div class="insp-rank"><div class="sc"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8"><path d="M4 19h16M6 15l4-6 3 4 3-7 2 3"/></svg>'+esc(iv(r.scene))+'</div><div class="md">'+esc(iv(r.model))+'</div><div class="insp-score"><span class="lab">能力分</span><span class="dots">'+dots+'</span><span class="val '+(score.tbd?'tbd':'')+'">性价比 '+esc(score.v)+'</span>'+tr+'</div><div class="insp-meta">价格档位：'+esc(iv(r.priceTier))+'<br>'+esc(iv(r.reason))+'<br><span class="src">来源 '+esc(iv(r.source))+' · '+esc(iv(r.sourceDate))+'</span></div></div>';
+  }).join('');
+}
+function inspStKey(s){ return INSPIRE_ST[s]||'archived'; }
+function renderInspIdeas(){
+  const el=$('#inspIdeas'); if(!el) return;
+  const list=inspArr('ideas');
+  if(!list.length){ el.innerHTML=inspEmpty('灵感看板暂无条目','新想法过七维评分入账后，将按状态色卡排列在这里；点击卡片可展开全部细节。'); return; }
+  el.innerHTML=list.map((x,i)=>{
+    const st=iv(x.status), k=inspStKey(st);
+    const forms=(x.forms&&x.forms.length)?x.forms.map(f=>'<span class="insp-tag">'+esc(f)+'</span>').join(''):'';
+    const tasks=(x.tasks&&x.tasks.length)?x.tasks.map(t=>'<span class="insp-tag">'+esc(t)+'</span>').join(''):'';
+    return '<div class="insp-card" onclick="toggleInspIdea('+i+')"><span class="bar st-'+k+'"></span><div class="hd"><b>'+esc(iv(x.name))+'</b><span class="insp-st '+k+'">'+esc(st)+'</span>'+(x.score!=null?'<span class="sc">'+esc(x.score)+' 分</span>':'')+'</div><div class="pos">'+esc(iv(x.positioning))+'</div><div class="insp-tags"><span class="insp-tag pain">痛点：'+esc(iv(x.pain))+'</span>'+(x.audience?'<span class="insp-tag">人群：'+esc(iv(x.audience))+'</span>':'')+'</div><div class="insp-more"><div class="in"><div class="insp-kv"><b>产品形态</b><span class="f">'+(forms||'待核验')+'</span><b>裂变钩子</b><span class="f">'+esc(iv(x.hook))+'</span><b>变现路径</b><span class="f">'+esc(iv(x.monetize))+'</span><b>关联任务</b><span class="f">'+(tasks||'待核验')+'</span></div></div></div></div>';
+  }).join('');
+}
+function toggleInspIdea(i){
+  const c=document.querySelectorAll('#inspIdeas .insp-card')[i]; if(!c) return;
+  c.classList.toggle('open');
+}
+function renderInspPains(){
+  const el=$('#inspPains'); if(!el) return;
+  const list=inspArr('pains');
+  if(!list.length){ el.innerHTML=inspEmpty('痛点登记暂无条目','从灵感中提炼的认知差痛点将在这里登记，并标注现有产品是否满足。'); return; }
+  el.innerHTML=list.map(p=>{
+    const sat=iv(p.satisfied);
+    const cls=sat==='否'?'red':(sat==='是'?'green':'blue');
+    const txt=sat==='否'?'现有产品未满足':(sat==='是'?'现有产品已满足':'满足情况待核验');
+    return '<div class="insp-pain"><div class="p">'+esc(iv(p.pain))+'</div><div class="idea">命中灵感：'+esc(iv(p.idea))+'</div><span class="badge '+cls+'">'+txt+'</span></div>';
+  }).join('');
+}
+function renderInspDerived(){
+  const el=$('#inspDerived'); if(!el) return;
+  const list=inspArr('derived');
+  if(!list.length){ el.innerHTML=inspEmpty('裂变衍生池暂无条目','每日至少 1 个新变体（换人群 / 换形态 / 换钩子 / 换变现）将在这里登记。'); return; }
+  el.innerHTML=list.map(d=>'<div class="insp-der"><span class="d">'+esc(iv(d.date))+'</span><span class="flow"><span class="from">'+esc(iv(d.from))+'</span><span class="arr">→</span><span class="to">'+esc(iv(d.variant))+'</span></span><span class="ch">'+esc(iv(d.change))+'</span></div>').join('');
+}
+function renderInspire(){ loadInspire(()=>{ renderInspStatus(); renderInspRank(); renderInspIdeas(); renderInspPains(); renderInspDerived(); }); }
+
 /* ===== 启动 ===== */
 // 默认激活知识图谱页（否则 panel 隐藏、容器 0 尺寸）
 const _firstTab = document.querySelector('.tab[data-p="graph"]'); if (_firstTab) _firstTab.classList.add('on');
 const _firstPanel = document.getElementById('p-graph'); if (_firstPanel) _firstPanel.classList.add('on');
-renderSkillDeck(); renderOverview(); renderCaps(); renderRules(); renderProjects(); renderReqs(); renderArchive(); renderPrompts(); renderActivate();
+renderSkillDeck(); renderOverview(); renderCaps(); renderRules(); renderProjects(); renderReqs(); renderArchive(); renderPrompts(); renderActivate(); renderInspire();
 </script>
 <script src="galaxy.js"></script>
 <script src="galaxy3d.js"></script>
