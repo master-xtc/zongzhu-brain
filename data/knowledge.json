@@ -56,6 +56,12 @@
     "type": "review",
     "title": "20260827_灵感备案可视化合并验收",
     "id": "rev-02"
+   },
+   {
+    "time": "2026-08-27 20:22",
+    "type": "inspiration",
+    "title": "灵感备案数据更新（榜单6/灵感6/痛点6/衍生6）",
+    "id": "insp"
    }
   ]
  },
@@ -4358,38 +4364,38 @@
    "rankings": 6,
    "ideas": 6,
    "pains": 6,
-   "derived": 4
+   "derived": 6
   },
   "data": {
    "updatedAt": "2026-08-27",
    "rankings": [
     {
      "scene": "日常对话/分析",
-     "model": "待核验",
-     "capabilityScore": "待核验",
-     "priceTier": "待核验",
-     "reason": "待每日核验",
-     "source": "待核验",
+     "model": "Gemini 2.5 Flash-Lite",
+     "capabilityScore": 4,
+     "priceTier": "便宜",
+     "reason": "AA实测延迟最低0.28s、低价档，日常问答性价比首选；深度分析天花板=Claude Opus 5（智能指数63第1）",
+     "source": "Artificial Analysis 2026-08-27 抓取",
      "sourceDate": "2026-08-27",
      "trend": "新增"
     },
     {
      "scene": "编程/建站",
-     "model": "待核验",
-     "capabilityScore": "待核验",
-     "priceTier": "待核验",
-     "reason": "待每日核验",
-     "source": "待核验",
+     "model": "GPT-5.6 Sol (max)",
+     "capabilityScore": 5,
+     "priceTier": "贵",
+     "reason": "AA智能指数61（第5）、agentic编码第一梯队，本团队Codex主力同系；预算敏感换Kimi K3（开源最强60分）",
+     "source": "Artificial Analysis 2026-08-27 抓取",
      "sourceDate": "2026-08-27",
      "trend": "新增"
     },
     {
      "scene": "中文长文/小说",
-     "model": "待核验",
-     "capabilityScore": "待核验",
-     "priceTier": "待核验",
-     "reason": "待每日核验",
-     "source": "待核验",
+     "model": "Kimi K3 (max)",
+     "capabilityScore": 5,
+     "priceTier": "便宜",
+     "reason": "AA开源智能指数第1（60分），中文长文性价比首选；GLM-5.3-Flash（57分）备选",
+     "source": "Artificial Analysis 2026-08-27 抓取",
      "sourceDate": "2026-08-27",
      "trend": "新增"
     },
@@ -4415,11 +4421,11 @@
     },
     {
      "scene": "通用性价比",
-     "model": "待核验",
-     "capabilityScore": "待核验",
-     "priceTier": "待核验",
-     "reason": "待每日核验",
-     "source": "待核验",
+     "model": "Kimi K3 (max)",
+     "capabilityScore": 5,
+     "priceTier": "便宜",
+     "reason": "AA开源智能指数第1（60分）价格低，综合性价比之王；纯跑量工具型任务可用Devstral 2（$0.00/M最低价档）",
+     "source": "Artificial Analysis 2026-08-27 抓取",
      "sourceDate": "2026-08-27",
      "trend": "新增"
     }
@@ -4447,7 +4453,7 @@
      "name": "大学生办事词典",
      "positioning": "第一次实习/租房/入职百科",
      "pain": "节点词穷",
-     "audience": "待核验",
+     "audience": "大学生/准毕业生（实习·租房·三方·竞赛）",
      "forms": [
       "清单",
       "生成器"
@@ -4464,7 +4470,7 @@
      "name": "验房装修避坑",
      "positioning": "收房前必看工具",
      "pain": "验房/报价单黑话",
-     "audience": "待核验",
+     "audience": "买房收房家庭（业主·家长）",
      "forms": [
       "清单",
       "词典"
@@ -4481,7 +4487,7 @@
      "name": "养宠新手词典",
      "positioning": "新铲屎官工具站",
      "pain": "疫苗/看病术语",
-     "audience": "待核验",
+     "audience": "新手养宠人（学生·年轻家庭）",
      "forms": [
       "生成器",
       "日历"
@@ -4498,7 +4504,7 @@
      "name": "打工人权益",
      "positioning": "离职/五险一金自查站",
      "pain": "权益黑话",
-     "audience": "待核验",
+     "audience": "职场打工人（被裁风险人群）",
      "forms": [
       "计算器",
       "清单"
@@ -4515,7 +4521,7 @@
      "name": "签证材料生成器",
      "positioning": "出国前材料清单",
      "pain": "材料术语",
-     "audience": "待核验",
+     "audience": "计划出国者（学生·自由行·家庭）",
      "forms": [
       "清单",
       "生成器"
@@ -4585,6 +4591,18 @@
      "from": "AI 黑话词典+等级测试站",
      "variant": "提示词生成器带水印",
      "change": "换形态=生成器（带水印裂变）"
+    },
+    {
+     "date": "2026-08-27",
+     "from": "打工人权益",
+     "variant": "裁员赔偿金计算器",
+     "change": "换形态=计算器（数值即情绪，晒图裂变）"
+    },
+    {
+     "date": "2026-08-27",
+     "from": "大学生办事词典",
+     "variant": "竞赛报名材料生成器",
+     "change": "换人群=竞赛生，换钩子=组队群转发"
     }
    ]
   }
