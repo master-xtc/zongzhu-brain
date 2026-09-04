@@ -767,6 +767,12 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
     "type": "inspiration",
     "title": "灵感备案数据更新（榜单6/灵感6/痛点6/衍生6）",
     "id": "insp"
+   },
+   {
+    "time": "2026-09-04 16:04",
+    "type": "prompt",
+    "title": "提示词_网站防伪标签_接单引流入口_v1",
+    "id": "prompt-62"
    }
   ]
  },
@@ -2755,6 +2761,14 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_开窗口B_灵感备案可视化面板UI_v1.md",
    "src": "",
    "created_at": "2026-08-27 11:33"
+  },
+  {
+   "id": "prompt-62",
+   "title": "提示词_网站防伪标签_接单引流入口_v1",
+   "detail": "# 提示词_网站防伪标签_接单引流入口_v1\n\n> 分类：开发建站（作品防伪 + 接单引流 · 胶囊展开卡版）\n> 修订：2026-09-04 v1.4 定稿：业务微信号 xtc20you；交互升级为\"胶囊变卡片\"动效（习总指定参考规格）\n\n## 八字段\n1. **名称**：提示词_网站防伪标签_接单引流入口_v1\n2. **用途**：给任何交付的网站/作品加一个\"防伪标签\"：右下角胶囊按钮，点击向下展开成卡片，显示业务微信号 xtc20you 并提供复制；访客可一键复制加微信联系开发\n3. **适用场景**：新网站收尾、已有站点补装（健身指挥台、BIM 站、客户单、作品集）；打开新会话直接调用\n4. **变量位**：\n   - {SITE_DIR}：目标网站本地根目录\n   - {POS}：放置位置（默认 corner 右下角固定；footer=页脚行简易版）\n   - {PILL_TITLE}：胶囊标题（默认：找我开发）\n   - 已定稿：业务微信号 xtc20you（对外业务号，可对外展示，非隐私）\n5. **正文模板**（新会话开场直接粘贴，超百字、要素齐全，已填微信号与交互规格）：\n\n你是 VIBE LAB 娱乐视觉工作室的技术执行，任务：为目标网站加一个\"胶囊变卡片\"防伪标签。起点：右下角固定胶囊按钮（圆角胶囊、细边框、hover 金色，内含微信 SVG 线性小图标 + 标题\"找我开发\"）；点击后向下展开成卡片（方向：向下），卡片顶部保留图标与标题，正文与复制按钮逐步出现——出现顺序：微信号正文（文案：微信 xtc20you）先出现，之后\"复制\"按钮再出现；动效时长 380ms、缓入缓出（ease-in-out），用 CSS 过渡实现（transform/opacity 过渡，不用 JS 动画库）；结束态为停留卡片态，可逆序收回（再点或点外部收回）。交互：点击\"复制\"或微信号文字，将 xtc20you 写入剪贴板并弹轻提示 toast（文案：已复制：xtc20you），复制失败给手动长按选中提示。禁止海报、开屏弹窗、二维码大图、emoji、多余文案与花哨装饰。样式与站点原生风格统一，卡片字号 12-14px 低调不喧宾夺主，移动端 360/390/430 三视口不溢出、按钮可点、展开不遮挡底部关键内容（必要时卡片向上展开或限制高度）。隐私红线：只显示业务微信号 xtc20you，绝不出现习总真实姓名、电话、邮箱等隐私。交付前本地预览验证：展开/收回动画正确、复制真实生效、toast 正确，桌面与移动视口各测一次；改动前备份到站点备份目录，完成后按 类别_对象_用途_时间 落盘改动记录。验收标准：胶囊可见、点开展开顺序正确（正文先于按钮）、380ms 缓动、可逆收回、复制真实生效、无 emoji 无海报无隐私外泄、三视口 PASS。\n\n6. **变体**：\n   - v1b 胶囊展开卡（推荐，默认）：右下角胶囊 → 向下展开卡片（交互规格见正文模板）\n   - v1a 页脚行简易版：版权行旁加\"微信 xtc20you [复制]\"，零侵入，无动效\n   - v1c 联系块：关于/设置页联系条目（微信 xtc20you + 复制按钮）\n7. **验收标准**：胶囊点开为卡片且顺序正确（正文先、按钮后）；时长 380ms 缓入缓出；可逆收回；复制真实生效 toast 正确；无隐私外泄；三视口 PASS\n8. **使用记录**：2026-09-04 创建（v1.1 去海报、v1.2 微信号单条+复制、v1.3 填入 xtc20you、v1.4 胶囊变卡片动效定稿）；首次使用：健身网站防伪标签（习总新窗口）\n\n## 反例规避\n- 不做海报、开屏弹窗、二维码大图、插画与多余文案\n- 不放习总真实姓名、手机号、邮箱，只放业务微信号 xtc20you\n- 不用 emoji、花哨动效；图标用 SVG 线性\n- 动效必须 CSS 过渡实现且顺序正确：正文先出现、复制按钮后出现，禁止同时弹出\n- 复制功能必须真实可用，不许只做样式不做事件\n- API Key、部署令牌一律不进提示词与代码",
+   "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_网站防伪标签_接单引流入口_v1.md",
+   "src": "提示词库\\开发建站",
+   "created_at": "2026-09-04 16:04"
   }
  ],
  "reviews": [
@@ -5313,7 +5327,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
   }
  }
 }</script>
-<script id="inspire" type="application/json">{"updatedAt": "2026-08-27", "rankings": [{"scene": "日常对话/分析", "model": "Gemini 2.5 Flash-Lite", "capabilityScore": 4, "priceTier": "便宜", "reason": "AA实测延迟最低0.28s、低价档，日常问答性价比首选；深度分析天花板=Claude Opus 5（智能指数63第1）", "source": "Artificial Analysis 2026-08-27 抓取", "sourceDate": "2026-08-27", "trend": "新增"}, {"scene": "编程/建站", "model": "GPT-5.6 Sol (max)", "capabilityScore": 5, "priceTier": "贵", "reason": "AA智能指数61（第5）、agentic编码第一梯队，本团队Codex主力同系；预算敏感换Kimi K3（开源最强60分）", "source": "Artificial Analysis 2026-08-27 抓取", "sourceDate": "2026-08-27", "trend": "新增"}, {"scene": "中文长文/小说", "model": "Kimi K3 (max)", "capabilityScore": 5, "priceTier": "便宜", "reason": "AA开源智能指数第1（60分），中文长文性价比首选；GLM-5.3-Flash（57分）备选", "source": "Artificial Analysis 2026-08-27 抓取", "sourceDate": "2026-08-27", "trend": "新增"}, {"scene": "出图（视觉）", "model": "豆包 doubao-seedream", "capabilityScore": 4, "priceTier": "便宜", "reason": "团队实测基线（价格档位=团队定档默认，精确价格待核验）", "source": "火山方舟定价页", "sourceDate": "2026-08-27", "trend": "维持"}, {"scene": "配音", "model": "edge-tts", "capabilityScore": 4, "priceTier": "免费", "reason": "已沉淀技能（speech/edge-tts）", "source": "团队沉淀·speech技能", "sourceDate": "2026-08-27", "trend": "维持"}, {"scene": "通用性价比", "model": "Kimi K3 (max)", "capabilityScore": 5, "priceTier": "便宜", "reason": "AA开源智能指数第1（60分）价格低，综合性价比之王；纯跑量工具型任务可用Devstral 2（$0.00/M最低价档）", "source": "Artificial Analysis 2026-08-27 抓取", "sourceDate": "2026-08-27", "trend": "新增"}], "ideas": [{"name": "AI 黑话词典+等级测试站", "positioning": "普通人学 AI 第一站", "pain": "想说说不出的 AI 术语", "audience": "AI 新手/职场人/学生", "forms": ["词典", "测试", "生成器"], "hook": "等级测试晒分", "monetize": "课程分销/咨询", "score": 30, "status": "待验证", "tasks": ["T2"]}, {"name": "大学生办事词典", "positioning": "第一次实习/租房/入职百科", "pain": "节点词穷", "audience": "大学生/准毕业生（实习·租房·三方·竞赛）", "forms": ["清单", "生成器"], "hook": "转发给室友", "monetize": "求职辅导/资料包", "score": 29, "status": "待验证", "tasks": ["T2"]}, {"name": "验房装修避坑", "positioning": "收房前必看工具", "pain": "验房/报价单黑话", "audience": "买房收房家庭（业主·家长）", "forms": ["清单", "词典"], "hook": "清单转发家人", "monetize": "本地商家导流", "score": 27, "status": "待验证", "tasks": ["T2"]}, {"name": "养宠新手词典", "positioning": "新铲屎官工具站", "pain": "疫苗/看病术语", "audience": "新手养宠人（学生·年轻家庭）", "forms": ["生成器", "日历"], "hook": "疫苗表转家人", "monetize": "用品CPS/医院导流", "score": 27, "status": "待验证", "tasks": ["T2"]}, {"name": "打工人权益", "positioning": "离职/五险一金自查站", "pain": "权益黑话", "audience": "职场打工人（被裁风险人群）", "forms": ["计算器", "清单"], "hook": "情绪传播", "monetize": "律所导流/求职服务", "score": 25, "status": "待验证", "tasks": ["T2"]}, {"name": "签证材料生成器", "positioning": "出国前材料清单", "pain": "材料术语", "audience": "计划出国者（学生·自由行·家庭）", "forms": ["清单", "生成器"], "hook": "分享同行人", "monetize": "代办导流", "score": 25, "status": "灵感", "tasks": ["T2"]}], "pains": [{"pain": "想学 AI 但看不懂术语", "idea": "AI 黑话词典+等级测试站", "satisfied": "否"}, {"pain": "第一次办学生-职场手续词穷", "idea": "大学生办事词典", "satisfied": "否"}, {"pain": "收房不懂验房、报价看不懂", "idea": "验房装修避坑", "satisfied": "否"}, {"pain": "新手养宠不懂疫苗/看病", "idea": "养宠新手词典", "satisfied": "否"}, {"pain": "被裁/离职不懂权益", "idea": "打工人权益", "satisfied": "否"}, {"pain": "出国不懂材料流程", "idea": "签证材料生成器", "satisfied": "否"}], "derived": [{"date": "2026-08-27", "from": "大学生办事词典", "variant": "打工人办事词典", "change": "换人群（学生→打工人）"}, {"date": "2026-08-27", "from": "大学生办事词典", "variant": "毕业进度测算测试卡", "change": "换形态=测试，钩子=晒分数"}, {"date": "2026-08-27", "from": "验房装修避坑", "variant": "本地验房师转介绍裂变", "change": "换变现=本地CPL（本地验房师转介绍）"}, {"date": "2026-08-27", "from": "AI 黑话词典+等级测试站", "variant": "提示词生成器带水印", "change": "换形态=生成器（带水印裂变）"}, {"date": "2026-08-27", "from": "打工人权益", "variant": "裁员赔偿金计算器", "change": "换形态=计算器（数值即情绪，晒图裂变）"}, {"date": "2026-08-27", "from": "大学生办事词典", "variant": "竞赛报名材料生成器", "change": "换人群=竞赛生，换钩子=组队群转发"}]}</script>
+<script id="inspire" type="application/json"></script>
 <script>
 const KB = JSON.parse(document.getElementById('kb').textContent);
 window.KB = KB; // galaxy 引擎（galaxy.js / galaxy3d.js）读取
