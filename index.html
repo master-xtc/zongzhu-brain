@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>总助大脑 · 可视化知识库</title>
+<link rel="icon" href="data:,">
 <script type="importmap">{"imports":{"three":"./three/three.module.js","three/addons/":"./three/addons/"}}</script>
 <style>
 :root{
@@ -544,7 +545,7 @@ header{display:none}
 </section>
 
 <section class="panel" id="p-rules">
-  <h2>规则体系 <span class="en">RULES · 总则 v3.11 为核心</span></h2>
+  <h2>规则体系 <span class="en">RULES · 总则 v3.13 为核心</span></h2>
   <div class="grid g2" id="ruleGrid"></div>
   <div class="sec-t">红线清单（21 条）</div>
   <div class="row-item" id="redlineList"></div>
@@ -710,71 +711,9 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
   "version": "1.3.0",
   "generated_at": "2026-08-20",
   "source_root": "D:\\小说文件\\总助大脑",
-  "assets_count": 557,
+  "assets_count": 757,
   "sync": "由 build_kb.py 生成；修改请重跑构建器或直接编辑本文件",
-  "url": "https://master-xtc.github.io/zongzhu-brain/",
-  "changelog": [
-   {
-    "time": "2026-08-27 11:24",
-    "type": "knowledge",
-    "title": "AI灵感备案库（AI能力性价比榜+灵感任务痛点库）",
-    "id": "kno-07"
-   },
-   {
-    "time": "2026-08-27 11:24",
-    "type": "prompt",
-    "title": "提示词_开员工窗口_灵感备案每日运营_v1",
-    "id": "prompt-58"
-   },
-   {
-    "time": "2026-08-27 11:24",
-    "type": "review",
-    "title": "20260827_灵感备案库入总助大脑",
-    "id": "rev-01"
-   },
-   {
-    "time": "2026-08-27 11:29",
-    "type": "prompt",
-    "title": "提示词_开员工窗口_灵感备案每日运营_v2（内嵌六大灵感）",
-    "id": "prompt-59"
-   },
-   {
-    "time": "2026-08-27 11:33",
-    "type": "prompt",
-    "title": "提示词_开窗口A_灵感备案数据层与更新链路_v1",
-    "id": "prompt-60"
-   },
-   {
-    "time": "2026-08-27 11:33",
-    "type": "note",
-    "title": "任务书_灵感备案可视化_接口契约与验收",
-    "id": "note-01"
-   },
-   {
-    "time": "2026-08-27 11:33",
-    "type": "prompt",
-    "title": "提示词_开窗口B_灵感备案可视化面板UI_v1",
-    "id": "prompt-61"
-   },
-   {
-    "time": "2026-08-27 19:58",
-    "type": "review",
-    "title": "20260827_灵感备案可视化合并验收",
-    "id": "rev-02"
-   },
-   {
-    "time": "2026-08-27 20:22",
-    "type": "inspiration",
-    "title": "灵感备案数据更新（榜单6/灵感6/痛点6/衍生6）",
-    "id": "insp"
-   },
-   {
-    "time": "2026-09-04 16:04",
-    "type": "prompt",
-    "title": "提示词_网站防伪标签_接单引流入口_v1",
-    "id": "prompt-62"
-   }
-  ]
+  "url": "https://master-xtc.github.io/zongzhu-brain/"
  },
  "identity": {
   "title": "总助（Codex）",
@@ -998,6 +937,41 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    "title": "对话后自动积累",
    "content": "每次对话结束后自动执行沉淀闭环：①任务复盘写入 growth\\reviews\\ ②优质提示词/生产资料入库提示词库（八字段+细节齐全）③增量写入总助大脑（sync_kb.py --type prompts|reflection|memory|skill ...）④--rescan 重扫五库刷新索引与知识图谱；确保提示词库与总助大脑随每次对话持续积累、越用越全，缺细节不写入。",
    "src": "习总 2026-08-20 钦定"
+  },
+  {
+   "id": "R31",
+   "title": "上下文健康管理",
+   "detail": "跨多天、多阶段、含大量截图 base64 的会话立即提示开新会话；阶段结束必须落盘并附新会话开场提示词；接近上限时先落盘、交接、再开新会话。",
+   "cat": "上下文健康",
+   "src": "总则 v3.12 / 第十七章",
+   "created_at": "2026-10-04 11:28",
+   "content": "跨多天、多阶段、含大量截图 base64 的会话立即提示开新会话；阶段结束必须落盘并附新会话开场提示词；接近上限时先落盘、交接、再开新会话。"
+  },
+  {
+   "id": "R32",
+   "title": "完整版与共享版分离",
+   "detail": "对外分享必须先产出脱敏共享版；完整记忆、原始 vault、内部路径、邮箱、证件、密钥不得进入公开仓库；共享版用密码层或边缘访问控制。",
+   "cat": "安全分享",
+   "src": "2026-10-04 分享安全要求",
+   "created_at": "2026-10-04 11:28",
+   "content": "对外分享必须先产出脱敏共享版；完整记忆、原始 vault、内部路径、邮箱、证件、密钥不得进入公开仓库；共享版用密码层或边缘访问控制。"
+  },
+  {
+   "id": "R33",
+   "title": "只读使用与写权限隔离",
+   "detail": "他人只给网站使用权限，不共享 GitHub 或部署账号；仓库仅保留所有者写权限，协作者只能走只读或 PR 审核；部署密钥最小权限、可撤销。",
+   "cat": "安全分享",
+   "src": "2026-10-04 分享安全要求",
+   "created_at": "2026-10-04 11:28",
+   "content": "他人只给网站使用权限，不共享 GitHub 或部署账号；仓库仅保留所有者写权限，协作者只能走只读或 PR 审核；部署密钥最小权限、可撤销。"
+  },
+  {
+   "id": "R34",
+   "title": "最终版留存与过程文件清理",
+   "cat": "交付纪律",
+   "src": "习总 2026-10-04 钦定",
+   "created_at": "2026-10-04 23:54",
+   "content": "所有项目完成后只保留最终版文件和文档；过程性草稿、临时导出、重复副本、明文预览、中间数据、调试截图与临时目录，在确认最终版可独立使用、可正常交付且路径落在 D 盘后，统一删除。最终版必须命名清楚并放在固定最终版目录；保留后续重建所需的正式脚本与源资料，但不保留多份过程副本。习总后续每次修改内容，必须按“更新完整版源数据→重建共享版→加密→发布→线上验收→更新最终总结→删除过程文件”的顺序同步更新，禁止只改一个入口导致版本不一致。删除前必须先确认新最终版已生成并验证，禁止误删唯一源文件；若存在不可逆风险，先呈报习总。"
   }
  ],
  "capabilities": [
@@ -1178,6 +1152,122 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
     "Hermes"
    ],
    "status": "已上岗"
+  },
+  {
+   "id": "cap-01",
+   "title": "静态站密码层与权限隔离",
+   "detail": "对静态站采用 AES-GCM 客户端加密与 PBKDF2 密钥派生，仓库只发布密文与必要静态资源；完整记忆、原始 vault、内部路径与密钥不进入公开仓库。",
+   "domain": "安全",
+   "tools": [
+    "Node crypto",
+    "Web Crypto",
+    "GitHub权限",
+    "Cloudflare Access"
+   ],
+   "status": "本阶段新增",
+   "created_at": "2026-10-04 11:28",
+   "name": "静态站密码层与权限隔离"
+  },
+  {
+   "id": "cap-02",
+   "title": "知识库构建与巡检",
+   "detail": "全量档案、Obsidian vault、Galaxy 3D 图谱、增量写入、健康巡检与脱敏发布，形成可重复的知识库生产链路。",
+   "domain": "知识",
+   "tools": [
+    "Python",
+    "Obsidian",
+    "Three.js"
+   ],
+   "status": "已实测",
+   "created_at": "2026-10-04 11:28",
+   "name": "知识库构建与巡检"
+  },
+  {
+   "id": "cap-03",
+   "title": "多代理并行派工",
+   "detail": "对独立子任务并行派工，主流程负责拆分、集成、验收与统一汇报，适合研究、写作、编辑、构建、验证同时推进。",
+   "domain": "协作",
+   "tools": [
+    "multi_agent",
+    "skills"
+   ],
+   "status": "可用",
+   "created_at": "2026-10-04 11:28",
+   "name": "多代理并行派工"
+  },
+  {
+   "id": "cap-04",
+   "title": "MCP 工具链",
+   "detail": "浏览器、桌面、文档、表格、演示、GitHub、实时文档与设计上下文等 MCP 通道，优先用工具而不是重复手写。",
+   "domain": "协作",
+   "tools": [
+    "MCP",
+    "context7",
+    "github",
+    "figma",
+    "notion",
+    "linear"
+   ],
+   "status": "可用",
+   "created_at": "2026-10-04 11:28",
+   "name": "MCP 工具链"
+  },
+  {
+   "id": "cap-05",
+   "title": "配音与音频转写",
+   "detail": "AI 人声配音 TTS/edge-tts 与音频转写、字幕分段；真人声音克隆不做，遵守隐私合规边界。",
+   "domain": "音频",
+   "tools": [
+    "speech",
+    "edge-tts",
+    "transcribe"
+   ],
+   "status": "已实测",
+   "created_at": "2026-10-04 11:28",
+   "name": "配音与音频转写"
+  },
+  {
+   "id": "cap-06",
+   "title": "文档表格演示与PDF",
+   "detail": "Word、Excel、PPT、PDF 的生成、编辑、渲染与视觉验收，覆盖比赛手册、报价单、方案与数据表。",
+   "domain": "办公",
+   "tools": [
+    "documents",
+    "spreadsheets",
+    "presentations",
+    "pdf"
+   ],
+   "status": "已实测",
+   "created_at": "2026-10-04 11:28",
+   "name": "文档表格演示与PDF"
+  },
+  {
+   "id": "cap-07",
+   "title": "常驻任务与多平台",
+   "detail": "定时任务、学习循环、多平台接入与值班执行；Hermes 与 DSH 已上岗，可作为常驻执行层。",
+   "domain": "调度",
+   "tools": [
+    "Hermes",
+    "DSH",
+    "cron"
+   ],
+   "status": "已上岗",
+   "created_at": "2026-10-04 11:28",
+   "name": "常驻任务与多平台"
+  },
+  {
+   "id": "cap-08",
+   "title": "AI员工调度网关",
+   "detail": "DeepSeek 与豆包 ark 文本、视觉、出图统一入口，自动写任务日志到 growth/log，支持批量调度。",
+   "domain": "调度",
+   "tools": [
+    "调度网关",
+    "DeepSeek",
+    "豆包"
+   ],
+   "status": "已实测",
+   "created_at": "2026-10-04 11:28",
+   "name": "AI员工调度网关"
   }
  ],
  "knowledge": [
@@ -1266,28 +1356,31 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    "src": "复盘 20260814"
   },
   {
-   "id": "kno-01",
+   "id": "K13",
    "title": "健身网站AI自动录入升级方案",
    "detail": "健身指挥台(fitness-command.netlify.app)AI化四块方案：①拍照算热量=新增Netlify Function food-analyze，前端canvas压缩图片后调ark视觉API，结果写localStorage复用p0.js calorieItems；②拍照自动体态自评=posture-analyze函数返回score+建议；③拍照展板卡通化=纯前端SVG贴纸+圆角卡片，保留v6炸裂特效；④每晚23:00自动打分=Netlify Scheduled Function(daily-score)，前端仅同步文本快照到Blobs daily-snapshots(不含照片)，评分写回daily-scores次日展示。完整交接文档:D:\\健身教练\\对接文件_健身网站AI自动录入升级_v1_20260821.md。红线:照片本机处理不留存服务器。",
    "domain": "开发建站",
    "src": "总助 20260821 对接文件",
-   "created_at": "2026-08-21 17:37"
+   "created_at": "2026-08-21 17:37",
+   "content": "健身指挥台(fitness-command.netlify.app)AI化四块方案：①拍照算热量=新增Netlify Function food-analyze，前端canvas压缩图片后调ark视觉API，结果写localStorage复用p0.js calorieItems；②拍照自动体态自评=posture-analyze函数返回score+建议；③拍照展板卡通化=纯前端SVG贴纸+圆角卡片，保留v6炸裂特效；④每晚23:00自动打分=Netlify Scheduled Function(daily-score)，前端仅同步文本快照到Blobs daily-snapshots(不含照片)，评分写回daily-scores次日展示。完整交接文档:D:\\健身教练\\对接文件_健身网站AI自动录入升级_v1_20260821.md。红线:照片本机处理不留存服务器。"
   },
   {
-   "id": "kno-06",
+   "id": "K14",
    "title": "总助大脑技能台：一键调用技能生成提示词（v1.5.0）",
    "detail": "技能台是总助大脑 v1.5.0 新增功能页：左侧技能可视化清单（搜索+详情），右侧提示词生成器——选技能、填需求、一键生成标准提示词（自动套用技能要点与输出要求）、复制即用；内置 7 种 iOS 容器变形动效实时 CSS 演示（圆点变胶囊/胶囊变卡片/紧凑态展开/圆角过渡/尺寸变形/内容重排/反向收回），每张卡片可播放动效并可一键载入生成器。维护：技能沉淀放 D:\\AI员工体系\\growth\\skills 后跑 sync_kb.py --rescan 或 --type skill；生成器为通用三段式（背景/需求/技能要点+输出要求），新技能自动生效无需改代码；动效数据在 index.tpl.html 的 MORPHS 数组；页面模板注入脚本 _build\\patch_skilldeck_v15.py。线上：https://master-xtc.github.io/zongzhu-brain/ 。",
    "domain": "开发建站",
    "src": "20260826 习总需求：技能可视化+一键调用",
-   "created_at": "2026-08-26 11:40"
+   "created_at": "2026-08-26 11:40",
+   "content": "技能台是总助大脑 v1.5.0 新增功能页：左侧技能可视化清单（搜索+详情），右侧提示词生成器——选技能、填需求、一键生成标准提示词（自动套用技能要点与输出要求）、复制即用；内置 7 种 iOS 容器变形动效实时 CSS 演示（圆点变胶囊/胶囊变卡片/紧凑态展开/圆角过渡/尺寸变形/内容重排/反向收回），每张卡片可播放动效并可一键载入生成器。维护：技能沉淀放 D:\\AI员工体系\\growth\\skills 后跑 sync_kb.py --rescan 或 --type skill；生成器为通用三段式（背景/需求/技能要点+输出要求），新技能自动生效无需改代码；动效数据在 index.tpl.html 的 MORPHS 数组；页面模板注入脚本 _build\\patch_skilldeck_v15.py。线上：https://master-xtc.github.io/zongzhu-brain/ 。"
   },
   {
-   "id": "kno-07",
-   "title": "AI灵感备案库（AI能力性价比榜+灵感任务痛点库）",
-   "detail": "# 备案：AI 灵感库（双板块 · 每日更新 · 裂变变形）\n\n> 归属：总助大脑（总助网站）· 位置：D:\\小说文件\\总助大脑\\\n> 建立：2026-08-27 · 更新方式：值班员工每日增量写入（sync_kb.py）+ 每周日成长整合\n> 一句话：习总打开总助网站，30 秒看懂「今天该用哪个 AI」+「灵感库有没有新东西、值不值得做」。\n\n---\n\n## 板块一：AI 能力与性价比排行榜\n\n### 目标\n- 习总 30 秒知道：当前场景用哪个 AI 最好、哪个性价比最高。\n- 按场景分榜，不做单一总榜（不同场景最优解不同）。\n\n### 榜单结构（每榜字段）\n| 场景 | 推荐模型 | 能力分(1-5) | 价格档位 | 选型理由 | 最近更新 |\n|---|---|---|---|---|---|\n| 日常对话/分析 | 待每日核验 | 待核验 | 待核验 | 待核验 | 2026-08-27 初始 |\n| 编程/建站 | 待每日核验 | 待核验 | 待核验 | 待核验 | 2026-08-27 初始 |\n| 中文长文/小说 | 待每日核验 | 待核验 | 待核验 | 待核验 | 2026-08-27 初始 |\n| 出图（视觉） | 豆包 doubao-seedream | 4 | 团队定档默认 | 团队实测基线 | 2026-08-27 初始 |\n| 配音 | edge-tts | 4 | 免费 | 已沉淀技能 | 2026-08-27 初始 |\n| 通用性价比 | 待每日核验 | 待核验 | 待核验 | 待核验 | 2026-08-27 初始 |\n\n### 性价比计算口径\n- 性价比指数 = 能力分 x 0.6 + 价格分 x 0.4\n- 价格分 = 按官方「每百万 Token 定价」换算（越低越高分）\n- 价格每日核验，禁止凭记忆填写；核验来源见下\n\n### 每日核验来源清单（固定）\n1. 各模型官方发布页 / 定价页\n2. LMArena / Hugging Face 趋势榜\n3. Artificial Analysis / Vellum 价格对比\n4. 团队实测记录（D:\\AI员工体系\\growth\\log 网关调用日志）\n\n---\n\n## 板块二：灵感库 · 任务 · 痛点\n\n### 灵感条目模板（字段）\n灵感名 / 一句话定位 / 痛点（认知差）/ 人群 / 产品形态（四件套）/ 裂变钩子 / 变现 / 七维评分 / 状态 / 关联任务 / 更新记录\n\n### 当前灵感台账（2026-08-27 快照）\n| 灵感 | 一句话定位 | 痛点 | 形态 | 钩子 | 变现 | 评分 | 状态 |\n|---|---|---|---|---|---|---|---|\n| AI 黑话词典+等级测试 | 普通人学 AI 第一站 | 想说说不出的 AI 术语 | 词典+测试+生成器 | 等级测试晒分 | 课程分销/咨询 | 30 | 待验证 |\n| 大学生办事词典 | 第一次实习/租房/入职百科 | 节点词穷 | 清单+生成器 | 转发给室友 | 求职辅导/资料包 | 29 | 待验证 |\n| 验房装修避坑 | 收房前必看工具 | 验房/报价单黑话 | 清单+词典 | 清单转发家人 | 本地商家导流 | 27 | 待验证 |\n| 养宠新手词典 | 新铲屎官工具站 | 疫苗/看病术语 | 生成器+日历 | 疫苗表转家人 | 用品CPS/医院导流 | 27 | 待验证 |\n| 打工人权益 | 离职/五险一金自查站 | 权益黑话 | 计算器+清单 | 情绪传播 | 律所导流/求职服务 | 25 | 待验证 |\n| 签证材料生成器 | 出国前材料清单 | 材料术语 | 清单+生成器 | 分享同行人 | 代办导流 | 25 | 备选 |\n\n### 痛点登记表\n| 痛点（一句话认知差） | 命中灵感 | 现有产品是否满足 |\n|---|---|---|\n| 想学 AI 但看不懂术语 | AI 黑话词典 | 有但质量差，缝隙在 |\n| 第一次办学生-职场手续词穷 | 大学生办事词典 | 碎片化无系统工具 |\n| 收房不懂验房、报价看不懂 | 验房装修避坑 | 无系统工具 |\n| 新手养宠不懂疫苗/看病 | 养宠新手词典 | 无统一工具 |\n| 被裁/离职不懂权益 | 打工人权益 | 科普号多，工具少 |\n| 出国不懂材料流程 | 签证材料 | 时效性差，谁能做准谁赢 |\n\n### 任务看板（首批）\n| 任务 | 所属灵感 | MVP 拆解 | 优先级 | 状态 | 负责人 |\n|---|---|---|---|---|---|\n| 7 天 MVP 验证 | 待习总圈定 | 1 页面+1 钩子+1 变现通道+0 预算分发 | P0 | 待指派 | 总助+值班员工 |\n| 真实搜索量/竞品核验 | 全部 | 每灵感补搜索量与竞品数据 | P1 | 待指派 | 值班员工 |\n\n---\n\n## 每日进步与更新机制\n\n### 每日动作清单（值班员工，约 15 分钟）\n1. 板块一：核对 4 类来源，有变化就更新榜单并标注日期；无变化写「今日无更新」；\n2. 板块二：灵感扫描（新想法过七维评分再入账）、任务看板进展、痛点命中情况；\n3. 裂变：从现有灵感衍生至少 1 个新变体（换人群/换形态/换钩子/换变现），写入衍生池；\n4. 落盘：更新本文件 + 当日日志（日志_灵感备案_YYYYMMDD.md），并用 sync_kb.py 写入总助大脑。\n\n### 更新纪律\n- 数据可溯源（来源+日期），不编造；有变化才改榜单\n- 每日日志固定三段：①AI 动态与榜单变化 ②灵感/任务/痛点进展 ③今日裂变衍生变体\n\n### 每周日成长整合\n- 周报（三块：榜单变化汇总 / 灵感进展 / 衍生池复盘）\n- 沉淀：1 条技能或提示词入库 + 复盘入 growth + sync_kb --rescan\n\n---\n\n## 裂变与变形机制\n\n### 裂变公式\n变体 = 原灵感 x 换人群 x 换形态（词典/清单/测试/生成器）x 换钩子（七式）x 换变现\n\n### 变形矩阵示例\n- 大学生办事词典 → 打工人办事词典（换人群）\n- 大学生办事词典 → 毕业进度测算测试卡（换形态=测试，钩子=晒分数）\n- 验房装修避坑 → 本地验房师转介绍裂变（换变现=本地 CPL）\n- AI 黑话词典 → 提示词生成器带水印（换形态=生成器）\n\n### 衍生池规则\n- 每日衍生 ≥1 个新变体登记入池；每周复盘淘汰失效、升级高分；高分变体转正式灵感台账\n\n---\n\n## 使用与验收\n- 习总查看：总助网站（总助大脑）图谱新增「灵感备案」节点；详读本文件\n- 验收标准：每日有更新或「无更新」记录；榜单数据可溯源；衍生池每周 +7；每周日周报完成\n- 员工执行入口：提示词「提示词_开员工窗口_灵感备案每日运营_v1.md」（提示词库\\调度指令\\）",
-   "domain": "灵感备案",
-   "src": "习总灵感备案需求 20260827",
-   "created_at": "2026-08-27 11:24"
+   "id": "K15",
+   "title": "静态站密码分享与权限隔离",
+   "detail": "GitHub Pages 无内置密码保护；静态站可用 AES-GCM 客户端加密，数据内嵌且不发布原始 JSON/vault；需要账号级权限时再上 Cloudflare Access。防修改靠仓库权限与分支保护，不靠页面密码。",
+   "domain": "安全",
+   "src": "2026-10-04 访问控制方案",
+   "created_at": "2026-10-04 11:29",
+   "content": "GitHub Pages 无内置密码保护；静态站可用 AES-GCM 客户端加密，数据内嵌且不发布原始 JSON/vault；需要账号级权限时再上 Cloudflare Access。防修改靠仓库权限与分支保护，不靠页面密码。"
   }
  ],
  "projects": [
@@ -1370,6 +1463,50 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    "path": "D:\\AI员工体系",
    "progress": "总助Codex/Hermes/豆包/WorkBuddy/Claude/DSH 六编制；提示词库 28 条；growth 沉淀库 169 项资产",
    "priority": "基础设施"
+  },
+  {
+   "id": "P11",
+   "title": "总脑网站产品化与访问控制",
+   "detail": "全量归纳记忆/技能/复盘/提示词；完整版与共享版分离；共享版加密码层并准备只读分享。",
+   "status": "本阶段实施",
+   "path": "D:\\接单客户\\网站_总脑_全量与共享版构建_20261004",
+   "priority": "基础设施",
+   "created_at": "2026-10-04 11:29",
+   "name": "总脑网站产品化与访问控制",
+   "progress": "全量归纳记忆/技能/复盘/提示词；完整版与共享版分离；共享版加密码层并准备只读分享。"
+  },
+  {
+   "id": "P12",
+   "title": "CET4 四级网站与小程序",
+   "detail": "网站上线并修复倒计时与功能；部署包与国内 CloudBase/备案路径已准备，小程序复刻继续。",
+   "status": "已上线/小程序复刻中",
+   "path": "D:\\接单客户",
+   "priority": "主线",
+   "created_at": "2026-10-04 11:29",
+   "name": "CET4 四级网站与小程序",
+   "progress": "网站上线并修复倒计时与功能；部署包与国内 CloudBase/备案路径已准备，小程序复刻继续。"
+  },
+  {
+   "id": "P13",
+   "title": "小程序接单与交付",
+   "detail": "BIM、健身、CET4 三条小程序链路；个人主体注册、备案与发布流程已有沉淀。",
+   "status": "进行中",
+   "path": "D:\\接单客户",
+   "priority": "变现",
+   "created_at": "2026-10-04 11:29",
+   "name": "小程序接单与交付",
+   "progress": "BIM、健身、CET4 三条小程序链路；个人主体注册、备案与发布流程已有沉淀。"
+  },
+  {
+   "id": "P14",
+   "title": "市调大赛与学校比赛项目",
+   "detail": "参赛手册、班级资料与比赛材料已有 docx 生成与复核沉淀。",
+   "status": "进行中",
+   "path": "D:\\接单客户",
+   "priority": "学习",
+   "created_at": "2026-10-04 11:29",
+   "name": "市调大赛与学校比赛项目",
+   "progress": "参赛手册、班级资料与比赛材料已有 docx 生成与复核沉淀。"
   }
  ],
  "employees": [
@@ -1591,16 +1728,21 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    "acceptance": "任意员工 AI 通过 MCP/HTTP 一条命令登记条目并自动刷新可视化和档案",
    "created_at": "2026-08-20 03:35",
    "updated_at": ""
-  }
- ],
- "notes": [
+  },
   {
-   "id": "note-01",
-   "title": "任务书_灵感备案可视化_接口契约与验收",
-   "detail": "# 任务书：灵感备案可视化——接口契约与验收\n\n> 项目：总助大脑「灵感备案」可视化面板（习总选定方案 A，2026-08-27）\n> 拆窗：窗口 A 数据层与更新链路；窗口 B 可视化面板 UI；并行动工，写集不重叠\n> 合并验收：总助 Codex；视觉复检：豆包/视觉下属\n\n## 一、数据文件\n- 路径：D:\\小说文件\\总助大脑\\data\\灵感备案.json\n- 初始数据来源：D:\\小说文件\\总助大脑\\备案_灵感库双板块与运营机制_20260827.md（不编造价格/评分，未核验字段写「待核验」）\n\n## 二、JSON 接口契约（窗口 A 产出，窗口 B 只读）\n```json\n{\n  \"updatedAt\": \"2026-08-27\",\n  \"rankings\": [\n    { \"scene\": \"出图\", \"model\": \"豆包 doubao-seedream\", \"capabilityScore\": 4, \"priceTier\": \"便宜\", \"reason\": \"团队实测基线\", \"source\": \"火山方舟定价页\", \"sourceDate\": \"2026-08-27\", \"trend\": \"维持\" }\n  ],\n  \"ideas\": [\n    { \"name\": \"AI 黑话词典+等级测试站\", \"positioning\": \"普通人学 AI 的第一站\", \"pain\": \"想说说不出的 AI 术语\", \"audience\": \"AI 新手/职场人/学生\", \"forms\": [\"词典\",\"测试\",\"生成器\"], \"hook\": \"等级测试晒分卡\", \"monetize\": \"课程分销+咨询\", \"score\": 30, \"status\": \"待验证\", \"tasks\": [\"T1\"] }\n  ],\n  \"pains\": [\n    { \"pain\": \"想学 AI 但看不懂术语\", \"idea\": \"AI 黑话词典+等级测试站\", \"satisfied\": \"否\" }\n  ],\n  \"derived\": [\n    { \"date\": \"2026-08-27\", \"from\": \"大学生办事词典\", \"variant\": \"毕业进度测算测试卡\", \"change\": \"换形态=测试，钩子=晒分数\" }\n  ]\n}\n```\n- 状态枚举：灵感/待验证/验证中/执行中/已变现/已归档\n- trend 枚举：新增/上升/下降/维持\n\n## 三、窗口分工与写集\n- 窗口 A（数据层）：data\\灵感备案.json + 增量更新脚本（榜单/灵感/痛点/衍生四类），自动刷新 knowledge.json 与 index.html；写集=data\\ 与 _build\\\n- 窗口 B（UI 层）：index.html 新增「灵感备案」页签 + 四块布局 + 更新状态条；写集=index.html 与新增资源文件\n- 双方禁止越界；数据缺字段 UI 显示「待核验」不报错\n\n## 四、验收标准（A+B 合并后）\n1. 本地打开 index.html 可见「灵感备案」页签，四块渲染正确、断网可用\n2. 排行榜按场景分榜，性价比指数可见；灵感卡状态色卡区分、可展开\n3. 每日更新脚本一条命令可增量写入并刷新页面数据\n4. knowledge.json 原有条目完好；python 无报错；页签切换无 console 报错\n\n## 五、落盘纪律\n- 改动即落盘；每完成一个阶段建议开新会话；完成后由总助验收并回填沉淀",
-   "created_at": "2026-08-27 11:33"
+   "id": "REQ-06",
+   "title": "总脑共享版密码层与只读访问",
+   "detail": "总脑完整版继续私有；对外发布共享脱敏版，加密码层，只给使用权限，不给仓库或部署写权限；密钥文件放在桌面招聘员工文件夹。",
+   "path": "",
+   "src": "",
+   "created_at": "2026-10-04 11:29",
+   "cat": "安全",
+   "priority": "高",
+   "status": "实施中",
+   "acceptance": "共享版无原始路径/邮箱/证件/密钥；错误密码不可读；仓库仅所有者可写；桌面文件夹含密钥与总结。"
   }
  ],
+ "notes": [],
  "memories": [
   {
    "id": "mem-01",
@@ -1624,12 +1766,12 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
   },
   {
    "id": "mem-03",
-   "title": "Codex 全局规则（最新版 v3.11）",
+   "title": "Codex 全局规则索引（v3.13）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\codex_instructions_v3.md",
    "summary": [
-    "# Codex 全局规则（最新版 v3.11）",
-    "> 来源: C:\\Users\\XTC\\.codex\\AGENTS.md",
-    "> 更新日期: 2026-08-15"
+    "# Codex 全局规则索引（v3.13）",
+    "> 来源: C:\\Users\\XTC\\.codex\\AGENTS.md（始终以该文件为最新主档）",
+    "> 更新日期: 2026-10-04"
    ]
   },
   {
@@ -1682,6 +1824,36 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
   },
   {
    "id": "mem-09",
+   "title": "结论_BIM小程序发布准备完成_20260826.md",
+   "path": "C:\\Users\\XTC\\.codex\\memories\\结论_BIM小程序发布准备完成_20260826.md",
+   "summary": [
+    "# 结论_BIM小程序发布准备完成_20260826.md",
+    "## 项目状态（2026-08-26）",
+    "- 城院智筑先锋 BIM 小程序：P0-P4 全部完成，发布准备就绪，待备案审核"
+   ]
+  },
+  {
+   "id": "mem-10",
+   "title": "结论_BIM小程序已上线_20260904.md",
+   "path": "C:\\Users\\XTC\\.codex\\memories\\结论_BIM小程序已上线_20260904.md",
+   "summary": [
+    "# 结论_BIM小程序已上线_20260904.md",
+    "> 习总口述确认（2026-09-04）：BIM 小程序已全部上线。此前 08-26~09-03 的\"发布准备/待提审\"文档为滞后状态，判断项目状态以习总口述为最高优先级，文档仅作",
+    "## 项目状态基线（以此为准）"
+   ]
+  },
+  {
+   "id": "mem-11",
+   "title": "结论_CET4小程序新建个人主体与备案路径_20260914",
+   "path": "C:\\Users\\XTC\\.codex\\memories\\结论_CET4小程序新建个人主体与备案路径_20260914.md",
+   "summary": [
+    "# 结论_CET4小程序新建个人主体与备案路径_20260914",
+    "> 习总裁决（2026-09-14）：CET4 备考工具小程序**新建个人主体**，不复用 BIM（wx71677a747b5261cd）/ 健身（wx316e0f53ce38db",
+    "## 一、链路与官方时效（原文核验，非推测）"
+   ]
+  },
+  {
+   "id": "mem-12",
    "title": "结论：FIT COMMAND 网站母版与小程序商业化对接（2026-08-18）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\结论_FITCOMMAND网站母版与小程序商业化对接_20260818.md",
    "summary": [
@@ -1691,7 +1863,27 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-10",
+   "id": "mem-13",
+   "title": "结论_健身小程序上线前修复包与上传_20260909",
+   "path": "C:\\Users\\XTC\\.codex\\memories\\结论_健身小程序上线前修复包与上传_20260909.md",
+   "summary": [
+    "# 结论_健身小程序上线前修复包与上传_20260909",
+    "> 供后续会话快速恢复上下文（2026-09-09 总助存档）",
+    "## 项目定位"
+   ]
+  },
+  {
+   "id": "mem-14",
+   "title": "结论：小程序个人认证与可搜索性（2026-09-05）",
+   "path": "C:\\Users\\XTC\\.codex\\memories\\结论_小程序个人认证与可搜索性_20260905.md",
+   "summary": [
+    "# 结论：小程序个人认证与可搜索性（2026-09-05）",
+    "> 来源：习总实操口述（2026-09-05，BIM 小程序后台实测）；价格与规则以微信官方当年公示为准。",
+    "## 事实"
+   ]
+  },
+  {
+   "id": "mem-15",
    "title": "网站开发规范 · 本地预览 SW 缓存根治（习总钦定 · 2026-08-13）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\网站开发规范_本地预览SW缓存根治_20260813.md",
    "summary": [
@@ -1701,7 +1893,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-11",
+   "id": "mem-16",
    "title": "背景：健身网站路径与定位（2026-08-17 修正）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\背景_健身网站路径与定位_20260817.md",
    "summary": [
@@ -1711,7 +1903,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-12",
+   "id": "mem-17",
    "title": "能力：总助视觉通道（豆包 vision 看图）2026-08-14 上线",
    "path": "C:\\Users\\XTC\\.codex\\memories\\能力_总助视觉通道_豆包vision_20260814.md",
    "summary": [
@@ -1721,7 +1913,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-13",
+   "id": "mem-18",
    "title": "一句话",
    "path": "C:\\Users\\XTC\\.codex\\memories\\能力清单_总助能力全景_v1_20260813.md",
    "summary": [
@@ -1731,7 +1923,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-14",
+   "id": "mem-19",
    "title": "规则_上下文健康管理_v3.12（2026-08-19 习总钦定）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\规则_上下文健康管理_v3.12_20260819.md",
    "summary": [
@@ -1741,7 +1933,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-15",
+   "id": "mem-20",
    "title": "规则：主程序-分裂分支架构（产品开发铁律 v1.0）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\规则_主程序分裂分支架构_20260817.md",
    "summary": [
@@ -1751,7 +1943,17 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-16",
+   "id": "mem-21",
+   "title": "规则：任务分窗并行动工（习总钦定 2026-08-27）",
+   "path": "C:\\Users\\XTC\\.codex\\memories\\规则_任务分窗并行动工_20260827.md",
+   "summary": [
+    "# 规则：任务分窗并行动工（习总钦定 2026-08-27）",
+    "## 背景",
+    "## 规则"
+   ]
+  },
+  {
+   "id": "mem-22",
    "title": "规则_关键产出立即落盘与分阶段新会话（2026-08-15 习总钦定）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\规则_关键产出立即落盘与分阶段新会话_20260815.md",
    "summary": [
@@ -1761,7 +1963,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-17",
+   "id": "mem-23",
    "title": "一、反思机制（对己，强制）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\规则_反思与创造机制_v3.8_20260813.md",
    "summary": [
@@ -1771,7 +1973,36 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-18",
+   "id": "mem-24",
+   "title": "总脑双入口分工（2026-10-05 习总确认）",
+   "path": "C:\\Users\\XTC\\.codex\\memories\\规则_总脑双入口分工_v1_20261005.md",
+   "summary": [
+    "## 总脑双入口分工（2026-10-05 习总确认）",
+    "- 旧总脑网址仅供习总私用，不写入对外文档、不分享给他人。",
+    "- 新加密共享版仅供他人只读使用，使用者没有仓库写权限，不能修改习总数据。"
+   ]
+  },
+  {
+   "id": "mem-25",
+   "title": "规则：最终版留存与过程文件清理（v3.13）",
+   "path": "C:\\Users\\XTC\\.codex\\memories\\规则_最终版留存与过程文件清理_v3.13_20261004.md",
+   "summary": [
+    "# 规则：最终版留存与过程文件清理（v3.13）",
+    "> 生效：2026-10-04 ｜ 来源：习总钦定 ｜ 适用范围：全部 AI 员工与全部项目",
+    "## 规则正文"
+   ]
+  },
+  {
+   "id": "mem-26",
+   "title": "规则：网站引流标签 —— 禁大图二维码 / 禁开屏海报（2026-09-04 习总钦定）",
+   "path": "C:\\Users\\XTC\\.codex\\memories\\规则_网站引流标签禁大图二维码_20260904.md",
+   "summary": [
+    "# 规则：网站引流标签 —— 禁大图二维码 / 禁开屏海报（2026-09-04 习总钦定）",
+    "> 场景：把 VIBE LAB 网站（健身指挥台 / BIM 学习站 / 黔行导航站等）作为引流载体放出时使用。"
+   ]
+  },
+  {
+   "id": "mem-27",
    "title": "核心",
    "path": "C:\\Users\\XTC\\.codex\\memories\\规则_能力自查机制_v3.7_20260813.md",
    "summary": [
@@ -1781,7 +2012,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-19",
+   "id": "mem-28",
    "title": "规则：视频制作仅人声、无BGM（2026-08-14 习总钦定）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\规则_视频制作仅人声无BGM_20260814.md",
    "summary": [
@@ -1791,7 +2022,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-20",
+   "id": "mem-29",
    "title": "规则：视频制作动画优先（2026-08-14 习总钦定）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\规则_视频制作动画优先_20260814.md",
    "summary": [
@@ -1801,7 +2032,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-21",
+   "id": "mem-30",
    "title": "视频分析流水线（已沉淀，可复用）",
    "path": "C:\\Users\\XTC\\.codex\\memories\\视频分析流水线与QwenMMPlugins方案_20260813.md",
    "summary": [
@@ -1811,7 +2042,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-22",
+   "id": "mem-31",
    "title": "一、设备硬件基线",
    "path": "C:\\Users\\XTC\\.codex\\memories\\设备硬件与电源配置_联想Y9000P_20260813.md",
    "summary": [
@@ -1821,7 +2052,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "mem-23",
+   "id": "mem-32",
    "title": "Ad-hoc notes",
    "path": "C:\\Users\\XTC\\.codex\\memories\\extensions\\ad_hoc\\instructions.md",
    "summary": [
@@ -1928,6 +2159,16 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
   },
   {
    "id": "skill-08",
+   "title": "技能：商业分析_赛道筛选与裂变获客模型_v1",
+   "path": "D:\\AI员工体系\\growth\\skills\\商业分析_赛道筛选与裂变获客模型_v1.md",
+   "summary": [
+    "# 技能：商业分析_赛道筛选与裂变获客模型_v1",
+    "## 技能名",
+    "## 触发场景"
+   ]
+  },
+  {
+   "id": "skill-09",
    "title": "技能名",
    "path": "D:\\AI员工体系\\growth\\skills\\小说写作_去AI味蒸馏打法.md",
    "summary": [
@@ -1937,7 +2178,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-09",
+   "id": "skill-10",
    "title": "技能：APP开发_人机协作闭环（TRAE SOLO 模式方法论）",
    "path": "D:\\AI员工体系\\growth\\skills\\开发建站_APP开发人机协作闭环.md",
    "summary": [
@@ -1947,7 +2188,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-10",
+   "id": "skill-11",
    "title": "技能名",
    "path": "D:\\AI员工体系\\growth\\skills\\开发建站_PixsoMCP设计转代码链路.md",
    "summary": [
@@ -1957,7 +2198,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-11",
+   "id": "skill-12",
    "title": "技能：开发建站_VibeCoding三端打包发布_v1",
    "path": "D:\\AI员工体系\\growth\\skills\\开发建站_VibeCoding三端打包发布_v1.md",
    "summary": [
@@ -1967,7 +2208,27 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-12",
+   "id": "skill-13",
+   "title": "技能_开发建站_小程序canvas绘制SVG贴纸转PNG管线_v1",
+   "path": "D:\\AI员工体系\\growth\\skills\\开发建站_小程序canvas绘制SVG贴纸转PNG管线_v1.md",
+   "summary": [
+    "# 技能_开发建站_小程序canvas绘制SVG贴纸转PNG管线_v1",
+    "## 触发场景",
+    "## 结论先行"
+   ]
+  },
+  {
+   "id": "skill-14",
+   "title": "技能_开发建站_小程序数据层抽取管线_运行时id补齐与幂等校验",
+   "path": "D:\\AI员工体系\\growth\\skills\\开发建站_小程序数据层抽取管线_运行时id补齐与幂等校验.md",
+   "summary": [
+    "# 技能_开发建站_小程序数据层抽取管线_运行时id补齐与幂等校验",
+    "**技能名**：网页静态数据 → 小程序数据模块的抽取管线（运行时 id 补齐 + 幂等校验）",
+    "**触发场景**：把已有网页/网站的题库、词库、素材库等数据搬到小程序端，需要「一份数据两端共用、永不增叉」。"
+   ]
+  },
+  {
+   "id": "skill-15",
    "title": "技能_开发建站_方舟视觉模型选型实测法",
    "path": "D:\\AI员工体系\\growth\\skills\\开发建站_方舟视觉模型选型实测法.md",
    "summary": [
@@ -1977,7 +2238,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-13",
+   "id": "skill-16",
    "title": "技能：本地预览 SW 缓存根治",
    "path": "D:\\AI员工体系\\growth\\skills\\开发建站_本地预览SW缓存根治.md",
    "summary": [
@@ -1987,7 +2248,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-14",
+   "id": "skill-17",
    "title": "开发建站_炸裂特效引擎fx.js",
    "path": "D:\\AI员工体系\\growth\\skills\\开发建站_炸裂特效引擎fx.js.md",
    "summary": [
@@ -1997,7 +2258,27 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-15",
+   "id": "skill-18",
+   "title": "技能_开发建站_网站搬运到微信小程序_个人主体合规与差距矩阵",
+   "path": "D:\\AI员工体系\\growth\\skills\\开发建站_网站搬运到微信小程序_个人主体合规与差距矩阵.md",
+   "summary": [
+    "# 技能_开发建站_网站搬运到微信小程序_个人主体合规与差距矩阵",
+    "**技能名**：网站 → 微信小程序 搬运前置评估（个人主体版）",
+    "**触发场景**：习总要求把已有网页/网站\"复刻/搬运/开发成小程序\"，尤其是个人主体小程序。"
+   ]
+  },
+  {
+   "id": "skill-19",
+   "title": "技能：静态知识库加密与只读发布",
+   "path": "D:\\AI员工体系\\growth\\skills\\开发建站_静态知识库加密与只读发布.md",
+   "summary": [
+    "# 技能：静态知识库加密与只读发布",
+    "## 技能名",
+    "## 触发场景"
+   ]
+  },
+  {
+   "id": "skill-20",
    "title": "技能名",
    "path": "D:\\AI员工体系\\growth\\skills\\开发建站_高德地图JSAPI链路.md",
    "summary": [
@@ -2007,7 +2288,27 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-16",
+   "id": "skill-21",
+   "title": "技能_前端修复_本地静态站功能排查与恢复",
+   "path": "D:\\AI员工体系\\growth\\skills\\技能_前端修复_本地静态站功能排查与恢复.md",
+   "summary": [
+    "# 技能_前端修复_本地静态站功能排查与恢复",
+    "> 沉淀日期：2026-09-10｜来源：CET4 四级网站修复任务",
+    "## 技能名"
+   ]
+  },
+  {
+   "id": "skill-22",
+   "title": "技能_小程序_自检与状态模拟验证",
+   "path": "D:\\AI员工体系\\growth\\skills\\技能_小程序_自检与状态模拟验证.md",
+   "summary": [
+    "# 技能_小程序_自检与状态模拟验证",
+    "**触发场景**：改完微信小程序页面后，需在**不打开微信开发者工具**的前提下确认“分支逻辑真跑通、标签真配对、文案真无敏感词”。",
+    "## 步骤"
+   ]
+  },
+  {
+   "id": "skill-23",
    "title": "排障_上下文健康管理（技能沉淀 · 2026-08-19）",
    "path": "D:\\AI员工体系\\growth\\skills\\排障_上下文健康管理_20260819.md",
    "summary": [
@@ -2017,7 +2318,17 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-17",
+   "id": "skill-24",
+   "title": "技能｜Word 长文档（docx）脚本化生成、自动分页与 COM 渲染排障",
+   "path": "D:\\AI员工体系\\growth\\skills\\文档生产_docx长手册生成与Word渲染排障_v1.md",
+   "summary": [
+    "# 技能｜Word 长文档（docx）脚本化生成、自动分页与 COM 渲染排障",
+    "- 技能名：文档生产_docx长手册生成与Word渲染排障",
+    "- 版本：v2（2026-09-21 增补自动分页、目录域、COM 样式覆盖三节）"
+   ]
+  },
+  {
+   "id": "skill-25",
    "title": "技能：知识库_总助大脑构建与维护（可视化+对接任意AI）",
    "path": "D:\\AI员工体系\\growth\\skills\\知识库_总助大脑构建与维护.md",
    "summary": [
@@ -2027,7 +2338,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-18",
+   "id": "skill-26",
    "title": "步骤",
    "path": "D:\\AI员工体系\\growth\\skills\\视觉生产_Cowart无限画布批注改图工作流.md",
    "summary": [
@@ -2037,7 +2348,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-19",
+   "id": "skill-27",
    "title": "技能名",
    "path": "D:\\AI员工体系\\growth\\skills\\视频分析_抖音视频内容分析流水线.md",
    "summary": [
@@ -2047,7 +2358,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-20",
+   "id": "skill-28",
    "title": "技能名",
    "path": "D:\\AI员工体系\\growth\\skills\\视频生产_H3Motion拼贴动画长视频.md",
    "summary": [
@@ -2057,7 +2368,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-21",
+   "id": "skill-29",
    "title": "技能名",
    "path": "D:\\AI员工体系\\growth\\skills\\视频生产_Remotion数据可视化动画.md",
    "summary": [
@@ -2067,7 +2378,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-22",
+   "id": "skill-30",
    "title": "触发场景",
    "path": "D:\\AI员工体系\\growth\\skills\\视频生产_Remotion质感宣传片链路.md",
    "summary": [
@@ -2077,7 +2388,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-23",
+   "id": "skill-31",
    "title": "视频生产_ffmpeg中文图文轮播渲染_v1",
    "path": "D:\\AI员工体系\\growth\\skills\\视频生产_ffmpeg中文图文轮播渲染_v1.md",
    "summary": [
@@ -2087,7 +2398,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-24",
+   "id": "skill-32",
    "title": "技能：视频生产 video-shotcraft 宣传片",
    "path": "D:\\AI员工体系\\growth\\skills\\视频生产_video-shotcraft宣传片技能.md",
    "summary": [
@@ -2097,7 +2408,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-25",
+   "id": "skill-33",
    "title": "技能：证券教学法",
    "path": "D:\\AI员工体系\\growth\\skills\\证券_证券教学法.md",
    "summary": [
@@ -2107,13 +2418,23 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "skill-26",
+   "id": "skill-34",
    "title": "技能_Claude与DSH启动排障",
    "path": "D:\\AI员工体系\\growth\\skills\\运维_ClaudeCode与DSH启动排障.md",
    "summary": [
     "# 技能_Claude与DSH启动排障",
     "## 技能名",
     "## 触发场景"
+   ]
+  },
+  {
+   "id": "skill-35",
+   "title": "技能_运维_软件下载安装到D盘与CDN风控绕过",
+   "path": "D:\\AI员工体系\\growth\\skills\\运维_软件下载安装到D盘与CDN风控绕过.md",
+   "summary": [
+    "# 技能_运维_软件下载安装到D盘与CDN风控绕过",
+    "- 技能名：Windows 软件下载安装到 D 盘 + CDN 风控绕过",
+    "- 领域：运维 / 系统落地"
    ]
   },
   {
@@ -2156,6 +2477,16 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
   },
   {
    "id": "prompt-03",
+   "title": "说明_提示词_写法与常见问题_v2_20261011",
+   "path": "D:\\AI员工体系\\提示词库\\说明_提示词_写法与常见问题_v2_20261011.md",
+   "summary": [
+    "# 说明_提示词_写法与常见问题_v2_20261011",
+    "> 版本：v2（在 v1 基础上全面扩写：底层原理讲透、八字段逐个展开、12 招进阶技巧、20 类问题、10 套模板变体、六条主线实战案例、调试方法论）",
+    "> 生成：2026-10-11 · 归属：D:\\AI员工体系\\提示词库（第四库）"
+   ]
+  },
+  {
+   "id": "prompt-04",
    "title": "提示词_宣传片三平台文案_视频核验工作流_v1",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_宣传片三平台文案_视频核验工作流_v1.md",
    "summary": [
@@ -2165,7 +2496,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-04",
+   "id": "prompt-05",
    "title": "提示词_宣传片三平台文案_通用_v2",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_宣传片三平台文案_通用_v2.md",
    "summary": [
@@ -2175,7 +2506,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-05",
+   "id": "prompt-06",
    "title": "提示词_宣传片生产_素材到成片_v1",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_宣传片生产_素材到成片_v1.md",
    "summary": [
@@ -2185,7 +2516,17 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-06",
+   "id": "prompt-07",
+   "title": "提示词_小红书抖音涨粉开店_从零到1000粉_v1",
+   "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_小红书抖音涨粉开店_从零到1000粉_v1.md",
+   "summary": [
+    "# 提示词：小红书+抖音双账号从 0 涨到 1000 粉开店（v1）",
+    "## 八字段索引",
+    "- 名称：小红书+抖音双账号从 0 涨到 1000 粉开店"
+   ]
+  },
+  {
+   "id": "prompt-08",
    "title": "提示词_小红书爆款笔记_图文结构_v1",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_小红书爆款笔记_图文结构_v1.md",
    "summary": [
@@ -2195,7 +2536,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-07",
+   "id": "prompt-09",
    "title": "提示词_引流文案_社交平台成果展示_v1",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_引流文案_社交平台成果展示_v1.md",
    "summary": [
@@ -2205,7 +2546,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-08",
+   "id": "prompt-10",
    "title": "提示词_成交话术_设计接单冷启动_v1",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_成交话术_设计接单冷启动_v1.md",
    "summary": [
@@ -2215,7 +2556,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-09",
+   "id": "prompt-11",
    "title": "提示词_抖音口播脚本_15到60秒_v1",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_抖音口播脚本_15到60秒_v1.md",
    "summary": [
@@ -2225,7 +2566,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-10",
+   "id": "prompt-12",
    "title": "提示词_报价单_网页建站定制_v1",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_报价单_网页建站定制_v1.md",
    "summary": [
@@ -2235,7 +2576,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-11",
+   "id": "prompt-13",
    "title": "提示词_拼贴动画长视频_H3Motion工作流_v1",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_拼贴动画长视频_H3Motion工作流_v1.md",
    "summary": [
@@ -2245,7 +2586,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-12",
+   "id": "prompt-14",
    "title": "提示词_拼贴动画长视频_H3Motion工作流_v2",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_拼贴动画长视频_H3Motion工作流_v2.md",
    "summary": [
@@ -2255,7 +2596,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-13",
+   "id": "prompt-15",
    "title": "提示词_数据可视化视频文案_社交平台发布_v1",
    "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_数据可视化视频文案_社交平台发布_v1.md",
    "summary": [
@@ -2265,7 +2606,47 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-14",
+   "id": "prompt-16",
+   "title": "提示词_无执照小程序接单冷启动_学生版_v1_20260830",
+   "path": "D:\\AI员工体系\\提示词库\\内容创作\\提示词_无执照小程序接单冷启动_学生版_v1_20260830.md",
+   "summary": [
+    "# 提示词_无执照小程序接单冷启动_学生版_v1_20260830",
+    "## 一、名称",
+    "## 二、用途"
+   ]
+  },
+  {
+   "id": "prompt-17",
+   "title": "提示词_企业培养上市模型_个人AI开发程度诊断与规划_v1",
+   "path": "D:\\AI员工体系\\提示词库\\分析复盘\\提示词_企业培养上市模型_个人AI开发程度诊断与规划_v1.md",
+   "summary": [
+    "# 提示词 · 企业培养上市模型：个人 AI 开发程度诊断与下一步规划（v1.0）",
+    "> 归属：分析复盘 / 商业模式诊断",
+    "> 版本：v1.0 · 2026-08-28"
+   ]
+  },
+  {
+   "id": "prompt-18",
+   "title": "提示词_公司注册流程教学_学生版_v1_20260828",
+   "path": "D:\\AI员工体系\\提示词库\\分析复盘\\提示词_公司注册流程教学_学生版_v1_20260828.md",
+   "summary": [
+    "# 提示词_公司注册流程教学_学生版_v1_20260828",
+    "## 一、名称",
+    "## 二、用途"
+   ]
+  },
+  {
+   "id": "prompt-19",
+   "title": "提示词_图纸参数提取_施工图读图防编造_v1_20260914",
+   "path": "D:\\AI员工体系\\提示词库\\分析复盘\\提示词_图纸参数提取_施工图读图防编造_v1_20260914.md",
+   "summary": [
+    "# 提示词_图纸参数提取_施工图读图防编造_v1",
+    "## 名称",
+    "## 用途"
+   ]
+  },
+  {
+   "id": "prompt-20",
    "title": "提示词_图表动画视觉核对_豆包vision_v1",
    "path": "D:\\AI员工体系\\提示词库\\分析复盘\\提示词_图表动画视觉核对_豆包vision_v1.md",
    "summary": [
@@ -2275,7 +2656,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-15",
+   "id": "prompt-21",
    "title": "提示词_复盘_任务四问_v1",
    "path": "D:\\AI员工体系\\提示词库\\分析复盘\\提示词_复盘_任务四问_v1.md",
    "summary": [
@@ -2285,7 +2666,17 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-16",
+   "id": "prompt-22",
+   "title": "提示词_思考_总脑产品化与功能分裂出售_总管理视角_v1",
+   "path": "D:\\AI员工体系\\提示词库\\分析复盘\\提示词_思考_总脑产品化与功能分裂出售_总管理视角_v1.md",
+   "summary": [
+    "# 提示词 · 思考：总脑产品化与功能分裂出售（总管理视角 v1.0）",
+    "> 归属：分析复盘 / 商业模式思考",
+    "> 版本：v1.0 · 2026-08-30"
+   ]
+  },
+  {
+   "id": "prompt-23",
    "title": "提示词_抖音视频内容分析_链接转写抽帧OCR_v1",
    "path": "D:\\AI员工体系\\提示词库\\分析复盘\\提示词_抖音视频内容分析_链接转写抽帧OCR_v1.md",
    "summary": [
@@ -2295,7 +2686,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-17",
+   "id": "prompt-24",
    "title": "提示词_排障_根因分析模板_v1",
    "path": "D:\\AI员工体系\\提示词库\\分析复盘\\提示词_排障_根因分析模板_v1.md",
    "summary": [
@@ -2305,7 +2696,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-18",
+   "id": "prompt-25",
    "title": "提示词_知识库巡检_健康报告_v1",
    "path": "D:\\AI员工体系\\提示词库\\分析复盘\\提示词_知识库巡检_健康报告_v1.md",
    "summary": [
@@ -2315,7 +2706,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-19",
+   "id": "prompt-26",
    "title": "提示词_出图_文旅场景细节强化_v1",
    "path": "D:\\AI员工体系\\提示词库\\图像生成\\提示词_出图_文旅场景细节强化_v1.md",
    "summary": [
@@ -2325,7 +2716,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-20",
+   "id": "prompt-27",
    "title": "提示词_图像生成_Seedream官方规则_v1",
    "path": "D:\\AI员工体系\\提示词库\\图像生成\\提示词_图像生成_Seedream官方规则_v1.md",
    "summary": [
@@ -2335,7 +2726,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-21",
+   "id": "prompt-28",
    "title": "提示词_图像生成_场景细节强化_v2",
    "path": "D:\\AI员工体系\\提示词库\\图像生成\\提示词_图像生成_场景细节强化_v2.md",
    "summary": [
@@ -2345,7 +2736,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-22",
+   "id": "prompt-29",
    "title": "提示词_封面排版_深色氛围组_v1",
    "path": "D:\\AI员工体系\\提示词库\\图像生成\\提示词_封面排版_深色氛围组_v1.md",
    "summary": [
@@ -2355,7 +2746,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-23",
+   "id": "prompt-30",
    "title": "提示词_海报_新中式国潮_v1",
    "path": "D:\\AI员工体系\\提示词库\\图像生成\\提示词_海报_新中式国潮_v1.md",
    "summary": [
@@ -2365,7 +2756,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-24",
+   "id": "prompt-31",
    "title": "提示词_站点风格_品牌叙事站视觉_v1",
    "path": "D:\\AI员工体系\\提示词库\\图像生成\\提示词_站点风格_品牌叙事站视觉_v1.md",
    "summary": [
@@ -2375,7 +2766,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-25",
+   "id": "prompt-32",
    "title": "提示词_配图_图文一一对应质检_v1",
    "path": "D:\\AI员工体系\\提示词库\\图像生成\\提示词_配图_图文一一对应质检_v1.md",
    "summary": [
@@ -2385,7 +2776,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-26",
+   "id": "prompt-33",
    "title": "提示词_去AI味蒸馏_网文风格提取与融合_v1",
    "path": "D:\\AI员工体系\\提示词库\\小说写作\\提示词_去AI味蒸馏_网文风格提取与融合_v1.md",
    "summary": [
@@ -2395,7 +2786,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-27",
+   "id": "prompt-34",
    "title": "提示词_小说_章节写作引擎_v2",
    "path": "D:\\AI员工体系\\提示词库\\小说写作\\提示词_小说_章节写作引擎_v2.md",
    "summary": [
@@ -2405,7 +2796,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-28",
+   "id": "prompt-35",
    "title": "提示词_小说_章节质检_对照设定卡_v2",
    "path": "D:\\AI员工体系\\提示词库\\小说写作\\提示词_小说_章节质检_对照设定卡_v2.md",
    "summary": [
@@ -2415,7 +2806,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-29",
+   "id": "prompt-36",
    "title": "提示词_小说_防烂尾大纲生成_v2",
    "path": "D:\\AI员工体系\\提示词库\\小说写作\\提示词_小说_防烂尾大纲生成_v2.md",
    "summary": [
@@ -2425,7 +2816,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-30",
+   "id": "prompt-37",
    "title": "提示词_APP开发需求说明书_SOLO模式_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_APP开发需求说明书_SOLO模式_v1.md",
    "summary": [
@@ -2435,7 +2826,17 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-31",
+   "id": "prompt-38",
+   "title": "提示词_BIM小程序P5练习闭环升级_任务书生成_v1_20260907",
+   "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_BIM小程序P5练习闭环升级_任务书生成_v1_20260907.md",
+   "summary": [
+    "# 提示词_BIM小程序P5练习闭环升级_任务书生成_v1_20260907",
+    "## 一、名称",
+    "## 二、用途"
+   ]
+  },
+  {
+   "id": "prompt-39",
    "title": "提示词_VibeCoding三端打包发布_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_VibeCoding三端打包发布_v1.md",
    "summary": [
@@ -2445,7 +2846,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-32",
+   "id": "prompt-40",
    "title": "提示词_一键部署_NetlifyVercel_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_一键部署_NetlifyVercel_v1.md",
    "summary": [
@@ -2455,7 +2856,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-33",
+   "id": "prompt-41",
    "title": "提示词_容器变形动效_大白话描述_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_容器变形动效_大白话描述_v1.md",
    "summary": [
@@ -2465,7 +2866,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-34",
+   "id": "prompt-42",
    "title": "提示词_小程序零成本上架_豆包WorkBuddy链路_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_小程序零成本上架_豆包WorkBuddy链路_v1.md",
    "summary": [
@@ -2475,7 +2876,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-35",
+   "id": "prompt-43",
    "title": "提示词_建站_健身地图调度台_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_建站_健身地图调度台_v1.md",
    "summary": [
@@ -2485,7 +2886,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-36",
+   "id": "prompt-44",
    "title": "提示词_建站_动漫能量炸裂颠覆重构_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_建站_动漫能量炸裂颠覆重构_v1.md",
    "summary": [
@@ -2495,7 +2896,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-37",
+   "id": "prompt-45",
    "title": "提示词_建站_叙事滚动页骨架_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_建站_叙事滚动页骨架_v1.md",
    "summary": [
@@ -2505,7 +2906,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-38",
+   "id": "prompt-46",
    "title": "提示词_建站_暖白能量动效站_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_建站_暖白能量动效站_v1.md",
    "summary": [
@@ -2515,7 +2916,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-39",
+   "id": "prompt-47",
    "title": "提示词_建站_潮流刊炸裂特效站_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_建站_潮流刊炸裂特效站_v1.md",
    "summary": [
@@ -2525,7 +2926,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-40",
+   "id": "prompt-48",
    "title": "提示词_建站_需求说明书_通用_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_建站_需求说明书_通用_v1.md",
    "summary": [
@@ -2535,7 +2936,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-41",
+   "id": "prompt-49",
    "title": "提示词_开发建站_Obsidian风格知识库页面改造_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_开发建站_Obsidian风格知识库页面改造_v1.md",
    "summary": [
@@ -2545,7 +2946,27 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-42",
+   "id": "prompt-50",
+   "title": "提示词_微信小程序数据文件排查与验收_开发建站_v1_20260826",
+   "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_微信小程序数据文件排查与验收_开发建站_v1_20260826.md",
+   "summary": [
+    "# 提示词_微信小程序数据文件排查与验收_开发建站_v1_20260826",
+    "## 用途",
+    "## 适用场景"
+   ]
+  },
+  {
+   "id": "prompt-51",
+   "title": "提示词_文档生成_竞赛参赛手册docx长文档_v1",
+   "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_文档生成_竞赛参赛手册docx长文档_v1.md",
+   "summary": [
+    "# 提示词_文档生成_竞赛参赛手册docx长文档_v1",
+    "## 一、名称",
+    "## 二、用途"
+   ]
+  },
+  {
+   "id": "prompt-52",
    "title": "提示词_网站自查_图文路径死链_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_网站自查_图文路径死链_v1.md",
    "summary": [
@@ -2555,7 +2976,17 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-43",
+   "id": "prompt-53",
+   "title": "提示词_网站防伪标签_接单引流入口_v1",
+   "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_网站防伪标签_接单引流入口_v1.md",
+   "summary": [
+    "# 提示词_网站防伪标签_接单引流入口_v1",
+    "> 分类：开发建站（作品防伪 + 接单引流 · 胶囊展开卡版）",
+    "> 修订：2026-09-04 v1.4 定稿：业务微信号 xtc20you；交互升级为\"胶囊变卡片\"动效（习总指定参考规格）"
+   ]
+  },
+  {
+   "id": "prompt-54",
    "title": "提示词_设计稿转代码_PixsoMCP链路_v1",
    "path": "D:\\AI员工体系\\提示词库\\开发建站\\提示词_设计稿转代码_PixsoMCP链路_v1.md",
    "summary": [
@@ -2565,7 +2996,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-44",
+   "id": "prompt-55",
    "title": "提示词_知识库_增量写入总助大脑_v1",
    "path": "D:\\AI员工体系\\提示词库\\知识库运营\\提示词_知识库_增量写入总助大脑_v1.md",
    "summary": [
@@ -2575,7 +3006,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-45",
+   "id": "prompt-56",
    "title": "提示词_知识库_对话后积累沉淀_v1",
    "path": "D:\\AI员工体系\\提示词库\\知识库运营\\提示词_知识库_对话后积累沉淀_v1.md",
    "summary": [
@@ -2585,7 +3016,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-46",
+   "id": "prompt-57",
    "title": "提示词_运营_健身网站P4定时打分_v1",
    "path": "D:\\AI员工体系\\提示词库\\自动化运营\\提示词_运营_健身网站P4定时打分_v1.md",
    "summary": [
@@ -2595,7 +3026,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-47",
+   "id": "prompt-58",
    "title": "提示词_运营_抖音小红书发布流程_v1",
    "path": "D:\\AI员工体系\\提示词库\\自动化运营\\提示词_运营_抖音小红书发布流程_v1.md",
    "summary": [
@@ -2605,7 +3036,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-48",
+   "id": "prompt-59",
    "title": "提示词_运营_私域转化话术_v1",
    "path": "D:\\AI员工体系\\提示词库\\自动化运营\\提示词_运营_私域转化话术_v1.md",
    "summary": [
@@ -2615,7 +3046,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-49",
+   "id": "prompt-60",
    "title": "提示词_dsh调度_本地headless任务_v1",
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_dsh调度_本地headless任务_v1.md",
    "summary": [
@@ -2625,7 +3056,17 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-50",
+   "id": "prompt-61",
+   "title": "提示词_创业方案深化_小程序接单与SaaS_v1",
+   "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_创业方案深化_小程序接单与SaaS_v1.md",
+   "summary": [
+    "# 提示词：创业方案深度深化与执行落地（小程序接单 + SaaS 生态化）",
+    "## 八字段索引",
+    "- 名称：创业方案深度深化与执行落地"
+   ]
+  },
+  {
+   "id": "prompt-62",
    "title": "提示词_前置分发_任务路由判读单_决策矩阵_v1",
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_前置分发_任务路由判读单_决策矩阵_v1.md",
    "summary": [
@@ -2635,7 +3076,47 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-51",
+   "id": "prompt-63",
+   "title": "提示词_开员工窗口_灵感备案每日运营_v1",
+   "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_开员工窗口_灵感备案每日运营_v1.md",
+   "summary": [
+    "# 提示词：提示词_开员工窗口_灵感备案每日运营_v1",
+    "## 基本信息",
+    "- 名称：提示词_开员工窗口_灵感备案每日运营_v1"
+   ]
+  },
+  {
+   "id": "prompt-64",
+   "title": "提示词_开员工窗口_灵感备案每日运营_v2",
+   "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_开员工窗口_灵感备案每日运营_v2.md",
+   "summary": [
+    "# 提示词：提示词_开员工窗口_灵感备案每日运营_v2",
+    "## 基本信息",
+    "- 名称：提示词_开员工窗口_灵感备案每日运营_v2"
+   ]
+  },
+  {
+   "id": "prompt-65",
+   "title": "提示词_开窗口A_灵感备案数据层与更新链路_v1",
+   "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_开窗口A_灵感备案数据层与更新链路_v1.md",
+   "summary": [
+    "# 提示词：提示词_开窗口A_灵感备案数据层与更新链路_v1",
+    "## 基本信息",
+    "- 名称：提示词_开窗口A_灵感备案数据层与更新链路_v1"
+   ]
+  },
+  {
+   "id": "prompt-66",
+   "title": "提示词_开窗口B_灵感备案可视化面板UI_v1",
+   "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_开窗口B_灵感备案可视化面板UI_v1.md",
+   "summary": [
+    "# 提示词：提示词_开窗口B_灵感备案可视化面板UI_v1",
+    "## 基本信息",
+    "- 名称：提示词_开窗口B_灵感备案可视化面板UI_v1"
+   ]
+  },
+  {
+   "id": "prompt-67",
    "title": "提示词_总助大脑激活与对接_任意AI_v1",
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_总助大脑激活与对接_任意AI_v1.md",
    "summary": [
@@ -2645,7 +3126,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-52",
+   "id": "prompt-68",
    "title": "提示词_新会话开场_BIM网站升级_v1",
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_新会话开场_BIM网站升级_v1.md",
    "summary": [
@@ -2655,7 +3136,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-53",
+   "id": "prompt-69",
    "title": "提示词_激活_总助大脑_任意AI_v2",
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_激活_总助大脑_任意AI_v2.md",
    "summary": [
@@ -2665,7 +3146,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-54",
+   "id": "prompt-70",
    "title": "提示词_视觉能力接入_通用MCP配置_v1",
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_视觉能力接入_通用MCP配置_v1.md",
    "summary": [
@@ -2675,7 +3156,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-55",
+   "id": "prompt-71",
    "title": "提示词_记忆_关键产出落盘与分阶段新会话_v1",
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_记忆_关键产出落盘与分阶段新会话_v1.md",
    "summary": [
@@ -2685,7 +3166,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-56",
+   "id": "prompt-72",
    "title": "提示词_调度_任务派单五要素_v1",
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_调度_任务派单五要素_v1.md",
    "summary": [
@@ -2695,7 +3176,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-57",
+   "id": "prompt-73",
    "title": "提示词_调度_新会话开场交接_通用_v2",
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_调度_新会话开场交接_通用_v2.md",
    "summary": [
@@ -2705,7 +3186,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "prompt-58",
+   "id": "prompt-74",
    "title": "提示词_阶段交接_抖音Obsidian四讲字幕级学习_v1",
    "path": "D:\\AI员工体系\\提示词库\\调度指令\\提示词_阶段交接_抖音Obsidian四讲字幕级学习_v1.md",
    "summary": [
@@ -3634,6 +4115,86 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
   },
   {
    "id": "rev-87",
+   "title": "20260826_BIM小程序P3特效与编译排障",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260826_BIM小程序P3特效与编译排障.md",
+   "summary": [
+    "# 20260826_BIM小程序P3特效与编译排障",
+    "## 做了什么",
+    "## 结果"
+   ]
+  },
+  {
+   "id": "rev-88",
+   "title": "复盘_城院智筑先锋BIM小程序P4发布准备_20260826",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260826_BIM小程序P4发布准备.md",
+   "summary": [
+    "# 复盘_城院智筑先锋BIM小程序P4发布准备_20260826",
+    "## 做了什么",
+    "- 查库：growth/reviews + 提示词库（复用《小程序零成本上架》提示词口径）；定位工程实际目录（城院智筑先锋_BIM小程序，非 城院智筑先锋\\_BIM小程序）。"
+   ]
+  },
+  {
+   "id": "rev-89",
+   "title": "复盘_FITCOMMAND小程序P0骨架_20260826",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260826_FITCOMMAND小程序P0骨架.md",
+   "summary": [
+    "# 复盘_FITCOMMAND小程序P0骨架_20260826",
+    "> 窗口：B（P0）｜ 主目录：D:\\微信小程序开发\\FITCOMMAND小程序\\ ｜ 依据：任务书_FITCOMMAND小程序P0骨架_优化版_20260826.md",
+    "## 做了什么"
+   ]
+  },
+  {
+   "id": "rev-90",
+   "title": "复盘_FITCOMMAND小程序P1热量评价_20260826",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260826_FITCOMMAND小程序P1热量评价.md",
+   "summary": [
+    "# 复盘_FITCOMMAND小程序P1热量评价_20260826",
+    "> 窗口：C（P1）｜ 主目录：D:\\微信小程序开发\\FITCOMMAND小程序\\ ｜ 依据：习总窗口任务书 P1",
+    "## 做了什么"
+   ]
+  },
+  {
+   "id": "rev-91",
+   "title": "复盘_FITCOMMAND小程序P2贴图分享_20260826",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260826_FITCOMMAND小程序P2贴图分享.md",
+   "summary": [
+    "# 复盘_FITCOMMAND小程序P2贴图分享_20260826",
+    "> 窗口：D（P2）｜ 主目录：D:\\微信小程序开发\\FITCOMMAND小程序\\ ｜ 依据：习总窗口任务书 P2",
+    "## 做了什么"
+   ]
+  },
+  {
+   "id": "rev-92",
+   "title": "复盘_FITCOMMAND小程序P3计划AI买断_20260826",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260826_FITCOMMAND小程序P3计划AI买断.md",
+   "summary": [
+    "# 复盘_FITCOMMAND小程序P3计划AI买断_20260826",
+    "> 窗口：E（P3）｜ 主目录：D:\\微信小程序开发\\FITCOMMAND小程序\\ ｜ 依据：习总窗口任务书 P3",
+    "## 做了什么"
+   ]
+  },
+  {
+   "id": "rev-93",
+   "title": "复盘_FITCOMMAND小程序P4发布准备_20260826",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260826_FITCOMMAND小程序P4发布准备.md",
+   "summary": [
+    "# 复盘_FITCOMMAND小程序P4发布准备_20260826",
+    "## 做了什么",
+    "- 查库：growth/reviews（复用 BIM P4 发布准备复盘）、提示词库（《小程序零成本上架》口径）、执行方案 v1.1（付费/云后台设计）、分工方案（红线）、工程数据"
+   ]
+  },
+  {
+   "id": "rev-94",
+   "title": "复盘：20260826_VibeCoding三端打包发布技能学习",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260826_三端打包发布技能学习.md",
+   "summary": [
+    "# 复盘：20260826_VibeCoding三端打包发布技能学习",
+    "## 做了什么",
+    "- 处理抖音第 6 集《app打包教程，安卓ios小程序三端新手全流程打包发布教学》（作者：程序员小程，13:24，AI编程完整入门教学）"
+   ]
+  },
+  {
+   "id": "rev-95",
    "title": "20260826 复盘：容器变形动效技能 + 总助大脑技能台上线（v1.5.0）",
    "path": "D:\\AI员工体系\\growth\\reviews\\20260826_容器变形动效技能台与一键调用.md",
    "summary": [
@@ -3643,7 +4204,297 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "rev-88",
+   "id": "rev-96",
+   "title": "复盘：分窗并行动工纪律与灵感备案可视化拆窗（2026-08-27）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260827_分窗并行动工纪律与可视化拆窗.md",
+   "summary": [
+    "# 复盘：分窗并行动工纪律与灵感备案可视化拆窗（2026-08-27）",
+    "## 做了什么",
+    "- 习总纠正「大任务应拆窗并行动工」后，补规则入 Codex 记忆（规则_任务分窗并行动工）"
+   ]
+  },
+  {
+   "id": "rev-97",
+   "title": "上线修复补充（2026-08-27 晚 · 总助接手）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260827_灵感备案可视化_上线修复补充.md",
+   "summary": [
+    "---",
+    "## 上线修复补充（2026-08-27 晚 · 总助接手）",
+    "### 事故"
+   ]
+  },
+  {
+   "id": "rev-98",
+   "title": "复盘：灵感备案可视化 · 窗口 A 数据层与更新链路",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260827_灵感备案可视化_窗口A数据层.md",
+   "summary": [
+    "# 复盘：灵感备案可视化 · 窗口 A 数据层与更新链路",
+    "> 日期：2026-08-27 · 执行：总助 Codex（窗口 A 开发者）· 任务书：任务书_灵感备案可视化_接口契约与验收_20260827.md",
+    "> 并行：窗口 B（UI 面板）· 写集：A=data\\ 与 _build\\；B=index.html"
+   ]
+  },
+  {
+   "id": "rev-99",
+   "title": "复盘：灵感备案可视化合并验收（2026-08-27）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260827_灵感备案可视化合并验收.md",
+   "summary": [
+    "# 复盘：灵感备案可视化合并验收（2026-08-27）",
+    "## 做了什么",
+    "- 对窗口 A（数据层）+ 窗口 B（面板 UI）交付物做合并统一验收：静态核验 + Playwright 实测 + 断网模拟"
+   ]
+  },
+  {
+   "id": "rev-100",
+   "title": "复盘：灵感备案可视化 · 窗口 B 面板 UI",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260827_灵感备案可视化面板UI.md",
+   "summary": [
+    "# 复盘：灵感备案可视化 · 窗口 B 面板 UI",
+    "> 日期：2026-08-27 · 执行：总助 Codex（窗口 B UI 开发者）· 任务书：任务书_灵感备案可视化_接口契约与验收_20260827.md",
+    "> 并行：窗口 A（数据层与更新链路）· 写集：A=data\\ 与 _build\\；B=index.html 与新增资源（互不重叠）"
+   ]
+  },
+  {
+   "id": "rev-101",
+   "title": "复盘：灵感备案库入总助大脑（2026-08-27）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260827_灵感备案库入总助大脑.md",
+   "summary": [
+    "# 复盘：灵感备案库入总助大脑（2026-08-27）",
+    "## 做了什么",
+    "- 将上一轮「裂变获客赛道灵感清单」升级为双板块备案（板块一 AI 能力与性价比排行榜、板块二 灵感任务与痛点库），含每日更新机制与裂变变形机制"
+   ]
+  },
+  {
+   "id": "rev-102",
+   "title": "复盘：裂变获客赛道灵感（2026-08-27）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260827_裂变获客赛道灵感.md",
+   "summary": [
+    "# 复盘：裂变获客赛道灵感（2026-08-27）",
+    "## 做了什么",
+    "- 查库（团队共享记忆/提示词库/growth/记忆档案）后，为习总产出 6 个「量大但少人注意」的裂变获客赛道灵感 + 一套可复用筛选模板（七维评分 + 一票否决 + 三句话验证"
+   ]
+  },
+  {
+   "id": "rev-103",
+   "title": "复盘：小程序接单 14 天启动方案（无执照版）2026-08-30",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260830_小程序接单14天启动方案.md",
+   "summary": [
+    "# 复盘：小程序接单 14 天启动方案（无执照版）2026-08-30",
+    "## 做了什么",
+    "- 习总交付第三方 AI《创业执行方案交付报告》+ 自拟 5 条判断，要求输出 6 部分 14 天启动方案并核对判断；"
+   ]
+  },
+  {
+   "id": "rev-104",
+   "title": "复盘：小红书+抖音 30 天涨粉开店全案（2026-08-30）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260830_小红书抖音30天涨粉开店全案.md",
+   "summary": [
+    "# 复盘：小红书+抖音 30 天涨粉开店全案（2026-08-30）",
+    "## 做了什么",
+    "- 按交接协议查库：交接文件 + 提示词库 v1 + 团队共享记忆 + growth 复盘/技能 + 获客打法/14 天启动方案，命中可复用结论（学生无执照启动顺序、获客三线、报价"
+   ]
+  },
+  {
+   "id": "rev-105",
+   "title": "复盘_电脑病毒检查_20260901",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260901_电脑病毒检查.md",
+   "summary": [
+    "# 复盘_电脑病毒检查_20260901",
+    "- 日期：2026-09-01",
+    "- 任务：检查电脑是否有病毒"
+   ]
+  },
+  {
+   "id": "rev-106",
+   "title": "复盘_系统缓存清理_20260901",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260901_系统缓存清理.md",
+   "summary": [
+    "# 复盘_系统缓存清理_20260901",
+    "- 日期：2026-09-01",
+    "- 任务：清理系统缓存与垃圾"
+   ]
+  },
+  {
+   "id": "rev-107",
+   "title": "复盘_C盘深挖清理与重复数据整理_20260902",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260902_C盘深挖清理与重复数据整理.md",
+   "summary": [
+    "# 复盘_C盘深挖清理与重复数据整理_20260902",
+    "- 日期：2026-09-02",
+    "- 任务：C 盘深挖清理 + 重复文件/数据整理"
+   ]
+  },
+  {
+   "id": "rev-108",
+   "title": "复盘_桌面重定向D盘_20260902",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260902_桌面重定向D盘.md",
+   "summary": [
+    "# 复盘_桌面重定向D盘_20260902",
+    "- 日期：2026-09-02",
+    "- 任务：桌面迁移到 D 盘 + 二次清理 C 盘"
+   ]
+  },
+  {
+   "id": "rev-109",
+   "title": "复盘_重启后收尾与游戏视频清理_20260903",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260903_游戏视频清理与pagefile排查.md",
+   "summary": [
+    "# 复盘_重启后收尾与游戏视频清理_20260903",
+    "- 日期：2026-09-03",
+    "- 任务：重启后验证桌面重定向 + 清理游戏视频"
+   ]
+  },
+  {
+   "id": "rev-110",
+   "title": "复盘：窄门数字建模工具 1.0.0 正式上线（2026-09-03）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260903_窄门数字建模工具上线.md",
+   "summary": [
+    "# 复盘：窄门数字建模工具 1.0.0 正式上线（2026-09-03）",
+    "## 做了什么",
+    "- 习总确认备案过审（湘ICP备2026038367号-1X）→ 总助做提审前静态终验（名称/开关/页面/JSON/素材可达性）"
+   ]
+  },
+  {
+   "id": "rev-111",
+   "title": "复盘：窄门100s宣传视频渲染（2026-09-04）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260904_窄门100s宣传视频.md",
+   "summary": [
+    "# 复盘：窄门100s宣传视频渲染（2026-09-04）",
+    "> 任务：按分镜用真实截图制作「窄门数字建模工具」100s 宣传视频竖版（1080x1920@30fps，约 106s，仅人声无 BGM）。",
+    "## 做了什么"
+   ]
+  },
+  {
+   "id": "rev-112",
+   "title": "复盘 20260909 BIM 小程序 v1.1.0 全功能补全（4 页 + 每日一练）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260909_BIM小程序v1.1.0全功能补全.md",
+   "summary": [
+    "# 复盘 20260909 BIM 小程序 v1.1.0 全功能补全（4 页 + 每日一练）",
+    "## 做了什么",
+    "- 补齐 4 个工具页：比赛参数速查 / 扩展资源 / 模拟考试(180 分钟) / 错题本（复用 data/*.json 与 utils/storage.js，视觉沿用 v2 暖"
+   ]
+  },
+  {
+   "id": "rev-113",
+   "title": "复盘_20260909_BIM小程序材料直收双端同步",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260909_BIM小程序材料直收双端同步.md",
+   "summary": [
+    "# 复盘_20260909_BIM小程序材料直收双端同步",
+    "## 做了什么",
+    "- 建立《流程_材料直收与双端同步》（习总\"我提供材料→直接吸收→双端同步\"需求固化）；"
+   ]
+  },
+  {
+   "id": "rev-114",
+   "title": "20260909_上线前修复包FITCOMMAND.md",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260909_上线前修复包FITCOMMAND.md",
+   "summary": [
+    "# 20260909_上线前修复包FITCOMMAND.md",
+    "## 做了什么",
+    "- FITCOMMAND 小程序上线前修复包：动作库火柴人 SVG data URI → 本地透明 PNG（主脚本 tools\\脚本_动作火柴人SVG转PNG_20260909.p"
+   ]
+  },
+  {
+   "id": "rev-115",
+   "title": "复盘 20260909 窄门数字建模工具 v1.1.1 提审发布上线",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260909_窄门v1.1.1提审发布上线.md",
+   "summary": [
+    "# 复盘 20260909 窄门数字建模工具 v1.1.1 提审发布上线",
+    "## 做了什么",
+    "- 分步教学习总完成提审：登录后台 → 版本管理 → 选开发版 1.1.1 → 填审核信息 → 处理隐私弹窗 → 提交审核（19:32）→ 审核通过 → 点发布（23:27）"
+   ]
+  },
+  {
+   "id": "rev-116",
+   "title": "复盘_CET4四级网站_倒计时与功能恢复_20260910",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260910_CET4四级网站修复.md",
+   "summary": [
+    "# 复盘_CET4四级网站_倒计时与功能恢复_20260910",
+    "> 任务：D:\\桌面\\cet4-review\\四级网站.html 倒计时归零与功能恢复",
+    "> 交付：修复后站点（原文件已备份）+ 修复记录 D:\\接单客户\\修复记录_CET4四级网站_倒计时与功能恢复_20260910.md"
+   ]
+  },
+  {
+   "id": "rev-117",
+   "title": "20260914_CET4小程序P1数据层与工程骨架",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260914_CET4小程序P1数据层与工程骨架.md",
+   "summary": [
+    "# 20260914_CET4小程序P1数据层与工程骨架",
+    "> 任务：CET4 备考工具包 — 微信小程序复刻 P1（数据层抽取 + 转换脚本 + 工程骨架）",
+    "> 窗口主目录：`D:\\接单客户` ｜ 工程：`D:\\接单客户\\CET4-Toolkit`"
+   ]
+  },
+  {
+   "id": "rev-118",
+   "title": "20260914_CET4网站GitHub托管与小程序复刻方案",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260914_CET4网站GitHub托管与小程序复刻方案.md",
+   "summary": [
+    "# 20260914_CET4网站GitHub托管与小程序复刻方案",
+    "> 窗口主目录：D:\\接单客户 ｜ 执行：总助 Codex ｜ 习总验收",
+    "## 一、做了什么"
+   ]
+  },
+  {
+   "id": "rev-119",
+   "title": "复盘：某公建 16 图参数提取与参数类题库扩量（窗1 · 模块A）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260914_公建图纸参数提取与题库扩量_窗1模块A.md",
+   "summary": [
+    "# 复盘：某公建 16 图参数提取与参数类题库扩量（窗1 · 模块A）",
+    "- 日期：2026-09-14 ｜ 执行：窗1 执行员（总助授权） ｜ 主目录：`D:\\接单客户`",
+    "## 做了什么"
+   ]
+  },
+  {
+   "id": "rev-120",
+   "title": "复盘_ToDesk安装与D盘落盘_20260917",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260917_ToDesk安装与D盘落盘.md",
+   "summary": [
+    "# 复盘_ToDesk安装与D盘落盘_20260917",
+    "- 任务ID：20260917_ToDesk安装",
+    "- 执行：总助 Codex"
+   ]
+  },
+  {
+   "id": "rev-121",
+   "title": "复盘_训练计划自定义（阶段 2a·N5 修正）_20260917",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260917_训练计划自定义.md",
+   "summary": [
+    "# 复盘_训练计划自定义（阶段 2a·N5 修正）_20260917",
+    "- 任务ID：20260917_训练计划自定义",
+    "- 执行：总助 Codex（本机执行 + 脚本把关，无下属派工）"
+   ]
+  },
+  {
+   "id": "rev-122",
+   "title": "复盘_2503302班综测汇总表复核_20260921",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260921_2503302班综测汇总表复核.md",
+   "summary": [
+    "# 复盘_2503302班综测汇总表复核_20260921",
+    "## 做了什么",
+    "## 结果"
+   ]
+  },
+  {
+   "id": "rev-123",
+   "title": "任务复盘｜市调大赛\"正大杯\"参赛说明与执行手册（Word 长文档）",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20260921_市调大赛参赛手册.md",
+   "summary": [
+    "# 任务复盘｜市调大赛\"正大杯\"参赛说明与执行手册（Word 长文档）",
+    "- 任务编号：20260921_市调大赛参赛手册",
+    "- 执行日期：2026-09-21"
+   ]
+  },
+  {
+   "id": "rev-124",
+   "title": "复盘：总脑共享版密码层与只读发布",
+   "path": "D:\\AI员工体系\\growth\\reviews\\20261004_总脑共享版密码层与只读发布.md",
+   "summary": [
+    "# 复盘：总脑共享版密码层与只读发布",
+    "> 日期：2026-10-04 ｜ 更新：2026-10-05 ｜ 任务：总脑网站密码密钥层、全量归纳沉淀与只读分享",
+    "## 做了什么"
+   ]
+  },
+  {
+   "id": "rev-125",
    "title": "复盘 · Hermes 值班出图实测（黄果树瀑布）",
    "path": "D:\\AI员工体系\\growth\\reviews\\复盘_Hermes值班出图实测_黄果树_20260814.md",
    "summary": [
@@ -3653,7 +4504,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "rev-89",
+   "id": "rev-126",
    "title": "复盘_上下文超限排障_20260819",
    "path": "D:\\AI员工体系\\growth\\reviews\\复盘_上下文超限排障_20260819.md",
    "summary": [
@@ -3663,7 +4514,17 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "rev-90",
+   "id": "rev-127",
+   "title": "复盘_小程序每日一练留存增强_20260914",
+   "path": "D:\\AI员工体系\\growth\\reviews\\复盘_小程序每日一练留存增强_20260914.md",
+   "summary": [
+    "# 复盘_小程序每日一练留存增强_20260914",
+    "**任务**：窄门数字建模工具小程序 · 窗2「每日一练留存增强」（站内提醒版·零成本）",
+    "**交付**：`D:\\接单客户\\清单_每日一练留存增强_20260914.md`　**结论**：通过（自检 6 项全绿）"
+   ]
+  },
+  {
+   "id": "rev-128",
    "title": "做了什么",
    "path": "D:\\AI员工体系\\growth\\reviews\\复盘_联想Y9000P黑屏闪烁排障_20260814.md",
    "summary": [
@@ -3673,7 +4534,7 @@ python D:\小说文件\总助大脑\_build\sync_kb.py --rescan</code></pre>
    ]
   },
   {
-   "id": "rev-91",
+   "id": "rev-129",
    "title": "20260814 复盘：Hermes 值班视觉自检（贵州宣传片抽帧）",
    "path": "D:\\AI员工体系\\growth\\reviews\\复盘_视觉自检_贵州宣传片抽帧_20260814.md",
    "summary": [
@@ -5350,8 +6211,8 @@ $('#nav').addEventListener('click', e => {
 function renderOverview(){
   const kpis = [
     ['资产索引', KB.meta.assets_count, '五库资产已结构化'],
-    ['规则', KB.rules.length, '总则 v3.11 核心 28 条'],
-    ['能力', KB.capabilities.length, '七大域 15 项能力'],
+    ['规则', KB.rules.length, '总则 v3.13 核心规则'],
+    ['能力', KB.capabilities.length, '多域能力全景'],
     ['项目', KB.projects.length, '主线项目'],
     ['需求', (KB.requirements||[]).length, '习总需求/能力增强清单'],
   ];
@@ -5361,9 +6222,9 @@ function renderOverview(){
   $('#quick').innerHTML = [
     ['技能台', 'skills', '一键选技能·填需求·生成提示词'],
     ['对接激活', 'activate', '三通道让任意 AI 接任总助'],
-    ['知识图谱', 'graph', '115 节点 · 136 关联可视化'],
+    ['知识图谱', 'graph', `${KB.graph.nodes.length} 节点 · ${KB.graph.links.length} 关联可视化`],
     ['能力全景', 'caps', '视频/网页/视觉/文案/自动化/协作/调度'],
-    ['记忆档案', 'archive', '记忆24+技能20+提示词54+复盘70'],
+    ['记忆档案', 'archive', `记忆${(KB.memories||[]).length}+技能${(KB.skills||[]).length}+提示词${(KB.prompts||[]).length}+复盘${(KB.reviews||[]).length}`],
   ].map(([l,p,d])=>`<div class="card" style="cursor:pointer" onclick="go('${p}')"><b style="color:var(--gold)">${l}</b><p class="sub" style="margin:6px 0 0">${d}</p></div>`).join('');
   $('#projMini').innerHTML = KB.projects.slice(0,6).map(p=>`
     <div class="card"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><b style="color:var(--text)">${p.name}</b><span class="badge ${p.status.includes('线')?'gold':''}">${p.status}</span></div>
