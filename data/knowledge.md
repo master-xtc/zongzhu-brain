@@ -234,7 +234,7 @@
 - 抖音Obsidian方法论四讲学习（2026-08-20） ｜ D:\AI员工体系\growth\reviews\20260820_Obsidian知识库方法论学习.md
 - 豆包ARK_KEY与Netlify配置就绪状态 ｜ D:\健身教练\对接文件_健身网站AI自动录入升级_v1_20260821.md
 
-## 十、技能沉淀索引（37 项，详见 D:\AI员工体系\growth\skills\）
+## 十、技能沉淀索引（38 项，详见 D:\AI员工体系\growth\skills\）
 
 - 技能沉淀 · BIM_数维快捷键与操作要点 ｜ D:\AI员工体系\growth\skills\BIM_数维快捷键与操作要点.md
 - 技能_ComfyUI_H3拼贴动画_8GB显存快速链路 ｜ D:\AI员工体系\growth\skills\ComfyUI_H3拼贴动画_8GB显存快速链路.md
@@ -273,6 +273,7 @@
 - 技能_运维_软件下载安装到D盘与CDN风控绕过 ｜ D:\AI员工体系\growth\skills\运维_软件下载安装到D盘与CDN风控绕过.md
 - 容器变形动效 · 大白话提示词法（iOS 7 式） ｜ D:\AI员工体系\growth\skills\前端_容器变形动效大白话提示词_v1.md
 - VibeCoding三端打包发布（安卓/iOS/小程序） ｜ D:\AI员工体系\growth\skills\开发建站_VibeCoding三端打包发布_v1.md
+- PPT Master 技能：GitHub 开源 AI 生成可编辑 PPTX ｜ C:/Users/XTC/.workbuddy/skills/ppt-master
 
 ## 十一、提示词库索引（81 条，详见 D:\AI员工体系\提示词库\）
 

@@ -7,7 +7,15 @@
   "source_root": "D:\\小说文件\\总助大脑",
   "assets_count": 757,
   "sync": "由 build_kb.py 生成；修改请重跑构建器或直接编辑本文件",
-  "url": "https://master-xtc.github.io/zongzhu-brain/"
+  "url": "https://master-xtc.github.io/zongzhu-brain/",
+  "changelog": [
+   {
+    "time": "2026-10-22 10:41",
+    "type": "skill",
+    "title": "PPT Master 技能：GitHub 开源 AI 生成可编辑 PPTX",
+    "id": "skill-26"
+   }
+  ]
  },
  "identity": {
   "title": "总助（Codex）",
@@ -1746,6 +1754,14 @@
    "path": "D:\\AI员工体系\\growth\\skills\\开发建站_VibeCoding三端打包发布_v1.md",
    "src": "抖音第6集：三端打包发布",
    "created_at": "2026-08-26 12:08"
+  },
+  {
+   "id": "skill-26",
+   "title": "PPT Master 技能：GitHub 开源 AI 生成可编辑 PPTX",
+   "detail": "PPT Master（GitHub：hugohe3/ppt-master，版本 v6.7.2，MIT 协议，39k+ star）是一套 AI 驱动的演示文稿工作流 skill，核心能力是把 PDF / Word / 网页 / Markdown / 纯文本素材，转成「原生可编辑」的 .pptx 文件——在 PowerPoint 里每一个文本框、形状、图表都能单独双击编辑，不是图片套壳。\n\n【安装位置】用户级目录 `C:\\Users\\XTC\\.workbuddy\\skills\\ppt-master`（13025 个文件完整，SKILL.md 在根目录）。来源仓库 `https://github.com/hugohe3/ppt-master`。\n\n【核心 Python 依赖（已装入隔离 venv）】`C:\\Users\\XTC\\.workbuddy\\binaries\\python\\envs\\default` 已装：python-pptx、XlsxWriter、Pillow、numpy、PyYAML、pathops（skia-pathops）、uharfbuzz，导入验证全部通过。这就是「文档 → SVG → 可编辑 PPTX」主链路运行所需。\n\n【用法】在对话里直接说：「用 ppt-master 把 XXX 做成 N 页、16:9、简体中文、克制专业风的 PPT」。它会走「战略规划 → 逐页生成 SVG → 导出可编辑 PPTX」流水线，全程有阻塞确认点，不会乱动文件。\n\n【安全审查结论：P2（安全）】逐项扫过 310 个脚本：无硬编码密钥（.env.example 只是生图后端 API Key 占位符，需自己填）；无数据外发（只连用户配置的生图 API、知名图库 Openverse/Pexels 等、用户给定的网页/文档 URL）；subprocess 只调 pandoc / ffmpeg / git / 本地服务这类标准工具，无任意命令执行；rmtree 只删它自建的临时构建目录，不动用户文件；唯一一处 eval 是 Pillow 的 ImageMath（图像运算，非代码执行）。\n\n【可选功能（按需另装依赖，当前未装）】AI 自动配图后端（google-genai 等）、PDF 转 MD（PyMuPDF，注意 AGPL）、Word 转 MD（pandoc + mammoth）、旁白语音（edge-tts）、本地 SVG 编辑器（flask）。用到这些时再补装即可。",
+   "path": "C:/Users/XTC/.workbuddy/skills/ppt-master",
+   "src": "GitHub hugohe3/ppt-master",
+   "created_at": "2026-10-22 10:41"
   }
  ],
  "prompts": [
