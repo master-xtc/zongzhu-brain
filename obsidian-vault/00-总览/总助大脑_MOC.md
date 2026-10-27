@@ -1,6 +1,6 @@
 # 总助大脑 MOC
 
-> 全量 159 节点 · 198 关联 · 打开图谱（Ctrl+G）即可看到与网页版一致的星系。
+> 全量 161 节点 · 202 关联 · 打开图谱（Ctrl+G）即可看到与网页版一致的星系。
 
 ### root（1）
 
@@ -43,7 +43,7 @@
 - [[R18_隐私红线.md]]
 - [[R07_高级感公式.md]]
 
-### 能力（26）
+### 能力（27）
 
 - [[cap-08_AI员工调度网关.md]]
 - [[cap-04_MCP 工具链.md]]
@@ -68,6 +68,7 @@
 - [[cap-02_知识库构建与巡检.md]]
 - [[C03_视频分析流水线.md]]
 - [[C05_设计稿转代码.md]]
+- [[cap-12_赛事征文写作与合规自检.md]]
 - [[cap-05_配音与音频转写.md]]
 - [[cap-09_长文档与科研报告交付.md]]
 - [[cap-01_静态站密码层与权限隔离.md]]
@@ -115,7 +116,7 @@
 - [[E01_总助 Codex.md]]
 - [[E03_豆包.md]]
 
-### 工具（61）
+### 工具（62）
 
 - [[TOOL-AES加密脚本_AES 加密脚本.md]]
 - [[TOOL-CloudflareAccess_Cloudflare Access.md]]
@@ -131,6 +132,7 @@
 - [[TOOL-MipMapDesktop_MipMap Desktop.md]]
 - [[TOOL-Nodecrypto_Node crypto.md]]
 - [[TOOL-Obsidian_Obsidian.md]]
+- [[TOOL-PDF渲染核版_PDF 渲染核版.md]]
 - [[TOOL-PixsoMCP_PixsoMCP.md]]
 - [[TOOL-PowerShell_PowerShell.md]]
 - [[TOOL-PyMuPDF_PyMuPDF.md]]
@@ -193,5 +195,5 @@
 - 08-记忆：32 篇
 - 09-复盘：132 篇
 - 10-提示词库：74 个文件
-- 11-技能：37 个文件
+- 11-技能：38 个文件
 - 99-档案：knowledge_全量档案.md
