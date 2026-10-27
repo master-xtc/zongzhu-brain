@@ -1,6 +1,6 @@
 # 总助大脑 MOC
 
-> 全量 115 节点 · 136 关联 · 打开图谱（Ctrl+G）即可看到与网页版一致的星系。
+> 全量 159 节点 · 198 关联 · 打开图谱（Ctrl+G）即可看到与网页版一致的星系。
 
 ### root（1）
 
@@ -43,25 +43,36 @@
 - [[R18_隐私红线.md]]
 - [[R07_高级感公式.md]]
 
-### 能力（15）
+### 能力（26）
 
+- [[cap-08_AI员工调度网关.md]]
+- [[cap-04_MCP 工具链.md]]
 - [[C13_人声配音与转写.md]]
 - [[C09_内容量产.md]]
 - [[C04_品牌叙事站.md]]
 - [[C11_团队协作管理.md]]
 - [[C08_图像生成.md]]
 - [[C12_多代理并行派工.md]]
+- [[cap-03_多代理并行派工.md]]
 - [[C06_多平台部署.md]]
 - [[C01_宣传片_质感视频.md]]
+- [[cap-07_常驻任务与多平台.md]]
 - [[C15_常驻定时多平台.md]]
+- [[cap-11_总脑双站构建与发布.md]]
 - [[C02_数据可视化动画.md]]
 - [[C14_文档表格PPT PDF.md]]
+- [[cap-06_文档表格演示与PDF.md]]
+- [[cap-10_无人机倾斜摄影建模与四类成果.md]]
 - [[C10_桌面与浏览器自动化.md]]
 - [[C07_看图与审美核对.md]]
+- [[cap-02_知识库构建与巡检.md]]
 - [[C03_视频分析流水线.md]]
 - [[C05_设计稿转代码.md]]
+- [[cap-05_配音与音频转写.md]]
+- [[cap-09_长文档与科研报告交付.md]]
+- [[cap-01_静态站密码层与权限隔离.md]]
 
-### 知识（12）
+### 知识（18）
 
 - [[K10_FITCOMMAND 商业化.md]]
 - [[K02_Hermes 技术核实.md]]
@@ -70,8 +81,14 @@
 - [[K01_五角色分工架构.md]]
 - [[K03_产品审美路线.md]]
 - [[K12_任务路由判读单.md]]
+- [[K13_健身网站AI自动录入升级方案.md]]
 - [[K08_去AI味蒸馏打法.md]]
+- [[K14_总助大脑技能台：一键调用技能生成提示词（v1.5.0）.md]]
+- [[kno-10_总脑双站同步与构建修复（2026-10-27）.md]]
+- [[kno-07_最近任务与能力基线（2026-10-27）.md]]
+- [[kno-09_真实桌面路径与交付校验.md]]
 - [[K09_网文双向盈利.md]]
+- [[kno-08_视觉子代理图片批量安全阈值.md]]
 - [[K04_设备基线 Y9000P.md]]
 - [[K11_调度网关.md]]
 - [[K07_豆包三通道.md]]
@@ -98,19 +115,39 @@
 - [[E01_总助 Codex.md]]
 - [[E03_豆包.md]]
 
-### 工具（35）
+### 工具（61）
 
+- [[TOOL-AES加密脚本_AES 加密脚本.md]]
+- [[TOOL-CloudflareAccess_Cloudflare Access.md]]
+- [[TOOL-DSH_DSH.md]]
+- [[TOOL-DeepSeek_DeepSeek.md]]
+- [[TOOL-GS_GS.md]]
+- [[TOOL-Git_Git.md]]
+- [[TOOL-GitHubPages_GitHub Pages.md]]
+- [[TOOL-GitHub权限_GitHub权限.md]]
 - [[TOOL-H3Motion_H3Motion.md]]
 - [[TOOL-Hermes_Hermes.md]]
+- [[TOOL-MCP_MCP.md]]
+- [[TOOL-MipMapDesktop_MipMap Desktop.md]]
+- [[TOOL-Nodecrypto_Node crypto.md]]
+- [[TOOL-Obsidian_Obsidian.md]]
 - [[TOOL-PixsoMCP_PixsoMCP.md]]
+- [[TOOL-PowerShell_PowerShell.md]]
+- [[TOOL-PyMuPDF_PyMuPDF.md]]
+- [[TOOL-Python_Python.md]]
 - [[TOOL-Qwen-MM-Plugins_Qwen-MM-Plugins.md]]
 - [[TOOL-Remotion_Remotion.md]]
+- [[TOOL-Three.js_Three.js.md]]
+- [[TOOL-WebCrypto_Web Crypto.md]]
+- [[TOOL-WordCOM_Word COM.md]]
 - [[TOOL-chrome_devtools_chrome_devtools.md]]
 - [[TOOL-cloudflare_cloudflare.md]]
 - [[TOOL-context7_context7.md]]
+- [[TOOL-cron_cron.md]]
 - [[TOOL-documents_documents.md]]
 - [[TOOL-edge-tts_edge-tts.md]]
 - [[TOOL-ffmpeg_ffmpeg.md]]
+- [[TOOL-figma_figma.md]]
 - [[TOOL-figmaskills_figma skills.md]]
 - [[TOOL-frontend-design_frontend-design.md]]
 - [[TOOL-fx.js_fx.js.md]]
@@ -119,11 +156,16 @@
 - [[TOOL-linear_linear.md]]
 - [[TOOL-multi_agent_multi_agent.md]]
 - [[TOOL-netlify_netlify.md]]
+- [[TOOL-notion_notion.md]]
 - [[TOOL-pdf_pdf.md]]
 - [[TOOL-playwright_playwright.md]]
+- [[TOOL-poppler_poppler.md]]
 - [[TOOL-presentations_presentations.md]]
+- [[TOOL-python-docx_python-docx.md]]
+- [[TOOL-rapidocr_rapidocr.md]]
 - [[TOOL-render_render.md]]
 - [[TOOL-seedream_seedream.md]]
+- [[TOOL-skills_skills.md]]
 - [[TOOL-speech_speech.md]]
 - [[TOOL-spreadsheets_spreadsheets.md]]
 - [[TOOL-superpowers_superpowers.md]]
@@ -133,21 +175,23 @@
 - [[TOOL-windowsMCP_windows MCP.md]]
 - [[TOOL-提示词库_提示词库.md]]
 - [[TOOL-调度网关_调度网关.md]]
+- [[TOOL-豆包_豆包.md]]
 - [[TOOL-豆包vision_豆包vision.md]]
 - [[TOOL-高德地图_高德地图.md]]
 
-### 需求（5）
+### 需求（6）
 
 - [[REQ-03_HTTP_MCP 服务开机自启.md]]
 - [[REQ-05_其他 AI 写入总助大脑通道.md]]
 - [[REQ-02_可视化页审美验收.md]]
 - [[REQ-01_总助大脑持续写入机制.md]]
+- [[req-01_总脑共享版密码层与只读访问.md]]
 - [[REQ-04_知识库迁移到团队资产位.md]]
 
 ## 档案区（不在图谱内，双击打开）
 
-- 08-记忆：25 篇
-- 09-复盘：80 篇
-- 10-提示词库：54 个文件
-- 11-技能：22 个文件
+- 08-记忆：32 篇
+- 09-复盘：132 篇
+- 10-提示词库：74 个文件
+- 11-技能：37 个文件
 - 99-档案：knowledge_全量档案.md
